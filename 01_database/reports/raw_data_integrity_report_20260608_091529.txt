@@ -1,0 +1,29 @@
+Book & Quality - Raw Data Integrity Report
+============================================================
+Run ID       : raw_integrity_20260608_091529
+Status       : success
+Database     : market_data
+Symbol       : XAUUSD
+Start Time   : 2026-06-08T09:15:29.237573+00:00
+End Time     : 2026-06-08T09:20:31.336473+00:00
+Duration Sec : 302.099
+
+Summary
+------------------------------------------------------------
+ M1 | exists=True | count≈5604412 | time_field=datetime | gaps=26977 | ohlc_bad=0 | status=success
+ M5 | exists=True | count≈1127947 | time_field=datetime | gaps=5183 | ohlc_bad=0 | status=success
+M15 | exists=True | count≈376837 | time_field=datetime | gaps=4770 | ohlc_bad=0 | status=success
+M30 | exists=True | count≈188895 | time_field=datetime | gaps=4575 | ohlc_bad=0 | status=success
+ H1 | exists=True | count≈95009 | time_field=datetime | gaps=3551 | ohlc_bad=0 | status=success
+ H4 | exists=True | count≈25550 | time_field=datetime | gaps=852 | ohlc_bad=0 | status=success
+ D1 | exists=True | count≈4978 | time_field=datetime | gaps=836 | ohlc_bad=0 | status=success
+
+Warnings
+------------------------------------------------------------
+- M1 has time gaps. Some gaps may be normal around market closures.
+- M5 has time gaps. Some gaps may be normal around market closures.
+- M15 has time gaps. Some gaps may be normal around market closures.
+- M30 has time gaps. Some gaps may be normal around market closures.
+- H1 has time gaps. Some gaps may be normal around market closures.
+- H4 has time gaps. Some gaps may be normal around market closures.
+- D1 has time gaps. Some gaps may be normal around market closures.

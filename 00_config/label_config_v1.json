@@ -1,0 +1,33 @@
+{
+  "book_entry_label_v1": {
+    "entry_rule": "Entry at next M15 open after anchor_time.",
+    "tp_usd": 2.0,
+    "sl_usd": 2.0,
+    "horizon_m15": 8,
+    "ambiguous_policy": "NOTRADE",
+    "outputs": [
+      "BUY",
+      "SELL",
+      "NOTRADE"
+    ]
+  },
+  "trade_quality_label_v1": {
+    "entry_rule": "Quality is evaluated from next M15 open after anchor_time.",
+    "base_r_usd": 2.0,
+    "horizon_m15_short": 8,
+    "horizon_m15_mid": 16,
+    "horizon_m15_long": 32,
+    "quality_score_min": 0,
+    "quality_score_max": 100,
+    "trend_phase_classes": [
+      "UP_TREND_EARLY",
+      "UP_TREND_MATURE",
+      "UP_TREND_EXHAUSTION",
+      "DOWN_TREND_EARLY",
+      "DOWN_TREND_MATURE",
+      "DOWN_TREND_EXHAUSTION",
+      "RANGE",
+      "TRANSITION"
+    ]
+  }
+}

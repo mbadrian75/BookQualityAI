@@ -1,0 +1,56 @@
+{
+  "project_name": "Book & Quality",
+  "project_code": "bq",
+  "project_version": "v1",
+  "symbol": "XAUUSD",
+  "anchor_timeframe": "M15",
+  "architecture": {
+    "book_entry_model": {
+      "timeframes": [
+        "M1",
+        "M5",
+        "M15"
+      ],
+      "target": "Entry direction detection",
+      "outputs": [
+        "p_buy",
+        "p_sell",
+        "p_notrade"
+      ]
+    },
+    "trade_quality_model": {
+      "timeframes": [
+        "M30",
+        "H1",
+        "H4"
+      ],
+      "target": "Trade quality and market phase detection",
+      "outputs": [
+        "buy_quality_score",
+        "sell_quality_score",
+        "fake_score",
+        "range_score",
+        "trend_phase"
+      ]
+    },
+    "api_decision_engine": {
+      "target": "Combine Book Entry and Trade Quality model outputs",
+      "outputs": [
+        "final_signal",
+        "lot_multiplier",
+        "trailing_mode",
+        "breakeven_mode",
+        "tp_mode",
+        "risk_mode",
+        "reason"
+      ]
+    }
+  },
+  "project_rules": {
+    "raw_collections_are_read_only": true,
+    "all_project_outputs_use_bq_prefix": true,
+    "every_script_must_generate_report": true,
+    "every_project_section_has_separate_folder": true,
+    "no_leak_rule": "For each anchor_time, only candles closed at or before anchor_time may be used."
+  }
+}

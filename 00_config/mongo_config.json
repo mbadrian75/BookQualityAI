@@ -1,0 +1,25 @@
+{
+  "mongo_uri": "mongodb://localhost:27017",
+  "database": "market_data",
+  "symbol": "XAUUSD",
+  "raw_collections": {
+    "m1": "xauusd_m1",
+    "m5": "xauusd_m5",
+    "m15": "xauusd_m15",
+    "m30": "xauusd_m30",
+    "h1": "xauusd_h1",
+    "h4": "xauusd_h4",
+    "d1": "xauusd_d1"
+  },
+  "bq_collections": {
+    "features_book_entry": "bq_features_book_entry_m15_v1",
+    "features_trade_quality": "bq_features_trade_quality_m15_v1",
+    "labels_book_entry": "bq_labels_book_entry_m15_v1",
+    "labels_trade_quality": "bq_labels_trade_quality_m15_v1",
+    "dataset_book_entry": "bq_dataset_book_entry_m15_v1",
+    "dataset_trade_quality": "bq_dataset_trade_quality_m15_v1",
+    "predictions_book_entry": "bq_predictions_book_entry_m15_v1",
+    "predictions_trade_quality": "bq_predictions_trade_quality_m15_v1",
+    "api_decisions": "bq_api_decisions_m15_v1"
+  }
+}

@@ -1,0 +1,132 @@
+Book & Quality - Project Structure Report
+==================================================
+Run ID        : create_project_structure_20260608_090403
+Status        : success
+Project Root  : C:\Project\Book_Quality
+Start Time    : 2026-06-08T09:04:03.419052+00:00
+End Time      : 2026-06-08T09:04:03.571425+00:00
+Duration Sec  : 0.152
+
+Directories Created  : 46
+Directories Existing : 0
+Files Created/Updated: 68
+Files Skipped        : 0
+Errors               : 0
+
+Created directories:
+  + C:\Project\Book_Quality\00_project_setup
+  + C:\Project\Book_Quality\00_project_setup\reports
+  + C:\Project\Book_Quality\00_config
+  + C:\Project\Book_Quality\01_database
+  + C:\Project\Book_Quality\01_database\bootstrap
+  + C:\Project\Book_Quality\01_database\integrity
+  + C:\Project\Book_Quality\01_database\reports
+  + C:\Project\Book_Quality\02_labels
+  + C:\Project\Book_Quality\02_labels\book_entry
+  + C:\Project\Book_Quality\02_labels\trade_quality
+  + C:\Project\Book_Quality\02_labels\reports
+  + C:\Project\Book_Quality\03_features
+  + C:\Project\Book_Quality\03_features\book_entry
+  + C:\Project\Book_Quality\03_features\trade_quality
+  + C:\Project\Book_Quality\03_features\reports
+  + C:\Project\Book_Quality\04_dataset
+  + C:\Project\Book_Quality\04_dataset\book_entry
+  + C:\Project\Book_Quality\04_dataset\trade_quality
+  + C:\Project\Book_Quality\04_dataset\exports
+  + C:\Project\Book_Quality\04_dataset\reports
+  + C:\Project\Book_Quality\05_training
+  + C:\Project\Book_Quality\05_training\book_entry
+  + C:\Project\Book_Quality\05_training\trade_quality
+  + C:\Project\Book_Quality\05_training\reports
+  + C:\Project\Book_Quality\06_models
+  + C:\Project\Book_Quality\06_models\book_entry
+  + C:\Project\Book_Quality\06_models\trade_quality
+  + C:\Project\Book_Quality\06_models\archived
+  + C:\Project\Book_Quality\07_backtest
+  + C:\Project\Book_Quality\07_backtest\book_quality
+  + C:\Project\Book_Quality\07_backtest\reports
+  + C:\Project\Book_Quality\08_api
+  + C:\Project\Book_Quality\08_api\app
+  + C:\Project\Book_Quality\08_api\decision_engine
+  + C:\Project\Book_Quality\08_api\schemas
+  + C:\Project\Book_Quality\08_api\reports
+  + C:\Project\Book_Quality\09_mt4_mt5
+  + C:\Project\Book_Quality\09_mt4_mt5\experts
+  + C:\Project\Book_Quality\09_mt4_mt5\indicators
+  + C:\Project\Book_Quality\09_mt4_mt5\scripts
+  + C:\Project\Book_Quality\10_docs
+  + C:\Project\Book_Quality\11_logs
+  + C:\Project\Book_Quality\12_exports
+  + C:\Project\Book_Quality\12_exports\csv
+  + C:\Project\Book_Quality\12_exports\json
+  + C:\Project\Book_Quality\12_exports\charts
+
+Created or updated files:
+  + C:\Project\Book_Quality\00_project_setup\.gitkeep
+  + C:\Project\Book_Quality\00_project_setup\reports\.gitkeep
+  + C:\Project\Book_Quality\00_config\.gitkeep
+  + C:\Project\Book_Quality\01_database\.gitkeep
+  + C:\Project\Book_Quality\01_database\bootstrap\.gitkeep
+  + C:\Project\Book_Quality\01_database\integrity\.gitkeep
+  + C:\Project\Book_Quality\01_database\reports\.gitkeep
+  + C:\Project\Book_Quality\02_labels\.gitkeep
+  + C:\Project\Book_Quality\02_labels\book_entry\.gitkeep
+  + C:\Project\Book_Quality\02_labels\trade_quality\.gitkeep
+  + C:\Project\Book_Quality\02_labels\reports\.gitkeep
+  + C:\Project\Book_Quality\03_features\.gitkeep
+  + C:\Project\Book_Quality\03_features\book_entry\.gitkeep
+  + C:\Project\Book_Quality\03_features\trade_quality\.gitkeep
+  + C:\Project\Book_Quality\03_features\reports\.gitkeep
+  + C:\Project\Book_Quality\04_dataset\.gitkeep
+  + C:\Project\Book_Quality\04_dataset\book_entry\.gitkeep
+  + C:\Project\Book_Quality\04_dataset\trade_quality\.gitkeep
+  + C:\Project\Book_Quality\04_dataset\exports\.gitkeep
+  + C:\Project\Book_Quality\04_dataset\reports\.gitkeep
+  + C:\Project\Book_Quality\05_training\.gitkeep
+  + C:\Project\Book_Quality\05_training\book_entry\.gitkeep
+  + C:\Project\Book_Quality\05_training\trade_quality\.gitkeep
+  + C:\Project\Book_Quality\05_training\reports\.gitkeep
+  + C:\Project\Book_Quality\06_models\.gitkeep
+  + C:\Project\Book_Quality\06_models\book_entry\.gitkeep
+  + C:\Project\Book_Quality\06_models\trade_quality\.gitkeep
+  + C:\Project\Book_Quality\06_models\archived\.gitkeep
+  + C:\Project\Book_Quality\07_backtest\.gitkeep
+  + C:\Project\Book_Quality\07_backtest\book_quality\.gitkeep
+  + C:\Project\Book_Quality\07_backtest\reports\.gitkeep
+  + C:\Project\Book_Quality\08_api\.gitkeep
+  + C:\Project\Book_Quality\08_api\app\.gitkeep
+  + C:\Project\Book_Quality\08_api\decision_engine\.gitkeep
+  + C:\Project\Book_Quality\08_api\schemas\.gitkeep
+  + C:\Project\Book_Quality\08_api\reports\.gitkeep
+  + C:\Project\Book_Quality\09_mt4_mt5\.gitkeep
+  + C:\Project\Book_Quality\09_mt4_mt5\experts\.gitkeep
+  + C:\Project\Book_Quality\09_mt4_mt5\indicators\.gitkeep
+  + C:\Project\Book_Quality\09_mt4_mt5\scripts\.gitkeep
+  + C:\Project\Book_Quality\10_docs\.gitkeep
+  + C:\Project\Book_Quality\11_logs\.gitkeep
+  + C:\Project\Book_Quality\12_exports\.gitkeep
+  + C:\Project\Book_Quality\12_exports\csv\.gitkeep
+  + C:\Project\Book_Quality\12_exports\json\.gitkeep
+  + C:\Project\Book_Quality\12_exports\charts\.gitkeep
+  + C:\Project\Book_Quality\00_config\mongo_config.json
+  + C:\Project\Book_Quality\00_config\project_config.json
+  + C:\Project\Book_Quality\00_config\label_config_v1.json
+  + C:\Project\Book_Quality\README.md
+  + C:\Project\Book_Quality\10_docs\database_design.md
+  + C:\Project\Book_Quality\10_docs\label_rules.md
+  + C:\Project\Book_Quality\10_docs\feature_rules.md
+  + C:\Project\Book_Quality\10_docs\api_decision_rules.md
+  + C:\Project\Book_Quality\01_database\integrity\01_check_raw_data_integrity.py
+  + C:\Project\Book_Quality\01_database\bootstrap\02_create_bq_meta_and_indexes.py
+  + C:\Project\Book_Quality\02_labels\book_entry\03_build_book_entry_labels_v1.py
+  + C:\Project\Book_Quality\02_labels\trade_quality\04_build_trade_quality_labels_v1.py
+  + C:\Project\Book_Quality\03_features\book_entry\05_build_book_entry_features_v1.py
+  + C:\Project\Book_Quality\03_features\trade_quality\06_build_trade_quality_features_v1.py
+  + C:\Project\Book_Quality\04_dataset\book_entry\07_build_book_entry_dataset_v1.py
+  + C:\Project\Book_Quality\04_dataset\trade_quality\08_build_trade_quality_dataset_v1.py
+  + C:\Project\Book_Quality\05_training\book_entry\09_train_book_entry_model_v1.py
+  + C:\Project\Book_Quality\05_training\trade_quality\10_train_trade_quality_model_v1.py
+  + C:\Project\Book_Quality\07_backtest\book_quality\11_backtest_book_quality_v1.py
+  + C:\Project\Book_Quality\08_api\app\app.py
+  + C:\Project\Book_Quality\08_api\decision_engine\decision_engine.py
+  + C:\Project\Book_Quality\08_api\schemas\schemas.py

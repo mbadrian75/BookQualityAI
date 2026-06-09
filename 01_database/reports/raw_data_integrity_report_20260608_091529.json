@@ -1,0 +1,1344 @@
+{
+  "script_name": "01_check_raw_data_integrity.py",
+  "run_id": "raw_integrity_20260608_091529",
+  "project_root": "C:\\Project\\Book_Quality",
+  "database": "market_data",
+  "symbol": "XAUUSD",
+  "mongo_uri": "mongodb://localhost:27017",
+  "start_time": "2026-06-08T09:15:29.237573+00:00",
+  "end_time": "2026-06-08T09:20:31.336473+00:00",
+  "duration_seconds": 302.099,
+  "status": "success",
+  "collections": {
+    "m1": {
+      "timeframe": "m1",
+      "collection": "xauusd_m1",
+      "exists": true,
+      "status": "success",
+      "estimated_count": 5604412,
+      "sample_keys": [
+        "_id",
+        "datetime",
+        "date",
+        "time",
+        "open",
+        "high",
+        "low",
+        "close",
+        "volume"
+      ],
+      "detected_time_field": "datetime",
+      "detected_ohlc_fields": {
+        "open": "open",
+        "high": "high",
+        "low": "low",
+        "close": "close",
+        "volume": "volume"
+      },
+      "first_time_raw": "2010-01-03 18:00:00",
+      "last_time_raw": "2025-12-31 16:57:00",
+      "first_time": "2010-01-03 18:00:00",
+      "last_time": "2025-12-31 16:57:00",
+      "duplicates": {
+        "has_duplicate_examples": false,
+        "duplicate_examples": []
+      },
+      "gaps": {
+        "checked": true,
+        "expected_delta": "0:01:00",
+        "scanned": 5604412,
+        "gap_count": 26977,
+        "duplicate_or_reverse_count": 0,
+        "examples": [
+          {
+            "type": "gap",
+            "previous": "2010-01-03 22:29:00",
+            "current": "2010-01-03 22:31:00",
+            "expected_delta": "0:01:00",
+            "actual_delta": "0:02:00"
+          },
+          {
+            "type": "gap",
+            "previous": "2010-01-03 22:48:00",
+            "current": "2010-01-03 22:51:00",
+            "expected_delta": "0:01:00",
+            "actual_delta": "0:03:00"
+          },
+          {
+            "type": "gap",
+            "previous": "2010-01-03 23:58:00",
+            "current": "2010-01-04 00:00:00",
+            "expected_delta": "0:01:00",
+            "actual_delta": "0:02:00"
+          },
+          {
+            "type": "gap",
+            "previous": "2010-01-04 00:09:00",
+            "current": "2010-01-04 00:11:00",
+            "expected_delta": "0:01:00",
+            "actual_delta": "0:02:00"
+          },
+          {
+            "type": "gap",
+            "previous": "2010-01-04 15:29:00",
+            "current": "2010-01-04 15:31:00",
+            "expected_delta": "0:01:00",
+            "actual_delta": "0:02:00"
+          },
+          {
+            "type": "gap",
+            "previous": "2010-01-04 15:32:00",
+            "current": "2010-01-04 15:34:00",
+            "expected_delta": "0:01:00",
+            "actual_delta": "0:02:00"
+          },
+          {
+            "type": "gap",
+            "previous": "2010-01-04 16:09:00",
+            "current": "2010-01-04 16:11:00",
+            "expected_delta": "0:01:00",
+            "actual_delta": "0:02:00"
+          },
+          {
+            "type": "gap",
+            "previous": "2010-01-04 16:32:00",
+            "current": "2010-01-04 16:34:00",
+            "expected_delta": "0:01:00",
+            "actual_delta": "0:02:00"
+          },
+          {
+            "type": "gap",
+            "previous": "2010-01-04 16:36:00",
+            "current": "2010-01-04 16:38:00",
+            "expected_delta": "0:01:00",
+            "actual_delta": "0:02:00"
+          },
+          {
+            "type": "gap",
+            "previous": "2010-01-04 16:52:00",
+            "current": "2010-01-04 16:54:00",
+            "expected_delta": "0:01:00",
+            "actual_delta": "0:02:00"
+          },
+          {
+            "type": "gap",
+            "previous": "2010-01-04 17:03:00",
+            "current": "2010-01-04 17:06:00",
+            "expected_delta": "0:01:00",
+            "actual_delta": "0:03:00"
+          },
+          {
+            "type": "gap",
+            "previous": "2010-01-04 17:10:00",
+            "current": "2010-01-04 17:13:00",
+            "expected_delta": "0:01:00",
+            "actual_delta": "0:03:00"
+          },
+          {
+            "type": "gap",
+            "previous": "2010-01-04 17:14:00",
+            "current": "2010-01-04 17:26:00",
+            "expected_delta": "0:01:00",
+            "actual_delta": "0:12:00"
+          },
+          {
+            "type": "gap",
+            "previous": "2010-01-04 17:26:00",
+            "current": "2010-01-04 17:37:00",
+            "expected_delta": "0:01:00",
+            "actual_delta": "0:11:00"
+          },
+          {
+            "type": "gap",
+            "previous": "2010-01-04 17:37:00",
+            "current": "2010-01-04 17:47:00",
+            "expected_delta": "0:01:00",
+            "actual_delta": "0:10:00"
+          },
+          {
+            "type": "gap",
+            "previous": "2010-01-04 17:47:00",
+            "current": "2010-01-04 18:00:00",
+            "expected_delta": "0:01:00",
+            "actual_delta": "0:13:00"
+          },
+          {
+            "type": "gap",
+            "previous": "2010-01-04 18:25:00",
+            "current": "2010-01-04 18:27:00",
+            "expected_delta": "0:01:00",
+            "actual_delta": "0:02:00"
+          },
+          {
+            "type": "gap",
+            "previous": "2010-01-04 21:25:00",
+            "current": "2010-01-04 21:28:00",
+            "expected_delta": "0:01:00",
+            "actual_delta": "0:03:00"
+          },
+          {
+            "type": "gap",
+            "previous": "2010-01-04 21:29:00",
+            "current": "2010-01-04 21:32:00",
+            "expected_delta": "0:01:00",
+            "actual_delta": "0:03:00"
+          },
+          {
+            "type": "gap",
+            "previous": "2010-01-04 21:37:00",
+            "current": "2010-01-04 21:39:00",
+            "expected_delta": "0:01:00",
+            "actual_delta": "0:02:00"
+          }
+        ],
+        "max_gap_scan_docs": null
+      },
+      "ohlc_consistency": {
+        "checked": true,
+        "scanned": 5604412,
+        "bad_count": 0,
+        "bad_examples": []
+      }
+    },
+    "m5": {
+      "timeframe": "m5",
+      "collection": "xauusd_m5",
+      "exists": true,
+      "status": "success",
+      "estimated_count": 1127947,
+      "sample_keys": [
+        "_id",
+        "datetime",
+        "close",
+        "high",
+        "low",
+        "open",
+        "volume"
+      ],
+      "detected_time_field": "datetime",
+      "detected_ohlc_fields": {
+        "open": "open",
+        "high": "high",
+        "low": "low",
+        "close": "close",
+        "volume": "volume"
+      },
+      "first_time_raw": "2010-01-03 18:00:00",
+      "last_time_raw": "2025-12-31 16:55:00",
+      "first_time": "2010-01-03 18:00:00",
+      "last_time": "2025-12-31 16:55:00",
+      "duplicates": {
+        "has_duplicate_examples": false,
+        "duplicate_examples": []
+      },
+      "gaps": {
+        "checked": true,
+        "expected_delta": "0:05:00",
+        "scanned": 1127947,
+        "gap_count": 5183,
+        "duplicate_or_reverse_count": 0,
+        "examples": [
+          {
+            "type": "gap",
+            "previous": "2010-01-04 17:10:00",
+            "current": "2010-01-04 17:25:00",
+            "expected_delta": "0:05:00",
+            "actual_delta": "0:15:00"
+          },
+          {
+            "type": "gap",
+            "previous": "2010-01-04 17:25:00",
+            "current": "2010-01-04 17:35:00",
+            "expected_delta": "0:05:00",
+            "actual_delta": "0:10:00"
+          },
+          {
+            "type": "gap",
+            "previous": "2010-01-04 17:35:00",
+            "current": "2010-01-04 17:45:00",
+            "expected_delta": "0:05:00",
+            "actual_delta": "0:10:00"
+          },
+          {
+            "type": "gap",
+            "previous": "2010-01-04 17:45:00",
+            "current": "2010-01-04 18:00:00",
+            "expected_delta": "0:05:00",
+            "actual_delta": "0:15:00"
+          },
+          {
+            "type": "gap",
+            "previous": "2010-01-05 17:15:00",
+            "current": "2010-01-05 18:00:00",
+            "expected_delta": "0:05:00",
+            "actual_delta": "0:45:00"
+          },
+          {
+            "type": "gap",
+            "previous": "2010-01-06 17:15:00",
+            "current": "2010-01-06 17:35:00",
+            "expected_delta": "0:05:00",
+            "actual_delta": "0:20:00"
+          },
+          {
+            "type": "gap",
+            "previous": "2010-01-06 17:35:00",
+            "current": "2010-01-06 18:00:00",
+            "expected_delta": "0:05:00",
+            "actual_delta": "0:25:00"
+          },
+          {
+            "type": "gap",
+            "previous": "2010-01-07 17:20:00",
+            "current": "2010-01-07 18:00:00",
+            "expected_delta": "0:05:00",
+            "actual_delta": "0:40:00"
+          },
+          {
+            "type": "gap",
+            "previous": "2010-01-08 17:00:00",
+            "current": "2010-01-10 18:00:00",
+            "expected_delta": "0:05:00",
+            "actual_delta": "2 days, 1:00:00"
+          },
+          {
+            "type": "gap",
+            "previous": "2010-01-11 17:20:00",
+            "current": "2010-01-11 17:55:00",
+            "expected_delta": "0:05:00",
+            "actual_delta": "0:35:00"
+          },
+          {
+            "type": "gap",
+            "previous": "2010-01-12 17:20:00",
+            "current": "2010-01-12 18:00:00",
+            "expected_delta": "0:05:00",
+            "actual_delta": "0:40:00"
+          },
+          {
+            "type": "gap",
+            "previous": "2010-01-13 17:10:00",
+            "current": "2010-01-13 18:00:00",
+            "expected_delta": "0:05:00",
+            "actual_delta": "0:50:00"
+          },
+          {
+            "type": "gap",
+            "previous": "2010-01-14 17:20:00",
+            "current": "2010-01-14 18:00:00",
+            "expected_delta": "0:05:00",
+            "actual_delta": "0:40:00"
+          },
+          {
+            "type": "gap",
+            "previous": "2010-01-15 16:25:00",
+            "current": "2010-01-17 18:00:00",
+            "expected_delta": "0:05:00",
+            "actual_delta": "2 days, 1:35:00"
+          },
+          {
+            "type": "gap",
+            "previous": "2010-01-18 13:10:00",
+            "current": "2010-01-18 15:00:00",
+            "expected_delta": "0:05:00",
+            "actual_delta": "1:50:00"
+          },
+          {
+            "type": "gap",
+            "previous": "2010-01-18 15:00:00",
+            "current": "2010-01-18 16:40:00",
+            "expected_delta": "0:05:00",
+            "actual_delta": "1:40:00"
+          },
+          {
+            "type": "gap",
+            "previous": "2010-01-18 16:50:00",
+            "current": "2010-01-18 18:00:00",
+            "expected_delta": "0:05:00",
+            "actual_delta": "1:10:00"
+          },
+          {
+            "type": "gap",
+            "previous": "2010-01-19 17:15:00",
+            "current": "2010-01-19 18:00:00",
+            "expected_delta": "0:05:00",
+            "actual_delta": "0:45:00"
+          },
+          {
+            "type": "gap",
+            "previous": "2010-01-20 17:15:00",
+            "current": "2010-01-20 18:00:00",
+            "expected_delta": "0:05:00",
+            "actual_delta": "0:45:00"
+          },
+          {
+            "type": "gap",
+            "previous": "2010-01-21 17:20:00",
+            "current": "2010-01-21 18:00:00",
+            "expected_delta": "0:05:00",
+            "actual_delta": "0:40:00"
+          }
+        ],
+        "max_gap_scan_docs": null
+      },
+      "ohlc_consistency": {
+        "checked": true,
+        "scanned": 1127947,
+        "bad_count": 0,
+        "bad_examples": []
+      }
+    },
+    "m15": {
+      "timeframe": "m15",
+      "collection": "xauusd_m15",
+      "exists": true,
+      "status": "success",
+      "estimated_count": 376837,
+      "sample_keys": [
+        "_id",
+        "datetime",
+        "close",
+        "high",
+        "low",
+        "open",
+        "volume"
+      ],
+      "detected_time_field": "datetime",
+      "detected_ohlc_fields": {
+        "open": "open",
+        "high": "high",
+        "low": "low",
+        "close": "close",
+        "volume": "volume"
+      },
+      "first_time_raw": "2010-01-03 18:00:00",
+      "last_time_raw": "2025-12-31 16:45:00",
+      "first_time": "2010-01-03 18:00:00",
+      "last_time": "2025-12-31 16:45:00",
+      "duplicates": {
+        "has_duplicate_examples": false,
+        "duplicate_examples": []
+      },
+      "gaps": {
+        "checked": true,
+        "expected_delta": "0:15:00",
+        "scanned": 376837,
+        "gap_count": 4770,
+        "duplicate_or_reverse_count": 0,
+        "examples": [
+          {
+            "type": "gap",
+            "previous": "2010-01-05 17:15:00",
+            "current": "2010-01-05 18:00:00",
+            "expected_delta": "0:15:00",
+            "actual_delta": "0:45:00"
+          },
+          {
+            "type": "gap",
+            "previous": "2010-01-06 17:30:00",
+            "current": "2010-01-06 18:00:00",
+            "expected_delta": "0:15:00",
+            "actual_delta": "0:30:00"
+          },
+          {
+            "type": "gap",
+            "previous": "2010-01-07 17:15:00",
+            "current": "2010-01-07 18:00:00",
+            "expected_delta": "0:15:00",
+            "actual_delta": "0:45:00"
+          },
+          {
+            "type": "gap",
+            "previous": "2010-01-08 17:00:00",
+            "current": "2010-01-10 18:00:00",
+            "expected_delta": "0:15:00",
+            "actual_delta": "2 days, 1:00:00"
+          },
+          {
+            "type": "gap",
+            "previous": "2010-01-11 17:15:00",
+            "current": "2010-01-11 17:45:00",
+            "expected_delta": "0:15:00",
+            "actual_delta": "0:30:00"
+          },
+          {
+            "type": "gap",
+            "previous": "2010-01-12 17:15:00",
+            "current": "2010-01-12 18:00:00",
+            "expected_delta": "0:15:00",
+            "actual_delta": "0:45:00"
+          },
+          {
+            "type": "gap",
+            "previous": "2010-01-13 17:00:00",
+            "current": "2010-01-13 18:00:00",
+            "expected_delta": "0:15:00",
+            "actual_delta": "1:00:00"
+          },
+          {
+            "type": "gap",
+            "previous": "2010-01-14 17:15:00",
+            "current": "2010-01-14 18:00:00",
+            "expected_delta": "0:15:00",
+            "actual_delta": "0:45:00"
+          },
+          {
+            "type": "gap",
+            "previous": "2010-01-15 16:15:00",
+            "current": "2010-01-17 18:00:00",
+            "expected_delta": "0:15:00",
+            "actual_delta": "2 days, 1:45:00"
+          },
+          {
+            "type": "gap",
+            "previous": "2010-01-18 13:00:00",
+            "current": "2010-01-18 15:00:00",
+            "expected_delta": "0:15:00",
+            "actual_delta": "2:00:00"
+          },
+          {
+            "type": "gap",
+            "previous": "2010-01-18 15:00:00",
+            "current": "2010-01-18 16:30:00",
+            "expected_delta": "0:15:00",
+            "actual_delta": "1:30:00"
+          },
+          {
+            "type": "gap",
+            "previous": "2010-01-18 16:45:00",
+            "current": "2010-01-18 18:00:00",
+            "expected_delta": "0:15:00",
+            "actual_delta": "1:15:00"
+          },
+          {
+            "type": "gap",
+            "previous": "2010-01-19 17:15:00",
+            "current": "2010-01-19 18:00:00",
+            "expected_delta": "0:15:00",
+            "actual_delta": "0:45:00"
+          },
+          {
+            "type": "gap",
+            "previous": "2010-01-20 17:15:00",
+            "current": "2010-01-20 18:00:00",
+            "expected_delta": "0:15:00",
+            "actual_delta": "0:45:00"
+          },
+          {
+            "type": "gap",
+            "previous": "2010-01-21 17:15:00",
+            "current": "2010-01-21 18:00:00",
+            "expected_delta": "0:15:00",
+            "actual_delta": "0:45:00"
+          },
+          {
+            "type": "gap",
+            "previous": "2010-01-22 16:45:00",
+            "current": "2010-01-24 18:00:00",
+            "expected_delta": "0:15:00",
+            "actual_delta": "2 days, 1:15:00"
+          },
+          {
+            "type": "gap",
+            "previous": "2010-01-25 17:15:00",
+            "current": "2010-01-25 18:00:00",
+            "expected_delta": "0:15:00",
+            "actual_delta": "0:45:00"
+          },
+          {
+            "type": "gap",
+            "previous": "2010-01-26 17:30:00",
+            "current": "2010-01-26 18:00:00",
+            "expected_delta": "0:15:00",
+            "actual_delta": "0:30:00"
+          },
+          {
+            "type": "gap",
+            "previous": "2010-01-27 17:15:00",
+            "current": "2010-01-27 17:45:00",
+            "expected_delta": "0:15:00",
+            "actual_delta": "0:30:00"
+          },
+          {
+            "type": "gap",
+            "previous": "2010-01-28 17:15:00",
+            "current": "2010-01-28 17:45:00",
+            "expected_delta": "0:15:00",
+            "actual_delta": "0:30:00"
+          }
+        ],
+        "max_gap_scan_docs": null
+      },
+      "ohlc_consistency": {
+        "checked": true,
+        "scanned": 376837,
+        "bad_count": 0,
+        "bad_examples": []
+      }
+    },
+    "m30": {
+      "timeframe": "m30",
+      "collection": "xauusd_m30",
+      "exists": true,
+      "status": "success",
+      "estimated_count": 188895,
+      "sample_keys": [
+        "_id",
+        "datetime",
+        "close",
+        "high",
+        "low",
+        "open",
+        "volume"
+      ],
+      "detected_time_field": "datetime",
+      "detected_ohlc_fields": {
+        "open": "open",
+        "high": "high",
+        "low": "low",
+        "close": "close",
+        "volume": "volume"
+      },
+      "first_time_raw": "2010-01-03 18:00:00",
+      "last_time_raw": "2025-12-31 16:30:00",
+      "first_time": "2010-01-03 18:00:00",
+      "last_time": "2025-12-31 16:30:00",
+      "duplicates": {
+        "has_duplicate_examples": false,
+        "duplicate_examples": []
+      },
+      "gaps": {
+        "checked": true,
+        "expected_delta": "0:30:00",
+        "scanned": 188895,
+        "gap_count": 4575,
+        "duplicate_or_reverse_count": 0,
+        "examples": [
+          {
+            "type": "gap",
+            "previous": "2010-01-05 17:00:00",
+            "current": "2010-01-05 18:00:00",
+            "expected_delta": "0:30:00",
+            "actual_delta": "1:00:00"
+          },
+          {
+            "type": "gap",
+            "previous": "2010-01-07 17:00:00",
+            "current": "2010-01-07 18:00:00",
+            "expected_delta": "0:30:00",
+            "actual_delta": "1:00:00"
+          },
+          {
+            "type": "gap",
+            "previous": "2010-01-08 17:00:00",
+            "current": "2010-01-10 18:00:00",
+            "expected_delta": "0:30:00",
+            "actual_delta": "2 days, 1:00:00"
+          },
+          {
+            "type": "gap",
+            "previous": "2010-01-12 17:00:00",
+            "current": "2010-01-12 18:00:00",
+            "expected_delta": "0:30:00",
+            "actual_delta": "1:00:00"
+          },
+          {
+            "type": "gap",
+            "previous": "2010-01-13 17:00:00",
+            "current": "2010-01-13 18:00:00",
+            "expected_delta": "0:30:00",
+            "actual_delta": "1:00:00"
+          },
+          {
+            "type": "gap",
+            "previous": "2010-01-14 17:00:00",
+            "current": "2010-01-14 18:00:00",
+            "expected_delta": "0:30:00",
+            "actual_delta": "1:00:00"
+          },
+          {
+            "type": "gap",
+            "previous": "2010-01-15 16:00:00",
+            "current": "2010-01-17 18:00:00",
+            "expected_delta": "0:30:00",
+            "actual_delta": "2 days, 2:00:00"
+          },
+          {
+            "type": "gap",
+            "previous": "2010-01-18 13:00:00",
+            "current": "2010-01-18 15:00:00",
+            "expected_delta": "0:30:00",
+            "actual_delta": "2:00:00"
+          },
+          {
+            "type": "gap",
+            "previous": "2010-01-18 15:00:00",
+            "current": "2010-01-18 16:30:00",
+            "expected_delta": "0:30:00",
+            "actual_delta": "1:30:00"
+          },
+          {
+            "type": "gap",
+            "previous": "2010-01-18 16:30:00",
+            "current": "2010-01-18 18:00:00",
+            "expected_delta": "0:30:00",
+            "actual_delta": "1:30:00"
+          },
+          {
+            "type": "gap",
+            "previous": "2010-01-19 17:00:00",
+            "current": "2010-01-19 18:00:00",
+            "expected_delta": "0:30:00",
+            "actual_delta": "1:00:00"
+          },
+          {
+            "type": "gap",
+            "previous": "2010-01-20 17:00:00",
+            "current": "2010-01-20 18:00:00",
+            "expected_delta": "0:30:00",
+            "actual_delta": "1:00:00"
+          },
+          {
+            "type": "gap",
+            "previous": "2010-01-21 17:00:00",
+            "current": "2010-01-21 18:00:00",
+            "expected_delta": "0:30:00",
+            "actual_delta": "1:00:00"
+          },
+          {
+            "type": "gap",
+            "previous": "2010-01-22 16:30:00",
+            "current": "2010-01-24 18:00:00",
+            "expected_delta": "0:30:00",
+            "actual_delta": "2 days, 1:30:00"
+          },
+          {
+            "type": "gap",
+            "previous": "2010-01-25 17:00:00",
+            "current": "2010-01-25 18:00:00",
+            "expected_delta": "0:30:00",
+            "actual_delta": "1:00:00"
+          },
+          {
+            "type": "gap",
+            "previous": "2010-01-29 16:30:00",
+            "current": "2010-01-31 18:00:00",
+            "expected_delta": "0:30:00",
+            "actual_delta": "2 days, 1:30:00"
+          },
+          {
+            "type": "gap",
+            "previous": "2010-02-01 17:00:00",
+            "current": "2010-02-01 18:00:00",
+            "expected_delta": "0:30:00",
+            "actual_delta": "1:00:00"
+          },
+          {
+            "type": "gap",
+            "previous": "2010-02-04 17:00:00",
+            "current": "2010-02-04 18:00:00",
+            "expected_delta": "0:30:00",
+            "actual_delta": "1:00:00"
+          },
+          {
+            "type": "gap",
+            "previous": "2010-02-05 16:30:00",
+            "current": "2010-02-07 18:00:00",
+            "expected_delta": "0:30:00",
+            "actual_delta": "2 days, 1:30:00"
+          },
+          {
+            "type": "gap",
+            "previous": "2010-02-09 17:00:00",
+            "current": "2010-02-09 18:00:00",
+            "expected_delta": "0:30:00",
+            "actual_delta": "1:00:00"
+          }
+        ],
+        "max_gap_scan_docs": null
+      },
+      "ohlc_consistency": {
+        "checked": true,
+        "scanned": 188895,
+        "bad_count": 0,
+        "bad_examples": []
+      }
+    },
+    "h1": {
+      "timeframe": "h1",
+      "collection": "xauusd_h1",
+      "exists": true,
+      "status": "success",
+      "estimated_count": 95009,
+      "sample_keys": [
+        "_id",
+        "datetime",
+        "close",
+        "high",
+        "low",
+        "open",
+        "volume"
+      ],
+      "detected_time_field": "datetime",
+      "detected_ohlc_fields": {
+        "open": "open",
+        "high": "high",
+        "low": "low",
+        "close": "close",
+        "volume": "volume"
+      },
+      "first_time_raw": "2010-01-03 18:00:00",
+      "last_time_raw": "2025-12-31 16:00:00",
+      "first_time": "2010-01-03 18:00:00",
+      "last_time": "2025-12-31 16:00:00",
+      "duplicates": {
+        "has_duplicate_examples": false,
+        "duplicate_examples": []
+      },
+      "gaps": {
+        "checked": true,
+        "expected_delta": "1:00:00",
+        "scanned": 95009,
+        "gap_count": 3551,
+        "duplicate_or_reverse_count": 0,
+        "examples": [
+          {
+            "type": "gap",
+            "previous": "2010-01-08 17:00:00",
+            "current": "2010-01-10 18:00:00",
+            "expected_delta": "1:00:00",
+            "actual_delta": "2 days, 1:00:00"
+          },
+          {
+            "type": "gap",
+            "previous": "2010-01-15 16:00:00",
+            "current": "2010-01-17 18:00:00",
+            "expected_delta": "1:00:00",
+            "actual_delta": "2 days, 2:00:00"
+          },
+          {
+            "type": "gap",
+            "previous": "2010-01-18 13:00:00",
+            "current": "2010-01-18 15:00:00",
+            "expected_delta": "1:00:00",
+            "actual_delta": "2:00:00"
+          },
+          {
+            "type": "gap",
+            "previous": "2010-01-18 16:00:00",
+            "current": "2010-01-18 18:00:00",
+            "expected_delta": "1:00:00",
+            "actual_delta": "2:00:00"
+          },
+          {
+            "type": "gap",
+            "previous": "2010-01-22 16:00:00",
+            "current": "2010-01-24 18:00:00",
+            "expected_delta": "1:00:00",
+            "actual_delta": "2 days, 2:00:00"
+          },
+          {
+            "type": "gap",
+            "previous": "2010-01-29 16:00:00",
+            "current": "2010-01-31 18:00:00",
+            "expected_delta": "1:00:00",
+            "actual_delta": "2 days, 2:00:00"
+          },
+          {
+            "type": "gap",
+            "previous": "2010-02-05 16:00:00",
+            "current": "2010-02-07 18:00:00",
+            "expected_delta": "1:00:00",
+            "actual_delta": "2 days, 2:00:00"
+          },
+          {
+            "type": "gap",
+            "previous": "2010-02-12 16:00:00",
+            "current": "2010-02-14 18:00:00",
+            "expected_delta": "1:00:00",
+            "actual_delta": "2 days, 2:00:00"
+          },
+          {
+            "type": "gap",
+            "previous": "2010-02-15 13:00:00",
+            "current": "2010-02-15 16:00:00",
+            "expected_delta": "1:00:00",
+            "actual_delta": "3:00:00"
+          },
+          {
+            "type": "gap",
+            "previous": "2010-02-15 16:00:00",
+            "current": "2010-02-15 18:00:00",
+            "expected_delta": "1:00:00",
+            "actual_delta": "2:00:00"
+          },
+          {
+            "type": "gap",
+            "previous": "2010-02-19 16:00:00",
+            "current": "2010-02-21 18:00:00",
+            "expected_delta": "1:00:00",
+            "actual_delta": "2 days, 2:00:00"
+          },
+          {
+            "type": "gap",
+            "previous": "2010-02-26 17:00:00",
+            "current": "2010-02-28 18:00:00",
+            "expected_delta": "1:00:00",
+            "actual_delta": "2 days, 1:00:00"
+          },
+          {
+            "type": "gap",
+            "previous": "2010-03-05 16:00:00",
+            "current": "2010-03-07 18:00:00",
+            "expected_delta": "1:00:00",
+            "actual_delta": "2 days, 2:00:00"
+          },
+          {
+            "type": "gap",
+            "previous": "2010-03-12 16:00:00",
+            "current": "2010-03-14 18:00:00",
+            "expected_delta": "1:00:00",
+            "actual_delta": "2 days, 2:00:00"
+          },
+          {
+            "type": "gap",
+            "previous": "2010-03-19 16:00:00",
+            "current": "2010-03-21 18:00:00",
+            "expected_delta": "1:00:00",
+            "actual_delta": "2 days, 2:00:00"
+          },
+          {
+            "type": "gap",
+            "previous": "2010-03-26 16:00:00",
+            "current": "2010-03-28 18:00:00",
+            "expected_delta": "1:00:00",
+            "actual_delta": "2 days, 2:00:00"
+          },
+          {
+            "type": "gap",
+            "previous": "2010-04-02 09:00:00",
+            "current": "2010-04-02 15:00:00",
+            "expected_delta": "1:00:00",
+            "actual_delta": "6:00:00"
+          },
+          {
+            "type": "gap",
+            "previous": "2010-04-02 16:00:00",
+            "current": "2010-04-04 17:00:00",
+            "expected_delta": "1:00:00",
+            "actual_delta": "2 days, 1:00:00"
+          },
+          {
+            "type": "gap",
+            "previous": "2010-04-09 16:00:00",
+            "current": "2010-04-11 18:00:00",
+            "expected_delta": "1:00:00",
+            "actual_delta": "2 days, 2:00:00"
+          },
+          {
+            "type": "gap",
+            "previous": "2010-04-16 16:00:00",
+            "current": "2010-04-18 18:00:00",
+            "expected_delta": "1:00:00",
+            "actual_delta": "2 days, 2:00:00"
+          }
+        ],
+        "max_gap_scan_docs": null
+      },
+      "ohlc_consistency": {
+        "checked": true,
+        "scanned": 95009,
+        "bad_count": 0,
+        "bad_examples": []
+      }
+    },
+    "h4": {
+      "timeframe": "h4",
+      "collection": "xauusd_h4",
+      "exists": true,
+      "status": "success",
+      "estimated_count": 25550,
+      "sample_keys": [
+        "_id",
+        "datetime",
+        "close",
+        "high",
+        "low",
+        "open",
+        "volume"
+      ],
+      "detected_time_field": "datetime",
+      "detected_ohlc_fields": {
+        "open": "open",
+        "high": "high",
+        "low": "low",
+        "close": "close",
+        "volume": "volume"
+      },
+      "first_time_raw": "2010-01-03 16:00:00",
+      "last_time_raw": "2025-12-31 16:00:00",
+      "first_time": "2010-01-03 16:00:00",
+      "last_time": "2025-12-31 16:00:00",
+      "duplicates": {
+        "has_duplicate_examples": false,
+        "duplicate_examples": []
+      },
+      "gaps": {
+        "checked": true,
+        "expected_delta": "4:00:00",
+        "scanned": 25550,
+        "gap_count": 852,
+        "duplicate_or_reverse_count": 0,
+        "examples": [
+          {
+            "type": "gap",
+            "previous": "2010-01-08 16:00:00",
+            "current": "2010-01-10 16:00:00",
+            "expected_delta": "4:00:00",
+            "actual_delta": "2 days, 0:00:00"
+          },
+          {
+            "type": "gap",
+            "previous": "2010-01-15 16:00:00",
+            "current": "2010-01-17 16:00:00",
+            "expected_delta": "4:00:00",
+            "actual_delta": "2 days, 0:00:00"
+          },
+          {
+            "type": "gap",
+            "previous": "2010-01-22 16:00:00",
+            "current": "2010-01-24 16:00:00",
+            "expected_delta": "4:00:00",
+            "actual_delta": "2 days, 0:00:00"
+          },
+          {
+            "type": "gap",
+            "previous": "2010-01-29 16:00:00",
+            "current": "2010-01-31 16:00:00",
+            "expected_delta": "4:00:00",
+            "actual_delta": "2 days, 0:00:00"
+          },
+          {
+            "type": "gap",
+            "previous": "2010-02-05 16:00:00",
+            "current": "2010-02-07 16:00:00",
+            "expected_delta": "4:00:00",
+            "actual_delta": "2 days, 0:00:00"
+          },
+          {
+            "type": "gap",
+            "previous": "2010-02-12 16:00:00",
+            "current": "2010-02-14 16:00:00",
+            "expected_delta": "4:00:00",
+            "actual_delta": "2 days, 0:00:00"
+          },
+          {
+            "type": "gap",
+            "previous": "2010-02-19 16:00:00",
+            "current": "2010-02-21 16:00:00",
+            "expected_delta": "4:00:00",
+            "actual_delta": "2 days, 0:00:00"
+          },
+          {
+            "type": "gap",
+            "previous": "2010-02-26 16:00:00",
+            "current": "2010-02-28 16:00:00",
+            "expected_delta": "4:00:00",
+            "actual_delta": "2 days, 0:00:00"
+          },
+          {
+            "type": "gap",
+            "previous": "2010-03-05 16:00:00",
+            "current": "2010-03-07 16:00:00",
+            "expected_delta": "4:00:00",
+            "actual_delta": "2 days, 0:00:00"
+          },
+          {
+            "type": "gap",
+            "previous": "2010-03-12 16:00:00",
+            "current": "2010-03-14 16:00:00",
+            "expected_delta": "4:00:00",
+            "actual_delta": "2 days, 0:00:00"
+          },
+          {
+            "type": "gap",
+            "previous": "2010-03-19 16:00:00",
+            "current": "2010-03-21 16:00:00",
+            "expected_delta": "4:00:00",
+            "actual_delta": "2 days, 0:00:00"
+          },
+          {
+            "type": "gap",
+            "previous": "2010-03-26 16:00:00",
+            "current": "2010-03-28 16:00:00",
+            "expected_delta": "4:00:00",
+            "actual_delta": "2 days, 0:00:00"
+          },
+          {
+            "type": "gap",
+            "previous": "2010-04-02 16:00:00",
+            "current": "2010-04-04 16:00:00",
+            "expected_delta": "4:00:00",
+            "actual_delta": "2 days, 0:00:00"
+          },
+          {
+            "type": "gap",
+            "previous": "2010-04-09 16:00:00",
+            "current": "2010-04-11 16:00:00",
+            "expected_delta": "4:00:00",
+            "actual_delta": "2 days, 0:00:00"
+          },
+          {
+            "type": "gap",
+            "previous": "2010-04-16 16:00:00",
+            "current": "2010-04-18 16:00:00",
+            "expected_delta": "4:00:00",
+            "actual_delta": "2 days, 0:00:00"
+          },
+          {
+            "type": "gap",
+            "previous": "2010-04-23 16:00:00",
+            "current": "2010-04-25 16:00:00",
+            "expected_delta": "4:00:00",
+            "actual_delta": "2 days, 0:00:00"
+          },
+          {
+            "type": "gap",
+            "previous": "2010-04-30 16:00:00",
+            "current": "2010-05-02 16:00:00",
+            "expected_delta": "4:00:00",
+            "actual_delta": "2 days, 0:00:00"
+          },
+          {
+            "type": "gap",
+            "previous": "2010-05-07 16:00:00",
+            "current": "2010-05-09 16:00:00",
+            "expected_delta": "4:00:00",
+            "actual_delta": "2 days, 0:00:00"
+          },
+          {
+            "type": "gap",
+            "previous": "2010-05-14 16:00:00",
+            "current": "2010-05-16 16:00:00",
+            "expected_delta": "4:00:00",
+            "actual_delta": "2 days, 0:00:00"
+          },
+          {
+            "type": "gap",
+            "previous": "2010-05-21 16:00:00",
+            "current": "2010-05-23 16:00:00",
+            "expected_delta": "4:00:00",
+            "actual_delta": "2 days, 0:00:00"
+          }
+        ],
+        "max_gap_scan_docs": null
+      },
+      "ohlc_consistency": {
+        "checked": true,
+        "scanned": 25550,
+        "bad_count": 0,
+        "bad_examples": []
+      }
+    },
+    "d1": {
+      "timeframe": "d1",
+      "collection": "xauusd_d1",
+      "exists": true,
+      "status": "success",
+      "estimated_count": 4978,
+      "sample_keys": [
+        "_id",
+        "datetime",
+        "close",
+        "high",
+        "low",
+        "open",
+        "volume"
+      ],
+      "detected_time_field": "datetime",
+      "detected_ohlc_fields": {
+        "open": "open",
+        "high": "high",
+        "low": "low",
+        "close": "close",
+        "volume": "volume"
+      },
+      "first_time_raw": "2010-01-03 00:00:00",
+      "last_time_raw": "2025-12-31 00:00:00",
+      "first_time": "2010-01-03 00:00:00",
+      "last_time": "2025-12-31 00:00:00",
+      "duplicates": {
+        "has_duplicate_examples": false,
+        "duplicate_examples": []
+      },
+      "gaps": {
+        "checked": true,
+        "expected_delta": "1 day, 0:00:00",
+        "scanned": 4978,
+        "gap_count": 836,
+        "duplicate_or_reverse_count": 0,
+        "examples": [
+          {
+            "type": "gap",
+            "previous": "2010-01-08 00:00:00",
+            "current": "2010-01-10 00:00:00",
+            "expected_delta": "1 day, 0:00:00",
+            "actual_delta": "2 days, 0:00:00"
+          },
+          {
+            "type": "gap",
+            "previous": "2010-01-15 00:00:00",
+            "current": "2010-01-17 00:00:00",
+            "expected_delta": "1 day, 0:00:00",
+            "actual_delta": "2 days, 0:00:00"
+          },
+          {
+            "type": "gap",
+            "previous": "2010-01-22 00:00:00",
+            "current": "2010-01-24 00:00:00",
+            "expected_delta": "1 day, 0:00:00",
+            "actual_delta": "2 days, 0:00:00"
+          },
+          {
+            "type": "gap",
+            "previous": "2010-01-29 00:00:00",
+            "current": "2010-01-31 00:00:00",
+            "expected_delta": "1 day, 0:00:00",
+            "actual_delta": "2 days, 0:00:00"
+          },
+          {
+            "type": "gap",
+            "previous": "2010-02-05 00:00:00",
+            "current": "2010-02-07 00:00:00",
+            "expected_delta": "1 day, 0:00:00",
+            "actual_delta": "2 days, 0:00:00"
+          },
+          {
+            "type": "gap",
+            "previous": "2010-02-12 00:00:00",
+            "current": "2010-02-14 00:00:00",
+            "expected_delta": "1 day, 0:00:00",
+            "actual_delta": "2 days, 0:00:00"
+          },
+          {
+            "type": "gap",
+            "previous": "2010-02-19 00:00:00",
+            "current": "2010-02-21 00:00:00",
+            "expected_delta": "1 day, 0:00:00",
+            "actual_delta": "2 days, 0:00:00"
+          },
+          {
+            "type": "gap",
+            "previous": "2010-02-26 00:00:00",
+            "current": "2010-02-28 00:00:00",
+            "expected_delta": "1 day, 0:00:00",
+            "actual_delta": "2 days, 0:00:00"
+          },
+          {
+            "type": "gap",
+            "previous": "2010-03-05 00:00:00",
+            "current": "2010-03-07 00:00:00",
+            "expected_delta": "1 day, 0:00:00",
+            "actual_delta": "2 days, 0:00:00"
+          },
+          {
+            "type": "gap",
+            "previous": "2010-03-12 00:00:00",
+            "current": "2010-03-14 00:00:00",
+            "expected_delta": "1 day, 0:00:00",
+            "actual_delta": "2 days, 0:00:00"
+          },
+          {
+            "type": "gap",
+            "previous": "2010-03-19 00:00:00",
+            "current": "2010-03-21 00:00:00",
+            "expected_delta": "1 day, 0:00:00",
+            "actual_delta": "2 days, 0:00:00"
+          },
+          {
+            "type": "gap",
+            "previous": "2010-03-26 00:00:00",
+            "current": "2010-03-28 00:00:00",
+            "expected_delta": "1 day, 0:00:00",
+            "actual_delta": "2 days, 0:00:00"
+          },
+          {
+            "type": "gap",
+            "previous": "2010-04-02 00:00:00",
+            "current": "2010-04-04 00:00:00",
+            "expected_delta": "1 day, 0:00:00",
+            "actual_delta": "2 days, 0:00:00"
+          },
+          {
+            "type": "gap",
+            "previous": "2010-04-09 00:00:00",
+            "current": "2010-04-11 00:00:00",
+            "expected_delta": "1 day, 0:00:00",
+            "actual_delta": "2 days, 0:00:00"
+          },
+          {
+            "type": "gap",
+            "previous": "2010-04-16 00:00:00",
+            "current": "2010-04-18 00:00:00",
+            "expected_delta": "1 day, 0:00:00",
+            "actual_delta": "2 days, 0:00:00"
+          },
+          {
+            "type": "gap",
+            "previous": "2010-04-23 00:00:00",
+            "current": "2010-04-25 00:00:00",
+            "expected_delta": "1 day, 0:00:00",
+            "actual_delta": "2 days, 0:00:00"
+          },
+          {
+            "type": "gap",
+            "previous": "2010-04-30 00:00:00",
+            "current": "2010-05-02 00:00:00",
+            "expected_delta": "1 day, 0:00:00",
+            "actual_delta": "2 days, 0:00:00"
+          },
+          {
+            "type": "gap",
+            "previous": "2010-05-07 00:00:00",
+            "current": "2010-05-09 00:00:00",
+            "expected_delta": "1 day, 0:00:00",
+            "actual_delta": "2 days, 0:00:00"
+          },
+          {
+            "type": "gap",
+            "previous": "2010-05-14 00:00:00",
+            "current": "2010-05-16 00:00:00",
+            "expected_delta": "1 day, 0:00:00",
+            "actual_delta": "2 days, 0:00:00"
+          },
+          {
+            "type": "gap",
+            "previous": "2010-05-21 00:00:00",
+            "current": "2010-05-23 00:00:00",
+            "expected_delta": "1 day, 0:00:00",
+            "actual_delta": "2 days, 0:00:00"
+          }
+        ],
+        "max_gap_scan_docs": null
+      },
+      "ohlc_consistency": {
+        "checked": true,
+        "scanned": 4978,
+        "bad_count": 0,
+        "bad_examples": []
+      }
+    }
+  },
+  "warnings": [
+    "M1 has time gaps. Some gaps may be normal around market closures.",
+    "M5 has time gaps. Some gaps may be normal around market closures.",
+    "M15 has time gaps. Some gaps may be normal around market closures.",
+    "M30 has time gaps. Some gaps may be normal around market closures.",
+    "H1 has time gaps. Some gaps may be normal around market closures.",
+    "H4 has time gaps. Some gaps may be normal around market closures.",
+    "D1 has time gaps. Some gaps may be normal around market closures."
+  ],
+  "errors": [],
+  "report_json_path": "C:\\Project\\Book_Quality\\01_database\\reports\\raw_data_integrity_report_20260608_091529.json",
+  "report_txt_path": "C:\\Project\\Book_Quality\\01_database\\reports\\raw_data_integrity_report_20260608_091529.txt"
+}
