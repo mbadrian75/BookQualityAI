@@ -1,0 +1,69 @@
+{
+  "script_name": "05_build_book_entry_features_v1.py",
+  "run_id": "book_entry_features_v1_20260609_065942",
+  "project_root": "C:\\Project\\BookQuality",
+  "database": "market_data",
+  "symbol": "XAUUSD",
+  "start_time": "2026-06-09T06:59:42.335444+00:00",
+  "end_time": "2026-06-09T06:59:50.534126+00:00",
+  "duration_seconds": 8.199,
+  "status": "success",
+  "feature_version": "book_entry_features_v1",
+  "max_lookback_minutes": 960,
+  "collections": {
+    "labels_source": "bq_labels_book_entry_m15_v1",
+    "m1_source": "xauusd_m1",
+    "m5_source": "xauusd_m5",
+    "m15_source": "xauusd_m15",
+    "target": "bq_features_book_entry_m15_v1"
+  },
+  "args": {
+    "limit": 1000,
+    "reset": true,
+    "start": null,
+    "end": null,
+    "skip_existing": false
+  },
+  "source_loads": {
+    "m1": {
+      "collection": "xauusd_m1",
+      "start": "2010-01-03 01:45:00",
+      "end": "2010-01-18 09:31:00",
+      "count": 14688,
+      "volume_field": "volume"
+    },
+    "m5": {
+      "collection": "xauusd_m5",
+      "start": "2010-01-03 01:45:00",
+      "end": "2010-01-18 09:31:00",
+      "count": 2981,
+      "volume_field": "volume"
+    },
+    "m15": {
+      "collection": "xauusd_m15",
+      "start": "2010-01-03 01:45:00",
+      "end": "2010-01-18 09:31:00",
+      "count": 1001,
+      "volume_field": "volume"
+    }
+  },
+  "counts": {
+    "anchors_loaded": 1000,
+    "anchors_processed": 1000,
+    "upserted_or_modified": 1000,
+    "inserted": 1000,
+    "matched": 0,
+    "modified": 0,
+    "skipped_existing": 0,
+    "row_errors": 0
+  },
+  "feature_count_min": 363,
+  "feature_count_max": 363,
+  "feature_count_last": 363,
+  "warnings": [],
+  "errors": [],
+  "reset_deleted_count": 0,
+  "final_target_count": 1000,
+  "report_json_path": "C:\\Project\\BookQuality\\03_features\\reports\\book_entry_features_v1_report_20260609_065942.json",
+  "report_txt_path": "C:\\Project\\BookQuality\\03_features\\reports\\book_entry_features_v1_report_20260609_065942.txt"
+}

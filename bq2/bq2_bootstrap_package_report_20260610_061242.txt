@@ -1,0 +1,11 @@
+Book & Quality v2 - Bootstrap Package Artifact Report
+==========================================================================
+Run ID            : bq2_bootstrap_package_20260610_061242
+Created At        : 2026-06-10T06:12:42.578529+00:00
+Status            : success
+Raw Data Modified : False
+
+Files:
+  + 00_project_setup/00_create_bq2_structure.py
+  + 01_database/bootstrap/01_create_bq2_meta_and_indexes.py
+  + 10_docs/bq2_locked_spec.md

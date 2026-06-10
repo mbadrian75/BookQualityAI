@@ -1,0 +1,97 @@
+{
+  "script_name": "04_build_trade_quality_labels_v1.py",
+  "run_id": "trade_quality_labels_v1_20260609_064407",
+  "project_root": "C:\\Project\\BookQuality",
+  "database": "market_data",
+  "symbol": "XAUUSD",
+  "start_time": "2026-06-09T06:44:07.444028+00:00",
+  "end_time": "2026-06-09T06:44:11.170291+00:00",
+  "duration_seconds": 3.726,
+  "status": "success",
+  "collections": {
+    "m15_source": "xauusd_m15",
+    "target": "bq_labels_trade_quality_m15_v1"
+  },
+  "args": {
+    "limit": 1000,
+    "reset": true,
+    "start": null,
+    "end": null,
+    "skip_existing": false
+  },
+  "label_config": {
+    "label_version": "trade_quality_label_v1",
+    "entry_rule": "Quality is evaluated from next M15 open after anchor_time.",
+    "base_r_usd": 2.0,
+    "horizon_m15_short": 8,
+    "horizon_m15_mid": 16,
+    "horizon_m15_long": 32,
+    "quality_score_min": 0,
+    "quality_score_max": 100,
+    "trend_phase_classes": [
+      "UP_TREND_EARLY",
+      "UP_TREND_MATURE",
+      "UP_TREND_EXHAUSTION",
+      "DOWN_TREND_EARLY",
+      "DOWN_TREND_MATURE",
+      "DOWN_TREND_EXHAUSTION",
+      "RANGE",
+      "TRANSITION"
+    ]
+  },
+  "counts": {
+    "anchors_read": 1000,
+    "upserted_or_modified": 1000,
+    "inserted": 1000,
+    "matched": 0,
+    "modified": 0,
+    "skipped_existing": 0,
+    "skipped_no_entry": 0,
+    "skipped_no_future_path": 0,
+    "row_errors": 0
+  },
+  "buy_quality_buckets": {
+    "BAD": 460,
+    "LOW": 104,
+    "MEDIUM": 99,
+    "HIGH": 175,
+    "EXCELLENT": 162
+  },
+  "sell_quality_buckets": {
+    "BAD": 496,
+    "LOW": 103,
+    "MEDIUM": 85,
+    "HIGH": 165,
+    "EXCELLENT": 151
+  },
+  "range_bucket_distribution": {
+    "BAD": 542,
+    "LOW": 188,
+    "MEDIUM": 171,
+    "HIGH": 92,
+    "EXCELLENT": 7
+  },
+  "trend_phase_distribution": {
+    "DOWN_TREND_EXHAUSTION": 171,
+    "DOWN_TREND_EARLY": 100,
+    "UP_TREND_MATURE": 204,
+    "TRANSITION": 13,
+    "UP_TREND_EXHAUSTION": 141,
+    "RANGE": 99,
+    "UP_TREND_EARLY": 109,
+    "DOWN_TREND_MATURE": 163
+  },
+  "boolean_counts": {
+    "fake_buy": 351,
+    "fake_sell": 377,
+    "is_range": 99,
+    "buy_quality_ge_70": 337,
+    "sell_quality_ge_70": 316
+  },
+  "warnings": [],
+  "errors": [],
+  "reset_deleted_count": 0,
+  "final_target_count": 1000,
+  "report_json_path": "C:\\Project\\BookQuality\\02_labels\\reports\\trade_quality_labels_v1_report_20260609_064407.json",
+  "report_txt_path": "C:\\Project\\BookQuality\\02_labels\\reports\\trade_quality_labels_v1_report_20260609_064407.txt"
+}

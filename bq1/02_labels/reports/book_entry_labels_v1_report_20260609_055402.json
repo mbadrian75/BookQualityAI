@@ -1,0 +1,60 @@
+{
+  "script_name": "03_build_book_entry_labels_v1.py",
+  "run_id": "book_entry_labels_v1_20260609_055402",
+  "project_root": "C:\\Project\\Book_Quality",
+  "database": "market_data",
+  "symbol": "XAUUSD",
+  "start_time": "2026-06-09T05:54:02.714574+00:00",
+  "end_time": "2026-06-09T06:24:39.421593+00:00",
+  "duration_seconds": 1836.707,
+  "status": "success",
+  "collections": {
+    "source_m15": "xauusd_m15",
+    "source_m1": "xauusd_m1",
+    "target_labels": "bq_labels_book_entry_m15_v1"
+  },
+  "args": {
+    "limit": null,
+    "reset": false,
+    "skip_existing": false,
+    "start": null,
+    "end": null
+  },
+  "label_config": {
+    "label_version": "book_entry_label_v1",
+    "entry_rule": "Entry at next M15 open after anchor_time.",
+    "tp_usd": 2.0,
+    "sl_usd": 2.0,
+    "horizon_m15": 8,
+    "ambiguous_policy": "NOTRADE",
+    "outputs": [
+      "BUY",
+      "SELL",
+      "NOTRADE"
+    ]
+  },
+  "counts": {
+    "anchors_read": 376836,
+    "upserted_or_modified": 376836,
+    "skipped_existing": 0,
+    "skipped_no_entry": 0,
+    "skipped_no_future_m1": 0,
+    "row_errors": 0
+  },
+  "label_distribution": {
+    "BUY": 143456,
+    "SELL": 143695,
+    "NOTRADE": 89685
+  },
+  "reason_distribution": {
+    "sell_tp_before_sl": 143695,
+    "buy_tp_before_sl": 143456,
+    "no_clear_edge": 89267,
+    "ambiguous_intrabar": 418
+  },
+  "warnings": [],
+  "errors": [],
+  "final_target_count": 376836,
+  "report_json_path": "C:\\Project\\Book_Quality\\02_labels\\reports\\book_entry_labels_v1_report_20260609_055402.json",
+  "report_txt_path": "C:\\Project\\Book_Quality\\02_labels\\reports\\book_entry_labels_v1_report_20260609_055402.txt"
+}

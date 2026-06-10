@@ -1,0 +1,76 @@
+Book & Quality - Trade Quality Labels v1 Report
+==========================================================================
+Run ID              : trade_quality_labels_v1_20260609_064608
+Status              : success
+Database            : market_data
+Symbol              : XAUUSD
+Start Time          : 2026-06-09T06:46:08.468702+00:00
+End Time            : 2026-06-09T06:52:39.650938+00:00
+Duration Sec        : 391.182
+
+Config
+--------------------------------------------------------------------------
+label_version            : trade_quality_label_v1
+entry_rule               : Quality is evaluated from next M15 open after anchor_time.
+base_r_usd               : 2.0
+horizon_m15_short        : 8
+horizon_m15_mid          : 16
+horizon_m15_long         : 32
+quality_score_min        : 0
+quality_score_max        : 100
+trend_phase_classes      : ['UP_TREND_EARLY', 'UP_TREND_MATURE', 'UP_TREND_EXHAUSTION', 'DOWN_TREND_EARLY', 'DOWN_TREND_MATURE', 'DOWN_TREND_EXHAUSTION', 'RANGE', 'TRANSITION']
+
+Counts
+--------------------------------------------------------------------------
+anchors_read             : 376836
+upserted_or_modified     : 376836
+inserted                 : 376836
+matched                  : 0
+modified                 : 0
+skipped_existing         : 0
+skipped_no_entry         : 0
+skipped_no_future_path   : 0
+row_errors               : 0
+
+Buy Quality Buckets
+--------------------------------------------------------------------------
+BAD            : 184122
+LOW            : 38576
+MEDIUM         : 43603
+HIGH           : 54201
+EXCELLENT      : 56334
+
+Sell Quality Buckets
+--------------------------------------------------------------------------
+BAD            : 186035
+LOW            : 38258
+MEDIUM         : 43395
+HIGH           : 55648
+EXCELLENT      : 53500
+
+Trend Phase Distribution
+--------------------------------------------------------------------------
+DOWN_TREND_EXHAUSTION         : 61380
+DOWN_TREND_EARLY              : 35510
+UP_TREND_MATURE               : 63396
+TRANSITION                    : 9166
+UP_TREND_EXHAUSTION           : 55135
+RANGE                         : 55725
+UP_TREND_EARLY                : 38097
+DOWN_TREND_MATURE             : 58427
+
+Range Bucket Distribution
+--------------------------------------------------------------------------
+BAD            : 201574
+LOW            : 66853
+MEDIUM         : 52684
+HIGH           : 47273
+EXCELLENT      : 8452
+
+Boolean Counts
+--------------------------------------------------------------------------
+fake_buy                 : 133229
+fake_sell                : 140407
+is_range                 : 55725
+buy_quality_ge_70        : 110535
+sell_quality_ge_70       : 109148

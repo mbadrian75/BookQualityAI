@@ -1,0 +1,51 @@
+Book & Quality - Trade Quality Features v1 Report
+==========================================================================
+run_id                   : trade_quality_features_v1_20260609_120143
+status                   : success
+database                 : market_data
+symbol                   : XAUUSD
+start_time               : 2026-06-09T12:01:43.413304+00:00
+end_time                 : 2026-06-09T12:01:55.302338+00:00
+duration_seconds         : 11.889
+
+Collections
+--------------------------------------------------------------------------
+labels_source            : bq_labels_trade_quality_m15_v1
+m30_source               : xauusd_m30
+h1_source                : xauusd_h1
+h4_source                : xauusd_h4
+target                   : bq_features_trade_quality_m15_v1
+
+Args
+--------------------------------------------------------------------------
+limit                    : 1000
+reset                    : True
+start                    : None
+end                      : None
+skip_existing            : False
+
+Source Loads
+--------------------------------------------------------------------------
+M30  : count=510 | 2009-12-29 06:15:00 -> 2010-01-18 13:30:00
+H1   : count=259 | 2009-12-29 06:15:00 -> 2010-01-18 13:30:00
+H4   : count=68 | 2009-12-29 06:15:00 -> 2010-01-18 13:30:00
+
+Counts
+--------------------------------------------------------------------------
+anchors_loaded           : 1000
+anchors_processed        : 1000
+upserted_or_modified     : 1000
+inserted                 : 1000
+matched                  : 0
+modified                 : 0
+skipped_existing         : 0
+row_errors               : 0
+
+Feature Info
+--------------------------------------------------------------------------
+feature_version          : trade_quality_features_v1
+feature_count_min        : 580
+feature_count_max        : 580
+feature_count_last       : 580
+max_lookback_minutes     : 7680
+no_leak_rule             : higher timeframe candle open time + timeframe duration <= decision_time

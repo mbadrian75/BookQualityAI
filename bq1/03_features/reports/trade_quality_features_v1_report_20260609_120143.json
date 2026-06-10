@@ -1,0 +1,73 @@
+{
+  "script_name": "06_build_trade_quality_features_v1.py",
+  "run_id": "trade_quality_features_v1_20260609_120143",
+  "project_root": "C:\\Project\\BookQuality",
+  "database": "market_data",
+  "symbol": "XAUUSD",
+  "start_time": "2026-06-09T12:01:43.413304+00:00",
+  "end_time": "2026-06-09T12:01:55.302338+00:00",
+  "duration_seconds": 11.889,
+  "status": "success",
+  "feature_version": "trade_quality_features_v1",
+  "max_lookback_minutes": 7680,
+  "no_leak_rule": "higher timeframe candle open time + timeframe duration <= decision_time",
+  "collections": {
+    "labels_source": "bq_labels_trade_quality_m15_v1",
+    "m30_source": "xauusd_m30",
+    "h1_source": "xauusd_h1",
+    "h4_source": "xauusd_h4",
+    "target": "bq_features_trade_quality_m15_v1"
+  },
+  "args": {
+    "limit": 1000,
+    "reset": true,
+    "start": null,
+    "end": null,
+    "skip_existing": false
+  },
+  "source_loads": {
+    "m30": {
+      "collection": "xauusd_m30",
+      "count": 510,
+      "start": "2009-12-29 06:15:00",
+      "end": "2010-01-18 13:30:00",
+      "volume_field": "volume",
+      "timeframe_minutes": 30
+    },
+    "h1": {
+      "collection": "xauusd_h1",
+      "count": 259,
+      "start": "2009-12-29 06:15:00",
+      "end": "2010-01-18 13:30:00",
+      "volume_field": "volume",
+      "timeframe_minutes": 60
+    },
+    "h4": {
+      "collection": "xauusd_h4",
+      "count": 68,
+      "start": "2009-12-29 06:15:00",
+      "end": "2010-01-18 13:30:00",
+      "volume_field": "volume",
+      "timeframe_minutes": 240
+    }
+  },
+  "counts": {
+    "anchors_loaded": 1000,
+    "anchors_processed": 1000,
+    "upserted_or_modified": 1000,
+    "inserted": 1000,
+    "matched": 0,
+    "modified": 0,
+    "skipped_existing": 0,
+    "row_errors": 0
+  },
+  "feature_count_min": 580,
+  "feature_count_max": 580,
+  "feature_count_last": 580,
+  "warnings": [],
+  "errors": [],
+  "reset_deleted_count": 0,
+  "final_target_count": 1000,
+  "report_json_path": "C:\\Project\\BookQuality\\03_features\\reports\\trade_quality_features_v1_report_20260609_120143.json",
+  "report_txt_path": "C:\\Project\\BookQuality\\03_features\\reports\\trade_quality_features_v1_report_20260609_120143.txt"
+}

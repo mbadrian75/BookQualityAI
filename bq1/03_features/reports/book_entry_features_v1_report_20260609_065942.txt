@@ -1,0 +1,50 @@
+Book & Quality - Book Entry Features v1 Report
+==========================================================================
+Run ID              : book_entry_features_v1_20260609_065942
+Status              : success
+Database            : market_data
+Symbol              : XAUUSD
+Start Time          : 2026-06-09T06:59:42.335444+00:00
+End Time            : 2026-06-09T06:59:50.534126+00:00
+Duration Sec        : 8.199
+
+Collections
+--------------------------------------------------------------------------
+labels_source            : bq_labels_book_entry_m15_v1
+m1_source                : xauusd_m1
+m5_source                : xauusd_m5
+m15_source               : xauusd_m15
+target                   : bq_features_book_entry_m15_v1
+
+Args
+--------------------------------------------------------------------------
+limit                    : 1000
+reset                    : True
+start                    : None
+end                      : None
+skip_existing            : False
+
+Source Loads
+--------------------------------------------------------------------------
+M1   : count=14688 | 2010-01-03 01:45:00 -> 2010-01-18 09:31:00
+M5   : count=2981 | 2010-01-03 01:45:00 -> 2010-01-18 09:31:00
+M15  : count=1001 | 2010-01-03 01:45:00 -> 2010-01-18 09:31:00
+
+Counts
+--------------------------------------------------------------------------
+anchors_loaded           : 1000
+anchors_processed        : 1000
+upserted_or_modified     : 1000
+inserted                 : 1000
+matched                  : 0
+modified                 : 0
+skipped_existing         : 0
+row_errors               : 0
+
+Feature Info
+--------------------------------------------------------------------------
+feature_version          : book_entry_features_v1
+feature_count_min        : 363
+feature_count_max        : 363
+feature_count_last       : 363
+max_lookback_minutes     : 960
