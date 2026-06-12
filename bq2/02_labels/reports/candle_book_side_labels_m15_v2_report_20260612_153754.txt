@@ -1,0 +1,75 @@
+Book & Quality v2 - Candle Book Side Labels M15 v2 Report
+==========================================================================
+run_id                            : candle_book_side_labels_m15_v2_20260612_153754
+status                            : success
+database                          : market_data
+symbol                            : XAUUSD
+start_time                        : 2026-06-12T15:37:54.438518+00:00
+end_time                          : 2026-06-12T15:37:58.667523+00:00
+duration_seconds                  : 4.229
+
+Collections
+--------------------------------------------------------------------------
+m15_source                        : xauusd_m15
+target                            : bq2_labels_candle_book_side_m15_v2
+
+Config
+--------------------------------------------------------------------------
+label_version                     : candle_book_side_label_m15_v2
+anchor_timeframe                  : M15
+entry_rule                        : entry_time = next M15 open after anchor_time
+base_r_usd                        : 2.0
+horizon_m15                       : 8
+direction_threshold_r             : 0.35
+purpose                           : side-specific confirmation labels for API direction
+
+Counts
+--------------------------------------------------------------------------
+m15_loaded                        : 376837
+anchors_seen                      : 1000
+labels_built                      : 1000
+upserted_or_modified              : 1000
+inserted                          : 1000
+matched                           : 0
+modified                          : 0
+skipped_existing                  : 0
+skipped_no_future_path            : 0
+row_errors                        : 0
+
+Book Direction v2 Distribution
+--------------------------------------------------------------------------
+SELL                              : 451
+BUY                               : 469
+NOTRADE                           : 80
+
+Buy Outcome Distribution
+--------------------------------------------------------------------------
+LOSS                              : 451
+WIN                               : 469
+FLAT                              : 77
+AMBIGUOUS                         : 3
+
+Sell Outcome Distribution
+--------------------------------------------------------------------------
+WIN                               : 451
+LOSS                              : 469
+FLAT                              : 77
+AMBIGUOUS                         : 3
+
+Buy Method Distribution
+--------------------------------------------------------------------------
+buy_stop_first                    : 421
+buy_target_first                  : 433
+buy_horizon_final_loss            : 30
+buy_horizon_final_win             : 36
+buy_horizon_flat                  : 77
+buy_ambiguous_same_bar            : 3
+
+Sell Method Distribution
+--------------------------------------------------------------------------
+sell_target_first                 : 421
+sell_stop_first                   : 433
+sell_horizon_final_win            : 30
+sell_horizon_final_loss           : 36
+sell_horizon_flat                 : 77
+sell_ambiguous_same_bar           : 3

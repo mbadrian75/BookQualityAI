@@ -1,0 +1,89 @@
+{
+  "script_name": "02_build_candle_book_side_dataset_m15_v2.py",
+  "run_id": "candle_book_side_dataset_m15_v2_20260612_201216",
+  "status": "success",
+  "database": "market_data",
+  "symbol": "XAUUSD",
+  "start_time": "2026-06-12T20:12:16.668643+00:00",
+  "end_time": "2026-06-12T20:12:19.270766+00:00",
+  "duration_seconds": 2.602,
+  "collections": {
+    "features_source": "bq2_features_candle_book_side_m15_v2",
+    "target": "bq2_dataset_candle_book_side_m15_v2"
+  },
+  "dataset_config": {
+    "dataset_version": "candle_book_side_dataset_m15_v2",
+    "feature_version": "candle_book_side_features_m15_v2",
+    "label_version": "candle_book_side_label_m15_v2",
+    "anchor_timeframe": "M15",
+    "input_timeframes": [
+      "M1",
+      "M5",
+      "M15"
+    ],
+    "targets": [
+      "buy_outcome",
+      "sell_outcome"
+    ],
+    "train_end": "2023-01-01 00:00:00",
+    "valid_end": "2024-01-01 00:00:00",
+    "test_end": null,
+    "require_no_leak_ok": true,
+    "keep_feature_dict": false,
+    "include_ambiguous": true
+  },
+  "counts": {
+    "features_seen": 1000,
+    "rows_built": 1000,
+    "upserted_or_modified": 1000,
+    "inserted": 1000,
+    "matched": 0,
+    "modified": 0,
+    "skipped_existing": 0,
+    "skipped_missing_features": 0,
+    "skipped_missing_y": 0,
+    "skipped_missing_outcome": 0,
+    "skipped_no_leak_not_ok": 0,
+    "skipped_schema_mismatch": 0,
+    "skipped_ambiguous": 0,
+    "skipped_ignored_split": 0,
+    "row_errors": 0
+  },
+  "feature_schema": {
+    "feature_count": 253,
+    "first_doc_feature_count_field": 253,
+    "feature_names_export": "C:\\Project\\BookQuality\\bq2\\04_dataset\\exports\\candle_book_side_m15_v2_feature_names_20260612_201216.json"
+  },
+  "split_distribution": {
+    "train": 1000
+  },
+  "book_direction_distribution": {
+    "SELL": 452,
+    "BUY": 453,
+    "NOTRADE": 95
+  },
+  "buy_outcome_distribution": {
+    "LOSS": 452,
+    "WIN": 453,
+    "FLAT": 92,
+    "AMBIGUOUS": 3
+  },
+  "sell_outcome_distribution": {
+    "WIN": 452,
+    "LOSS": 453,
+    "FLAT": 92,
+    "AMBIGUOUS": 3
+  },
+  "errors": [],
+  "args": {
+    "limit": 1000,
+    "reset": true,
+    "start": null,
+    "end": null,
+    "skip_existing": false
+  },
+  "reset_deleted_count": 0,
+  "final_target_count": 1000,
+  "report_json_path": "C:\\Project\\BookQuality\\bq2\\04_dataset\\reports\\candle_book_side_dataset_m15_v2_report_20260612_201216.json",
+  "report_txt_path": "C:\\Project\\BookQuality\\bq2\\04_dataset\\reports\\candle_book_side_dataset_m15_v2_report_20260612_201216.txt"
+}
