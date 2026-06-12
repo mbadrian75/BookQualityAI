@@ -1,0 +1,160 @@
+{
+  "run_id": "create_bq2_structure_20260610_062853",
+  "status": "success",
+  "project_root": "C:\\Project\\BookQuality\\bq2",
+  "start_time": "2026-06-10T06:28:53.035941+00:00",
+  "end_time": "2026-06-10T06:28:53.148959+00:00",
+  "duration_seconds": 0.113,
+  "raw_data_modified": false,
+  "actions_count": 37,
+  "actions": [
+    {
+      "path": "C:\\Project\\BookQuality\\bq2\\00_project_setup\\reports",
+      "action": "folder_ok"
+    },
+    {
+      "path": "C:\\Project\\BookQuality\\bq2\\00_config",
+      "action": "folder_ok"
+    },
+    {
+      "path": "C:\\Project\\BookQuality\\bq2\\01_database\\bootstrap",
+      "action": "folder_ok"
+    },
+    {
+      "path": "C:\\Project\\BookQuality\\bq2\\01_database\\reports",
+      "action": "folder_ok"
+    },
+    {
+      "path": "C:\\Project\\BookQuality\\bq2\\02_labels\\ma_quality",
+      "action": "folder_ok"
+    },
+    {
+      "path": "C:\\Project\\BookQuality\\bq2\\02_labels\\candle_book",
+      "action": "folder_ok"
+    },
+    {
+      "path": "C:\\Project\\BookQuality\\bq2\\02_labels\\reports",
+      "action": "folder_ok"
+    },
+    {
+      "path": "C:\\Project\\BookQuality\\bq2\\03_features\\ma_quality",
+      "action": "folder_ok"
+    },
+    {
+      "path": "C:\\Project\\BookQuality\\bq2\\03_features\\candle_book",
+      "action": "folder_ok"
+    },
+    {
+      "path": "C:\\Project\\BookQuality\\bq2\\03_features\\reports",
+      "action": "folder_ok"
+    },
+    {
+      "path": "C:\\Project\\BookQuality\\bq2\\04_dataset\\ma_quality",
+      "action": "folder_ok"
+    },
+    {
+      "path": "C:\\Project\\BookQuality\\bq2\\04_dataset\\candle_book",
+      "action": "folder_ok"
+    },
+    {
+      "path": "C:\\Project\\BookQuality\\bq2\\04_dataset\\reports",
+      "action": "folder_ok"
+    },
+    {
+      "path": "C:\\Project\\BookQuality\\bq2\\04_dataset\\exports",
+      "action": "folder_ok"
+    },
+    {
+      "path": "C:\\Project\\BookQuality\\bq2\\05_training\\ma_quality",
+      "action": "folder_ok"
+    },
+    {
+      "path": "C:\\Project\\BookQuality\\bq2\\05_training\\candle_book",
+      "action": "folder_ok"
+    },
+    {
+      "path": "C:\\Project\\BookQuality\\bq2\\05_training\\reports",
+      "action": "folder_ok"
+    },
+    {
+      "path": "C:\\Project\\BookQuality\\bq2\\06_models\\ma_quality",
+      "action": "folder_ok"
+    },
+    {
+      "path": "C:\\Project\\BookQuality\\bq2\\06_models\\candle_book",
+      "action": "folder_ok"
+    },
+    {
+      "path": "C:\\Project\\BookQuality\\bq2\\06_models\\archived",
+      "action": "folder_ok"
+    },
+    {
+      "path": "C:\\Project\\BookQuality\\bq2\\07_backtest\\bq2",
+      "action": "folder_ok"
+    },
+    {
+      "path": "C:\\Project\\BookQuality\\bq2\\07_backtest\\reports",
+      "action": "folder_ok"
+    },
+    {
+      "path": "C:\\Project\\BookQuality\\bq2\\08_api\\app",
+      "action": "folder_ok"
+    },
+    {
+      "path": "C:\\Project\\BookQuality\\bq2\\08_api\\decision_engine_bq2",
+      "action": "folder_ok"
+    },
+    {
+      "path": "C:\\Project\\BookQuality\\bq2\\08_api\\schemas",
+      "action": "folder_ok"
+    },
+    {
+      "path": "C:\\Project\\BookQuality\\bq2\\08_api\\reports",
+      "action": "folder_ok"
+    },
+    {
+      "path": "C:\\Project\\BookQuality\\bq2\\09_mt4_mt5\\experts",
+      "action": "folder_ok"
+    },
+    {
+      "path": "C:\\Project\\BookQuality\\bq2\\09_mt4_mt5\\indicators",
+      "action": "folder_ok"
+    },
+    {
+      "path": "C:\\Project\\BookQuality\\bq2\\09_mt4_mt5\\scripts",
+      "action": "folder_ok"
+    },
+    {
+      "path": "C:\\Project\\BookQuality\\bq2\\10_docs",
+      "action": "folder_ok"
+    },
+    {
+      "path": "C:\\Project\\BookQuality\\bq2\\11_logs",
+      "action": "folder_ok"
+    },
+    {
+      "path": "C:\\Project\\BookQuality\\bq2\\12_exports\\csv",
+      "action": "folder_ok"
+    },
+    {
+      "path": "C:\\Project\\BookQuality\\bq2\\12_exports\\json",
+      "action": "folder_ok"
+    },
+    {
+      "path": "C:\\Project\\BookQuality\\bq2\\12_exports\\charts",
+      "action": "folder_ok"
+    },
+    {
+      "path": "C:\\Project\\BookQuality\\bq2\\00_config\\bq2_config.json",
+      "action": "written"
+    },
+    {
+      "path": "C:\\Project\\BookQuality\\bq2\\00_config\\bq2_label_config_v1.json",
+      "action": "written"
+    },
+    {
+      "path": "C:\\Project\\BookQuality\\bq2\\10_docs\\bq2_locked_spec.md",
+      "action": "skipped_exists"
+    }
+  ]
+}

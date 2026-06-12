@@ -1,0 +1,10 @@
+Book & Quality v2 - Meta and Indexes Report
+==========================================================================
+Run ID            : create_bq2_meta_indexes_20260610_062930
+Status            : success
+Database          : market_data
+Symbol            : XAUUSD
+Reset BQ2         : False
+Raw Data Modified : False
+Duration Sec      : 1.539
+Actions Count     : 50

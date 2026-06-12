@@ -1,0 +1,97 @@
+{
+  "script_name": "01_build_ma_quality_labels_v1.py",
+  "run_id": "ma_quality_labels_v1_20260610_070040",
+  "status": "success",
+  "database": "market_data",
+  "symbol": "XAUUSD",
+  "start_time": "2026-06-10T07:00:40.686592+00:00",
+  "end_time": "2026-06-10T07:00:56.086270+00:00",
+  "duration_seconds": 15.4,
+  "collections": {
+    "m15_source": "xauusd_m15",
+    "m30_source": "xauusd_m30",
+    "h1_source": "xauusd_h1",
+    "h4_source": "xauusd_h4",
+    "target": "bq2_labels_ma_quality_m15_v1"
+  },
+  "label_config": {
+    "label_version": "ma_quality_label_v1",
+    "base_r_usd": 2.0,
+    "trade_horizon_m15": 64,
+    "ma_periods": [
+      20,
+      50,
+      100
+    ],
+    "m30_horizon_bars": 8,
+    "h1_horizon_bars": 6,
+    "h4_horizon_bars": 4,
+    "direction_threshold_r": 0.35
+  },
+  "source_loads": {
+    "m15": {
+      "collection": "xauusd_m15",
+      "count": 376837,
+      "first_time": "2010-01-03 18:00:00",
+      "last_time": "2025-12-31 16:45:00"
+    },
+    "m30": {
+      "collection": "xauusd_m30",
+      "count": 188895,
+      "first_time": "2010-01-03 18:00:00",
+      "last_time": "2025-12-31 16:30:00"
+    },
+    "h1": {
+      "collection": "xauusd_h1",
+      "count": 95009,
+      "first_time": "2010-01-03 18:00:00",
+      "last_time": "2025-12-31 16:00:00"
+    },
+    "h4": {
+      "collection": "xauusd_h4",
+      "count": 25550,
+      "first_time": "2010-01-03 16:00:00",
+      "last_time": "2025-12-31 16:00:00"
+    }
+  },
+  "counts": {
+    "anchors_seen": 1000,
+    "anchors_processed": 0,
+    "upserted_or_modified": 0,
+    "inserted": 0,
+    "matched": 0,
+    "modified": 0,
+    "skipped_existing": 0,
+    "skipped_no_entry": 0,
+    "skipped_no_future_trade_path": 0,
+    "skipped_no_ma_context": 1000,
+    "row_errors": 0
+  },
+  "prediction_distribution": {
+    "BUY": 0,
+    "SELL": 0,
+    "RANGE": 0
+  },
+  "phase_distribution": {
+    "m30": {},
+    "h1": {},
+    "h4": {}
+  },
+  "risk_distribution": {
+    "buy": {},
+    "sell": {}
+  },
+  "warnings": [],
+  "errors": [],
+  "args": {
+    "limit": 1000,
+    "reset": true,
+    "start": null,
+    "end": null,
+    "skip_existing": false
+  },
+  "reset_deleted_count": 0,
+  "final_target_count": 0,
+  "report_json_path": "C:\\Project\\BookQuality\\bq2\\02_labels\\reports\\ma_quality_labels_v1_report_20260610_070040.json",
+  "report_txt_path": "C:\\Project\\BookQuality\\bq2\\02_labels\\reports\\ma_quality_labels_v1_report_20260610_070040.txt"
+}

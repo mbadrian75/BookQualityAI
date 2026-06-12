@@ -1,0 +1,110 @@
+Book & Quality v2 - MA Scenario Dataset M30 v1 Report
+==========================================================================
+run_id                            : ma_scenario_dataset_m30_v1_20260611_072901
+status                            : success
+database                          : market_data
+symbol                            : XAUUSD
+start_time                        : 2026-06-11T07:29:01.572572+00:00
+end_time                          : 2026-06-11T07:29:03.401616+00:00
+duration_seconds                  : 1.829
+
+Collections
+--------------------------------------------------------------------------
+features_source                   : bq2_features_ma_quality_m30_v1
+target                            : bq2_dataset_ma_scenario_m30_v1
+
+Config
+--------------------------------------------------------------------------
+dataset_version                   : ma_scenario_dataset_m30_v1
+feature_version                   : ma_quality_features_m30_v1
+label_version                     : ma_quality_label_m30_v1
+anchor_timeframe                  : M30
+scenario_targets                  : ['predicted_direction', 'm30_future_direction', 'h1_future_direction', 'h4_future_direction', 'm30_phase', 'h1_phase', 'h4_phase']
+removed_targets                   : ['buy_quality_score', 'sell_quality_score', 'buy_risk_mode', 'sell_risk_mode', 'buy_lot_multiplier', 'sell_lot_multiplier', 'buy_tp_mode', 'sell_tp_mode', 'buy_sl_mode', 'sell_sl_mode', 'buy_trailing_mode', 'sell_trailing_mode', 'buy_exit_mode', 'sell_exit_mode']
+train_end                         : 2023-01-01 00:00:00
+valid_end                         : 2024-01-01 00:00:00
+test_end                          : None
+require_no_leak_ok                : True
+keep_feature_dict                 : False
+
+Counts
+--------------------------------------------------------------------------
+features_seen                     : 1000
+rows_built                        : 1000
+upserted_or_modified              : 1000
+inserted                          : 1000
+matched                           : 0
+modified                          : 0
+skipped_existing                  : 0
+skipped_missing_features          : 0
+skipped_missing_y                 : 0
+skipped_missing_scenario_target   : 0
+skipped_no_leak_not_ok            : 0
+skipped_schema_mismatch           : 0
+skipped_ignored_split             : 0
+row_errors                        : 0
+
+Feature Schema
+--------------------------------------------------------------------------
+feature_count                     : 302
+first_doc_feature_count_field     : 302
+feature_names_export              : C:\Project\BookQuality\bq2\04_dataset\exports\ma_scenario_m30_v1_feature_names_20260611_072901.json
+
+Split Distribution
+--------------------------------------------------------------------------
+train                             : 1000
+
+Target Distribution
+--------------------------------------------------------------------------
+predicted_direction:
+  SELL                           : 396
+  RANGE                          : 66
+  BUY                            : 538
+m30_future_direction:
+  SELL                           : 385
+  RANGE                          : 109
+  BUY                            : 506
+h1_future_direction:
+  SELL                           : 369
+  RANGE                          : 131
+  BUY                            : 500
+h4_future_direction:
+  BUY                            : 644
+  SELL                           : 284
+  RANGE                          : 72
+m30_phase:
+  REVERSAL_DOWN_START            : 90
+  DOWN_MIDDLE                    : 146
+  DOWN_START                     : 80
+  DOWN_EXHAUSTION                : 52
+  REVERSAL_UP_START              : 97
+  UP_END                         : 55
+  DOWN_END                       : 46
+  UP_MIDDLE                      : 248
+  UP_START                       : 44
+  UP_EXHAUSTION                  : 129
+  RANGE                          : 13
+h1_phase:
+  UP_END                         : 22
+  REVERSAL_DOWN_START            : 86
+  DOWN_MIDDLE                    : 123
+  DOWN_START                     : 112
+  DOWN_EXHAUSTION                : 74
+  REVERSAL_UP_START              : 74
+  UP_MIDDLE                      : 201
+  UP_EXHAUSTION                  : 134
+  RANGE                          : 22
+  UP_START                       : 110
+  DOWN_END                       : 42
+h4_phase:
+  UP_START                       : 149
+  REVERSAL_DOWN_START            : 71
+  DOWN_MIDDLE                    : 150
+  DOWN_EXHAUSTION                : 40
+  REVERSAL_UP_START              : 69
+  UP_MIDDLE                      : 331
+  UP_EXHAUSTION                  : 119
+  RANGE                          : 8
+  UP_END                         : 16
+  DOWN_START                     : 39
+  DOWN_END                       : 8

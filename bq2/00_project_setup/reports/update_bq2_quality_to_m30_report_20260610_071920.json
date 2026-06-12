@@ -1,0 +1,16 @@
+{
+  "run_id": "update_bq2_quality_to_m30_20260610_071920",
+  "status": "success",
+  "project_root": "C:\\Project\\BookQuality\\bq2",
+  "config_updated": "C:\\Project\\BookQuality\\bq2\\00_config\\bq2_config.json",
+  "label_config_updated": "C:\\Project\\BookQuality\\bq2\\00_config\\bq2_label_config_v1.json",
+  "ma_quality_collections": {
+    "labels_ma_quality": "bq2_labels_ma_quality_m30_v1",
+    "features_ma_quality": "bq2_features_ma_quality_m30_v1",
+    "dataset_ma_quality": "bq2_dataset_ma_quality_m30_v1",
+    "predictions_ma_quality": "bq2_predictions_ma_quality_m30_v1"
+  },
+  "raw_data_modified": false,
+  "started_at": "2026-06-10T07:19:20.392924+00:00",
+  "ended_at": "2026-06-10T07:19:20.397274+00:00"
+}

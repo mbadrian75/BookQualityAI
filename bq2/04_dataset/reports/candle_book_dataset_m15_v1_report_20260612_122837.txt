@@ -1,0 +1,63 @@
+Book & Quality v2 - Candle Book Dataset M15 v1 Report
+==========================================================================
+run_id                            : candle_book_dataset_m15_v1_20260612_122837
+status                            : success
+database                          : market_data
+symbol                            : XAUUSD
+start_time                        : 2026-06-12T12:28:37.284776+00:00
+end_time                          : 2026-06-12T12:53:54.545297+00:00
+duration_seconds                  : 1517.261
+
+Collections
+--------------------------------------------------------------------------
+features_source                   : bq2_features_candle_book_m15_v1
+target                            : bq2_dataset_candle_book_m15_v1
+
+Config
+--------------------------------------------------------------------------
+dataset_version                   : candle_book_dataset_m15_v1
+feature_version                   : candle_book_features_m15_v1
+label_version                     : candle_book_label_m15_v1
+anchor_timeframe                  : M15
+input_timeframes                  : ['M1', 'M5', 'M15']
+target                            : book_direction
+train_end                         : 2023-01-01 00:00:00
+valid_end                         : 2024-01-01 00:00:00
+test_end                          : None
+require_no_leak_ok                : True
+keep_feature_dict                 : False
+
+Counts
+--------------------------------------------------------------------------
+features_seen                     : 376779
+rows_built                        : 376779
+upserted_or_modified              : 376779
+inserted                          : 376779
+matched                           : 0
+modified                          : 0
+skipped_existing                  : 0
+skipped_missing_features          : 0
+skipped_missing_y                 : 0
+skipped_missing_book_direction    : 0
+skipped_no_leak_not_ok            : 0
+skipped_schema_mismatch           : 0
+skipped_ignored_split             : 0
+row_errors                        : 0
+
+Feature Schema
+--------------------------------------------------------------------------
+feature_count                     : 253
+first_doc_feature_count_field     : 253
+feature_names_export              : C:\Project\BookQuality\bq2\04_dataset\exports\candle_book_m15_v1_feature_names_20260612_122837.json
+
+Split Distribution
+--------------------------------------------------------------------------
+train                             : 308869
+valid                             : 20600
+test                              : 47310
+
+Label Distribution
+--------------------------------------------------------------------------
+SELL                              : 158682
+BUY                               : 160641
+NOTRADE                           : 57456

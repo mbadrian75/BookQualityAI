@@ -1,0 +1,257 @@
+{
+  "script_name": "01_train_ma_quality_m30_v1.py",
+  "run_id": "train_ma_quality_m30_v1_20260611_060942",
+  "status": "success",
+  "database": "market_data",
+  "symbol": "XAUUSD",
+  "start_time": "2026-06-11T06:09:42.895825+00:00",
+  "end_time": "2026-06-11T06:53:52.368364+00:00",
+  "duration_seconds": 2649.473,
+  "training_config": {
+    "model_version": "ma_quality_model_m30_v1",
+    "dataset_version": "ma_quality_dataset_m30_v1",
+    "feature_version": "ma_quality_features_m30_v1",
+    "label_version": "ma_quality_label_m30_v1",
+    "target_set": "core",
+    "algorithm": "sklearn.HistGradientBoosting",
+    "max_iter": 200,
+    "learning_rate": 0.05,
+    "max_leaf_nodes": 31,
+    "random_state": 42,
+    "limit": null
+  },
+  "counts": {
+    "rows_loaded": 187818,
+    "skipped_bad_x": 0,
+    "skipped_bad_y": 0,
+    "skipped_bad_split": 0,
+    "skipped_feature_count_mismatch": 0,
+    "models_trained": 7
+  },
+  "feature_count": 302,
+  "split_distribution_loaded": {
+    "train": 153874,
+    "valid": 10301,
+    "test": 23643
+  },
+  "targets_trained": [
+    "predicted_direction",
+    "buy_risk_mode",
+    "sell_risk_mode",
+    "buy_lot_multiplier",
+    "sell_lot_multiplier",
+    "buy_quality_score",
+    "sell_quality_score"
+  ],
+  "metrics": {
+    "predicted_direction": {
+      "target": "predicted_direction",
+      "type": "classification",
+      "classes": [
+        "BUY",
+        "RANGE",
+        "SELL"
+      ],
+      "split_metrics": {
+        "train": {
+          "rows": 153874,
+          "accuracy": 0.7730155841792635,
+          "macro_f1": 0.6046161714529229,
+          "weighted_f1": 0.7440005548677449
+        },
+        "valid": {
+          "rows": 10301,
+          "accuracy": 0.6756625570332977,
+          "macro_f1": 0.4759018117370739,
+          "weighted_f1": 0.6428887434756166
+        },
+        "test": {
+          "rows": 23643,
+          "accuracy": 0.6697542613035571,
+          "macro_f1": 0.474551427158535,
+          "weighted_f1": 0.636395647595355
+        }
+      }
+    },
+    "buy_risk_mode": {
+      "target": "buy_risk_mode",
+      "type": "classification",
+      "classes": [
+        "BLOCK",
+        "HIGH_RISK",
+        "LOW_RISK",
+        "NORMAL_RISK"
+      ],
+      "split_metrics": {
+        "train": {
+          "rows": 153874,
+          "accuracy": 0.6589027386043126,
+          "macro_f1": 0.3009097759110947,
+          "weighted_f1": 0.5565207467868021
+        },
+        "valid": {
+          "rows": 10301,
+          "accuracy": 0.6187748762256091,
+          "macro_f1": 0.19402489369013007,
+          "weighted_f1": 0.47808494710893107
+        },
+        "test": {
+          "rows": 23643,
+          "accuracy": 0.6400625978090767,
+          "macro_f1": 0.19513862024500322,
+          "weighted_f1": 0.4996037288275826
+        }
+      }
+    },
+    "sell_risk_mode": {
+      "target": "sell_risk_mode",
+      "type": "classification",
+      "classes": [
+        "BLOCK",
+        "HIGH_RISK",
+        "LOW_RISK",
+        "NORMAL_RISK"
+      ],
+      "split_metrics": {
+        "train": {
+          "rows": 153874,
+          "accuracy": 0.6564656797119721,
+          "macro_f1": 0.2873261249988872,
+          "weighted_f1": 0.5492035248711268
+        },
+        "valid": {
+          "rows": 10301,
+          "accuracy": 0.6289680613532667,
+          "macro_f1": 0.19446055222793815,
+          "weighted_f1": 0.4903422689054269
+        },
+        "test": {
+          "rows": 23643,
+          "accuracy": 0.6876876876876877,
+          "macro_f1": 0.2085629059153377,
+          "weighted_f1": 0.566829241865373
+        }
+      }
+    },
+    "buy_lot_multiplier": {
+      "target": "buy_lot_multiplier",
+      "type": "classification",
+      "classes": [
+        "0.0",
+        "0.25",
+        "0.5",
+        "1.0",
+        "1.5",
+        "2.0"
+      ],
+      "split_metrics": {
+        "train": {
+          "rows": 153874,
+          "accuracy": 0.6558027996932555,
+          "macro_f1": 0.23561292712654192,
+          "weighted_f1": 0.5500337520163255
+        },
+        "valid": {
+          "rows": 10301,
+          "accuracy": 0.6214930589263178,
+          "macro_f1": 0.12841285051581477,
+          "weighted_f1": 0.4774462757942344
+        },
+        "test": {
+          "rows": 23643,
+          "accuracy": 0.6401048936260204,
+          "macro_f1": 0.130450393395963,
+          "weighted_f1": 0.4999841802907192
+        }
+      }
+    },
+    "sell_lot_multiplier": {
+      "target": "sell_lot_multiplier",
+      "type": "classification",
+      "classes": [
+        "0.0",
+        "0.25",
+        "0.5",
+        "1.0",
+        "1.5",
+        "2.0"
+      ],
+      "split_metrics": {
+        "train": {
+          "rows": 153874,
+          "accuracy": 0.6535282113937377,
+          "macro_f1": 0.2167122867457704,
+          "weighted_f1": 0.5429588245240018
+        },
+        "valid": {
+          "rows": 10301,
+          "accuracy": 0.6315891661003786,
+          "macro_f1": 0.129962046649907,
+          "weighted_f1": 0.49137864924754115
+        },
+        "test": {
+          "rows": 23643,
+          "accuracy": 0.6907329865076344,
+          "macro_f1": 0.13783202730382035,
+          "weighted_f1": 0.5665009269563411
+        }
+      }
+    },
+    "buy_quality_score": {
+      "target": "buy_quality_score",
+      "type": "regression",
+      "split_metrics": {
+        "train": {
+          "rows": 153874,
+          "mae": 31.607922191504027,
+          "rmse": 35.98444982145003,
+          "r2": 0.15326323470382863
+        },
+        "valid": {
+          "rows": 10301,
+          "mae": 33.89444549115754,
+          "rmse": 40.139213329628994,
+          "r2": -0.019432638147415915
+        },
+        "test": {
+          "rows": 23643,
+          "mae": 32.235030725525895,
+          "rmse": 39.155269542159665,
+          "r2": -0.028900344145632806
+        }
+      }
+    },
+    "sell_quality_score": {
+      "target": "sell_quality_score",
+      "type": "regression",
+      "split_metrics": {
+        "train": {
+          "rows": 153874,
+          "mae": 31.46676024485378,
+          "rmse": 35.90274625899703,
+          "r2": 0.1488741688270966
+        },
+        "valid": {
+          "rows": 10301,
+          "mae": 34.207724868714344,
+          "rmse": 39.085955685769754,
+          "r2": -0.013550752626482199
+        },
+        "test": {
+          "rows": 23643,
+          "mae": 31.934325669868784,
+          "rmse": 35.766307952654245,
+          "r2": -0.0655320055281392
+        }
+      }
+    }
+  },
+  "outputs": {
+    "model_path": "C:\\Project\\BookQuality\\bq2\\06_models\\ma_quality\\ma_quality_model_m30_v1_core_20260611_060942.joblib",
+    "latest_model_path": "C:\\Project\\BookQuality\\bq2\\06_models\\ma_quality\\ma_quality_model_m30_v1_core_latest.joblib",
+    "report_json": "C:\\Project\\BookQuality\\bq2\\05_training\\reports\\ma_quality_train_m30_v1_report_20260611_060942.json",
+    "report_txt": "C:\\Project\\BookQuality\\bq2\\05_training\\reports\\ma_quality_train_m30_v1_report_20260611_060942.txt"
+  },
+  "warnings": [],
+  "errors": []
+}

@@ -1,0 +1,8 @@
+Book & Quality v2 - Create Structure Report
+==========================================================================
+Run ID            : create_bq2_structure_20260610_062853
+Status            : success
+Project Root      : C:\Project\BookQuality\bq2
+Raw Data Modified : False
+Duration Sec      : 0.113
+Actions Count     : 37

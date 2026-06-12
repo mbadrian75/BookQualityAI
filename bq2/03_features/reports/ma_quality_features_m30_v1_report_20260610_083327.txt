@@ -1,0 +1,53 @@
+Book & Quality v2 - MA Quality Features M30 v1 Report
+==========================================================================
+run_id                        : ma_quality_features_m30_v1_20260610_083327
+status                        : success
+database                      : market_data
+symbol                        : XAUUSD
+start_time                    : 2026-06-10T08:33:27.177479+00:00
+end_time                      : 2026-06-10T08:53:00.226394+00:00
+duration_seconds              : 1173.049
+
+Collections
+--------------------------------------------------------------------------
+labels_source                 : bq2_labels_ma_quality_m30_v1
+m30_source                    : xauusd_m30
+h1_source                     : xauusd_h1
+h4_source                     : xauusd_h4
+target                        : bq2_features_ma_quality_m30_v1
+
+Config
+--------------------------------------------------------------------------
+feature_version               : ma_quality_features_m30_v1
+label_version_expected        : ma_quality_label_m30_v1
+anchor_timeframe              : M30
+input_timeframes              : ['M30', 'H1', 'H4']
+ma_periods                    : [20, 50, 100]
+candle_windows                : [3, 5, 10, 20, 50]
+slope_lookbacks               : [1, 3, 5, 10]
+range_period                  : 20
+min_history_bars              : {'m30': 140, 'h1': 140, 'h4': 140}
+
+Counts
+--------------------------------------------------------------------------
+labels_loaded                 : 187967
+labels_processed              : 187818
+upserted_or_modified          : 187818
+inserted                      : 187818
+matched                       : 0
+modified                      : 0
+skipped_existing              : 0
+skipped_no_context            : 149
+skipped_no_label_y            : 0
+row_errors                    : 0
+
+Feature Count
+--------------------------------------------------------------------------
+min                           : 302
+max                           : 302
+last                          : 302
+distinct                      : {'302': 187818}
+
+Skip Reasons
+--------------------------------------------------------------------------
+h4:not_enough_history         : 149

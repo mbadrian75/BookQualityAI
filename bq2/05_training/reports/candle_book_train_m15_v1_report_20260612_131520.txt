@@ -1,0 +1,85 @@
+Book & Quality v2 - Train Candle Book Model M15 v1 Report
+==========================================================================
+run_id                            : candle_book_train_m15_v1_20260612_131520
+status                            : success
+database                          : market_data
+symbol                            : XAUUSD
+start_time                        : 2026-06-12T13:15:20.655009+00:00
+end_time                          : 2026-06-12T13:41:22.780449+00:00
+duration_seconds                  : 1562.125
+
+Collections
+--------------------------------------------------------------------------
+dataset_source                    : bq2_dataset_candle_book_m15_v1
+
+Training Config
+--------------------------------------------------------------------------
+model_version                     : candle_book_model_m15_v1
+dataset_version                   : candle_book_dataset_m15_v1
+feature_version                   : candle_book_features_m15_v1
+label_version                     : candle_book_label_m15_v1
+target                            : book_direction
+classifier                        : HistGradientBoostingClassifier
+max_iter                          : 200
+learning_rate                     : 0.05
+l2_regularization                 : 0.1
+max_leaf_nodes                    : 31
+limit_per_split                   : None
+sample_weight                     : True
+
+Counts
+--------------------------------------------------------------------------
+train                             : 308869
+valid                             : 20600
+test                              : 47310
+rows_loaded                       : 376779
+feature_count                     : 253
+train_label_distribution          : {'SELL': 129569, 'BUY': 129803, 'NOTRADE': 49497}
+valid_label_distribution          : {'NOTRADE': 2059, 'BUY': 9343, 'SELL': 9198}
+test_label_distribution           : {'SELL': 19915, 'BUY': 21495, 'NOTRADE': 5900}
+
+Model Output
+--------------------------------------------------------------------------
+model_path                        : C:\Project\BookQuality\bq2\06_models\candle_book\candle_book_model_m15_v1_20260612_131520.joblib
+latest_model_path                 : C:\Project\BookQuality\bq2\06_models\candle_book\candle_book_model_m15_v1_latest.joblib
+classes                           : ['BUY', 'NOTRADE', 'SELL']
+feature_count                     : 253
+
+Metrics
+--------------------------------------------------------------------------
+train:
+  rows                           : 308869
+  accuracy                       : 0.461652
+  macro_f1                       : 0.458372
+  weighted_f1                    : 0.4659
+  log_loss                       : 0.991103
+  confidence.avg_confidence      : 0.455276
+  confidence.p60_rate            : 0.057008
+  confidence.p70_rate            : 0.005643
+  confidence.p80_rate            : 6.5e-05
+  label_distribution          : {'SELL': 129569, 'BUY': 129803, 'NOTRADE': 49497}
+  prediction_distribution     : {'SELL': 104551, 'NOTRADE': 122101, 'BUY': 82217}
+valid:
+  rows                           : 20600
+  accuracy                       : 0.407816
+  macro_f1                       : 0.377615
+  weighted_f1                    : 0.416117
+  log_loss                       : 0.997198
+  confidence.avg_confidence      : 0.440445
+  confidence.p60_rate            : 0.010728
+  confidence.p70_rate            : 0.000534
+  confidence.p80_rate            : 0.0
+  label_distribution          : {'NOTRADE': 2059, 'BUY': 9343, 'SELL': 9198}
+  prediction_distribution     : {'BUY': 7507, 'SELL': 8766, 'NOTRADE': 4327}
+test:
+  rows                           : 47310
+  accuracy                       : 0.438766
+  macro_f1                       : 0.436704
+  weighted_f1                    : 0.439032
+  log_loss                       : 0.960827
+  confidence.avg_confidence      : 0.469615
+  confidence.p60_rate            : 0.068823
+  confidence.p70_rate            : 0.021856
+  confidence.p80_rate            : 0.000169
+  label_distribution          : {'SELL': 19915, 'BUY': 21495, 'NOTRADE': 5900}
+  prediction_distribution     : {'SELL': 19676, 'BUY': 17304, 'NOTRADE': 10330}

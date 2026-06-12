@@ -1,0 +1,123 @@
+Book & Quality v2 - Fast Predict MA Scenario Model M30 v1 Report
+==========================================================================
+run_id                            : fast_predict_ma_scenario_m30_v1_20260612_061114
+status                            : success
+database                          : market_data
+symbol                            : XAUUSD
+start_time                        : 2026-06-12T06:11:14.354514+00:00
+end_time                          : 2026-06-12T06:33:20.592350+00:00
+duration_seconds                  : 1326.238
+
+Collections
+--------------------------------------------------------------------------
+features_source                   : bq2_features_ma_quality_m30_v1
+target                            : bq2_predictions_ma_scenario_m30_v1
+
+Model
+--------------------------------------------------------------------------
+model_version                     : ma_scenario_model_m30_v1
+dataset_version                   : ma_scenario_dataset_m30_v1
+feature_version                   : ma_quality_features_m30_v1
+label_version                     : ma_quality_label_m30_v1
+trained_at                        : 2026-06-11T08:18:00.588929+00:00
+feature_count                     : 302
+targets                           : ['predicted_direction', 'm30_future_direction', 'h1_future_direction', 'h4_future_direction', 'm30_phase', 'h1_phase', 'h4_phase']
+
+Counts
+--------------------------------------------------------------------------
+features_seen                     : 187818
+predictions_built                 : 187818
+upserted_or_modified              : 187818
+inserted                          : 187818
+matched                           : 0
+modified                          : 0
+skipped_existing                  : 0
+skipped_missing_features          : 0
+skipped_feature_schema            : 0
+row_errors                        : 0
+
+Prediction Distribution
+--------------------------------------------------------------------------
+predicted_direction:
+  BUY                            : 94315
+  SELL                           : 91492
+  RANGE                          : 2011
+m30_future_direction:
+  BUY                            : 90726
+  SELL                           : 87856
+  RANGE                          : 9236
+h1_future_direction:
+  BUY                            : 90347
+  SELL                           : 85181
+  RANGE                          : 12290
+h4_future_direction:
+  BUY                            : 89108
+  SELL                           : 76317
+  RANGE                          : 22393
+m30_phase:
+  REVERSAL_DOWN_START            : 19622
+  DOWN_MIDDLE                    : 34055
+  DOWN_START                     : 14583
+  DOWN_EXHAUSTION                : 13282
+  REVERSAL_UP_START              : 17289
+  UP_END                         : 8800
+  DOWN_END                       : 8864
+  UP_MIDDLE                      : 37731
+  UP_START                       : 14296
+  UP_EXHAUSTION                  : 16434
+  RANGE                          : 2862
+h1_phase:
+  UP_MIDDLE                      : 39251
+  UP_END                         : 6735
+  REVERSAL_DOWN_START            : 16282
+  DOWN_MIDDLE                    : 34643
+  DOWN_START                     : 15200
+  DOWN_EXHAUSTION                : 14607
+  REVERSAL_UP_START              : 16130
+  UP_EXHAUSTION                  : 19451
+  RANGE                          : 3664
+  UP_START                       : 15410
+  DOWN_END                       : 6445
+h4_phase:
+  UP_START                       : 17223
+  REVERSAL_DOWN_START            : 12644
+  DOWN_MIDDLE                    : 34647
+  DOWN_EXHAUSTION                : 15648
+  REVERSAL_UP_START              : 12218
+  UP_MIDDLE                      : 43647
+  UP_EXHAUSTION                  : 22042
+  RANGE                          : 3879
+  UP_END                         : 3891
+  DOWN_START                     : 17338
+  DOWN_END                       : 4641
+
+Confidence Summary
+--------------------------------------------------------------------------
+predicted_direction:
+  avg_confidence                 : 0.695122
+  p70_rate                       : 0.465658
+  p80_rate                       : 0.315784
+m30_future_direction:
+  avg_confidence                 : 0.709178
+  p70_rate                       : 0.521697
+  p80_rate                       : 0.393966
+h1_future_direction:
+  avg_confidence                 : 0.77998
+  p70_rate                       : 0.652999
+  p80_rate                       : 0.553972
+h4_future_direction:
+  avg_confidence                 : 0.885266
+  p70_rate                       : 0.842331
+  p80_rate                       : 0.757851
+m30_phase:
+  avg_confidence                 : 0.781788
+  p70_rate                       : 0.681585
+  p80_rate                       : 0.535966
+h1_phase:
+  avg_confidence                 : 0.867115
+  p70_rate                       : 0.837502
+  p80_rate                       : 0.738188
+h4_phase:
+  avg_confidence                 : 0.97311
+  p70_rate                       : 0.975897
+  p80_rate                       : 0.965461

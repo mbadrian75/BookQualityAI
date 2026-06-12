@@ -1,0 +1,59 @@
+{
+  "script_name": "01_build_candle_book_labels_m15_v1.py",
+  "run_id": "candle_book_labels_m15_v1_20260612_092625",
+  "status": "success",
+  "database": "market_data",
+  "symbol": "XAUUSD",
+  "start_time": "2026-06-12T09:26:25.430336+00:00",
+  "end_time": "2026-06-12T09:30:31.256681+00:00",
+  "duration_seconds": 245.826,
+  "collections": {
+    "m15_source": "xauusd_m15",
+    "target": "bq2_labels_candle_book_m15_v1"
+  },
+  "label_config": {
+    "label_version": "candle_book_label_m15_v1",
+    "anchor_timeframe": "M15",
+    "entry_rule": "entry_time = next M15 open after anchor_time",
+    "base_r_usd": 2.0,
+    "horizon_m15": 8,
+    "direction_threshold_r": 0.35
+  },
+  "counts": {
+    "m15_loaded": 376837,
+    "anchors_seen": 376828,
+    "labels_built": 376828,
+    "upserted_or_modified": 376828,
+    "inserted": 376828,
+    "matched": 0,
+    "modified": 0,
+    "skipped_existing": 0,
+    "skipped_no_future_path": 0,
+    "row_errors": 0
+  },
+  "label_distribution": {
+    "SELL": 158694,
+    "BUY": 160678,
+    "NOTRADE": 57456
+  },
+  "label_method_distribution": {
+    "tp_sell_first": 141492,
+    "tp_buy_first": 142267,
+    "horizon_final_move_sell": 17202,
+    "horizon_final_move_buy": 18411,
+    "horizon_flat": 47749,
+    "ambiguous_same_bar": 9707
+  },
+  "errors": [],
+  "args": {
+    "limit": null,
+    "reset": true,
+    "start": null,
+    "end": null,
+    "skip_existing": false
+  },
+  "reset_deleted_count": 1000,
+  "final_target_count": 376828,
+  "report_json_path": "C:\\Project\\BookQuality\\bq2\\02_labels\\reports\\candle_book_labels_m15_v1_report_20260612_092625.json",
+  "report_txt_path": "C:\\Project\\BookQuality\\bq2\\02_labels\\reports\\candle_book_labels_m15_v1_report_20260612_092625.txt"
+}

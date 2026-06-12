@@ -1,0 +1,96 @@
+{
+  "ma_quality_label_v1": {
+    "anchor_timeframe": "M30",
+    "entry_rule": "decision_time = next M30 open after anchor_time",
+    "quality_timeframes": [
+      "M30",
+      "H1",
+      "H4"
+    ],
+    "ma_periods": [
+      20,
+      50,
+      100
+    ],
+    "future_horizons": {
+      "m30_bars": 8,
+      "h1_bars": 6,
+      "h4_bars": 4
+    },
+    "direction_classes": [
+      "BUY",
+      "SELL",
+      "RANGE"
+    ],
+    "phase_classes": [
+      "UP_START",
+      "UP_MIDDLE",
+      "UP_END",
+      "UP_EXHAUSTION",
+      "DOWN_START",
+      "DOWN_MIDDLE",
+      "DOWN_END",
+      "DOWN_EXHAUSTION",
+      "REVERSAL_UP_START",
+      "REVERSAL_DOWN_START",
+      "RANGE"
+    ],
+    "lot_multiplier_classes": [
+      0.0,
+      0.25,
+      0.5,
+      1.0,
+      1.5,
+      2.0
+    ],
+    "risk_modes": [
+      "LOW_RISK",
+      "NORMAL_RISK",
+      "HIGH_RISK",
+      "BLOCK"
+    ],
+    "tp_modes": [
+      "SHORT_TP",
+      "NORMAL_TP",
+      "WIDE_TP",
+      "HOLD_MORE"
+    ],
+    "sl_modes": [
+      "TIGHT_SL",
+      "NORMAL_SL",
+      "WIDE_SL"
+    ],
+    "trailing_modes": [
+      "NO_TRAILING",
+      "NORMAL_TRAIL",
+      "FAST_TRAIL",
+      "TIGHT_TRAIL"
+    ],
+    "exit_modes": [
+      "FAST_EXIT",
+      "NORMAL_EXIT",
+      "PROTECT_PROFIT",
+      "HOLD_MORE"
+    ],
+    "trade_horizon_m30": 16,
+    "base_r_usd": 2.0
+  },
+  "candle_book_label_v1": {
+    "anchor_timeframe": "M15",
+    "entry_rule": "decision_time = next M15 open after anchor_time",
+    "input_timeframes": [
+      "M1",
+      "M5",
+      "M15"
+    ],
+    "outputs": [
+      "BUY",
+      "SELL",
+      "NOTRADE"
+    ],
+    "tp_usd": 2.0,
+    "sl_usd": 2.0,
+    "horizon_m15": 8,
+    "ambiguous_policy": "NOTRADE"
+  }
+}

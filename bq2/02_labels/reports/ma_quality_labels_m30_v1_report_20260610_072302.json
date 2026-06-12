@@ -1,0 +1,137 @@
+{
+  "script_name": "01_build_ma_quality_labels_m30_v1.py",
+  "run_id": "ma_quality_labels_m30_v1_20260610_072302",
+  "status": "success",
+  "database": "market_data",
+  "symbol": "XAUUSD",
+  "start_time": "2026-06-10T07:23:02.265946+00:00",
+  "end_time": "2026-06-10T07:23:11.714656+00:00",
+  "duration_seconds": 9.449,
+  "collections": {
+    "m30_source": "xauusd_m30",
+    "h1_source": "xauusd_h1",
+    "h4_source": "xauusd_h4",
+    "target": "bq2_labels_ma_quality_m30_v1"
+  },
+  "label_config": {
+    "label_version": "ma_quality_label_m30_v1",
+    "anchor_timeframe": "M30",
+    "entry_rule": "decision_time = next M30 open after anchor_time",
+    "base_r_usd": 2.0,
+    "trade_horizon_m30": 16,
+    "ma_periods": [
+      20,
+      50,
+      100
+    ],
+    "m30_horizon_bars": 8,
+    "h1_horizon_bars": 6,
+    "h4_horizon_bars": 4,
+    "direction_threshold_r": 0.35
+  },
+  "source_loads": {
+    "m30": {
+      "collection": "xauusd_m30",
+      "count": 188895,
+      "first_time": "2010-01-03 18:00:00",
+      "last_time": "2025-12-31 16:30:00"
+    },
+    "h1": {
+      "collection": "xauusd_h1",
+      "count": 95009,
+      "first_time": "2010-01-03 18:00:00",
+      "last_time": "2025-12-31 16:00:00"
+    },
+    "h4": {
+      "collection": "xauusd_h4",
+      "count": 25550,
+      "first_time": "2010-01-03 16:00:00",
+      "last_time": "2025-12-31 16:00:00"
+    }
+  },
+  "counts": {
+    "anchors_seen": 1000,
+    "anchors_processed": 1000,
+    "upserted_or_modified": 1000,
+    "inserted": 1000,
+    "matched": 0,
+    "modified": 0,
+    "skipped_existing": 0,
+    "skipped_no_future_trade_path": 0,
+    "skipped_no_ma_context": 0,
+    "row_errors": 0
+  },
+  "prediction_distribution": {
+    "BUY": 491,
+    "SELL": 405,
+    "RANGE": 104
+  },
+  "phase_distribution": {
+    "m30": {
+      "UP_EXHAUSTION": 83,
+      "UP_MIDDLE": 182,
+      "UP_END": 74,
+      "REVERSAL_DOWN_START": 98,
+      "DOWN_MIDDLE": 145,
+      "DOWN_END": 52,
+      "RANGE": 25,
+      "REVERSAL_UP_START": 105,
+      "DOWN_START": 51,
+      "DOWN_EXHAUSTION": 89,
+      "UP_START": 96
+    },
+    "h1": {
+      "UP_MIDDLE": 174,
+      "UP_EXHAUSTION": 143,
+      "UP_END": 38,
+      "REVERSAL_UP_START": 86,
+      "RANGE": 34,
+      "REVERSAL_DOWN_START": 69,
+      "DOWN_END": 34,
+      "DOWN_MIDDLE": 190,
+      "DOWN_START": 42,
+      "DOWN_EXHAUSTION": 114,
+      "UP_START": 76
+    },
+    "h4": {
+      "UP_MIDDLE": 278,
+      "UP_EXHAUSTION": 83,
+      "REVERSAL_DOWN_START": 62,
+      "DOWN_MIDDLE": 232,
+      "DOWN_START": 150,
+      "DOWN_END": 15,
+      "REVERSAL_UP_START": 62,
+      "UP_START": 47,
+      "UP_END": 8,
+      "DOWN_EXHAUSTION": 63
+    }
+  },
+  "risk_distribution": {
+    "buy": {
+      "NORMAL_RISK": 97,
+      "HIGH_RISK": 90,
+      "BLOCK": 586,
+      "LOW_RISK": 227
+    },
+    "sell": {
+      "BLOCK": 626,
+      "LOW_RISK": 212,
+      "HIGH_RISK": 63,
+      "NORMAL_RISK": 99
+    }
+  },
+  "ma_context_skip_reasons": {},
+  "warnings": [],
+  "errors": [],
+  "args": {
+    "limit": 1000,
+    "reset": true,
+    "start": "2010-03-01 00:00:00",
+    "end": null,
+    "skip_existing": false
+  },
+  "reset_deleted_count": 0,
+  "final_target_count": 1000,
+  "report_json_path": "C:\\Project\\BookQuality\\bq2\\02_labels\\reports\\ma_quality_labels_m30_v1_report_20260610_072302.json",
+  "report_txt_path": "C:\\Project\\BookQuality\\bq2\\02_labels\\reports\\ma_quality_labels_m30_v1_report_20260610_072302.txt"
+}

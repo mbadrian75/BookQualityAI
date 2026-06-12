@@ -1,0 +1,79 @@
+Book & Quality v2 - Train MA Scenario Model M30 v1 Report
+==========================================================================
+run_id                            : train_ma_scenario_m30_v1_20260611_081657
+status                            : success
+database                          : market_data
+symbol                            : XAUUSD
+start_time                        : 2026-06-11T08:16:57.191807+00:00
+end_time                          : 2026-06-11T10:05:51.430153+00:00
+duration_seconds                  : 6534.238
+
+Training Config
+--------------------------------------------------------------------------
+model_version                     : ma_scenario_model_m30_v1
+dataset_version                   : ma_scenario_dataset_m30_v1
+feature_version                   : ma_quality_features_m30_v1
+label_version                     : ma_quality_label_m30_v1
+algorithm                         : sklearn.HistGradientBoostingClassifier
+targets                           : ['predicted_direction', 'm30_future_direction', 'h1_future_direction', 'h4_future_direction', 'm30_phase', 'h1_phase', 'h4_phase']
+max_iter                          : 200
+learning_rate                     : 0.05
+max_leaf_nodes                    : 31
+l2_regularization                 : 0.1
+random_state                      : 42
+limit                             : None
+limit_per_split                   : None
+
+Counts
+--------------------------------------------------------------------------
+rows_loaded                       : 187818
+skipped_bad_x                     : 0
+skipped_bad_y                     : 0
+skipped_bad_split                 : 0
+skipped_missing_target            : 0
+skipped_feature_count_mismatch    : 0
+models_trained                    : 7
+
+Split Distribution Loaded
+--------------------------------------------------------------------------
+train                             : 153874
+valid                             : 10301
+test                              : 23643
+
+Metrics Summary
+--------------------------------------------------------------------------
+predicted_direction (classification):
+  train    rows=153874 acc=0.7726 macro_f1=0.6034 weighted_f1=0.7434 avg_p=0.6969 p70_rate=0.4702 p80_rate=0.3185
+  valid    rows=10301 acc=0.6768 macro_f1=0.4781 weighted_f1=0.6445 avg_p=0.6922 p70_rate=0.4474 p80_rate=0.3172
+  test     rows=23643 acc=0.6684 macro_f1=0.4742 weighted_f1=0.6355 avg_p=0.6851 p70_rate=0.4443 p80_rate=0.2976
+m30_future_direction (classification):
+  train    rows=153874 acc=0.7756 macro_f1=0.6726 weighted_f1=0.7523 avg_p=0.7102 p70_rate=0.5243 p80_rate=0.3956
+  valid    rows=10301 acc=0.6986 macro_f1=0.5433 weighted_f1=0.6656 avg_p=0.7117 p70_rate=0.5193 p80_rate=0.3986
+  test     rows=23643 acc=0.6879 macro_f1=0.5391 weighted_f1=0.6589 avg_p=0.7016 p70_rate=0.5061 p80_rate=0.3813
+h1_future_direction (classification):
+  train    rows=153874 acc=0.8551 macro_f1=0.7811 weighted_f1=0.8433 avg_p=0.7788 p70_rate=0.6501 p80_rate=0.5517
+  valid    rows=10301 acc=0.7530 macro_f1=0.5884 weighted_f1=0.7209 avg_p=0.7796 p70_rate=0.6480 p80_rate=0.5545
+  test     rows=23643 acc=0.7347 macro_f1=0.5511 weighted_f1=0.6950 avg_p=0.7876 p70_rate=0.6738 p80_rate=0.5687
+h4_future_direction (classification):
+  train    rows=153874 acc=0.9776 macro_f1=0.9671 weighted_f1=0.9774 avg_p=0.8921 p70_rate=0.8600 p80_rate=0.7706
+  valid    rows=10301 acc=0.8287 macro_f1=0.6867 weighted_f1=0.8157 avg_p=0.8684 p70_rate=0.7976 p80_rate=0.7422
+  test     rows=23643 acc=0.8203 macro_f1=0.6940 weighted_f1=0.8121 avg_p=0.8478 p70_rate=0.7469 p80_rate=0.6815
+m30_phase (classification):
+  train    rows=153874 acc=0.9034 macro_f1=0.8917 weighted_f1=0.9018 avg_p=0.7866 p70_rate=0.6947 p80_rate=0.5463
+  valid    rows=10301 acc=0.7148 macro_f1=0.6318 weighted_f1=0.7037 avg_p=0.7604 p70_rate=0.6233 p80_rate=0.4840
+  test     rows=23643 acc=0.7178 macro_f1=0.6282 weighted_f1=0.7031 avg_p=0.7599 p70_rate=0.6216 p80_rate=0.4916
+h1_phase (classification):
+  train    rows=153874 acc=0.9712 macro_f1=0.9670 weighted_f1=0.9711 avg_p=0.8738 p70_rate=0.8543 p80_rate=0.7549
+  valid    rows=10301 acc=0.7734 macro_f1=0.6641 weighted_f1=0.7631 avg_p=0.8320 p70_rate=0.7500 p80_rate=0.6500
+  test     rows=23643 acc=0.7795 macro_f1=0.6556 weighted_f1=0.7638 avg_p=0.8389 p70_rate=0.7664 p80_rate=0.6675
+h4_phase (classification):
+  train    rows=153874 acc=0.9999 macro_f1=0.9999 weighted_f1=0.9999 avg_p=0.9867 p70_rate=0.9997 p80_rate=0.9985
+  valid    rows=10301 acc=0.8457 macro_f1=0.6850 weighted_f1=0.8326 avg_p=0.9253 p70_rate=0.8953 p80_rate=0.8506
+  test     rows=23643 acc=0.8351 macro_f1=0.6969 weighted_f1=0.8278 avg_p=0.9054 p70_rate=0.8564 p80_rate=0.8005
+
+Outputs
+--------------------------------------------------------------------------
+model_path                        : C:\Project\BookQuality\bq2\06_models\ma_quality\ma_scenario_model_m30_v1_20260611_081657.joblib
+latest_model_path                 : C:\Project\BookQuality\bq2\06_models\ma_quality\ma_scenario_model_m30_v1_latest.joblib
+report_json                       : C:\Project\BookQuality\bq2\05_training\reports\ma_scenario_train_m30_v1_report_20260611_081657.json
+report_txt                        : C:\Project\BookQuality\bq2\05_training\reports\ma_scenario_train_m30_v1_report_20260611_081657.txt

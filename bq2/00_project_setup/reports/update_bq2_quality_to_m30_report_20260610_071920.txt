@@ -1,0 +1,8 @@
+Book & Quality v2 - Update Quality Model to M30 Report
+==========================================================================
+Run ID            : update_bq2_quality_to_m30_20260610_071920
+Status            : success
+Raw Data Modified : False
+
+MA Quality collections now use M30 anchor.
+Config updated successfully.

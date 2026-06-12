@@ -1,0 +1,34 @@
+Book & Quality v2 - Cleanup Obsolete Collections Report
+==========================================================================
+Run ID            : cleanup_bq2_obsolete_collections_20260611_072449
+Status            : success
+Mode              : dry_run
+Database          : market_data
+Raw Data Modified : False
+Include BQ1       : False
+Duration Sec      : 0.042
+
+Actions
+--------------------------------------------------------------------------
+bq2_labels_ma_quality_m15_v1                  dry_run_would_drop        0
+bq2_features_ma_quality_m15_v1                dry_run_would_drop        0
+bq2_dataset_ma_quality_m15_v1                 dry_run_would_drop        0
+bq2_predictions_ma_quality_m15_v1             dry_run_would_drop        0
+bq2_dataset_ma_quality_m30_v1                 dry_run_would_drop        187818
+bq2_predictions_ma_quality_m30_v1             missing_skipped           
+
+Kept BQ2 Collections
+--------------------------------------------------------------------------
+bq2_labels_ma_quality_m30_v1
+bq2_features_ma_quality_m30_v1
+bq2_labels_candle_book_m15_v1
+bq2_features_candle_book_m15_v1
+bq2_dataset_candle_book_m15_v1
+bq2_predictions_candle_book_m15_v1
+bq2_api_decisions_m15_v1
+bq2_meta_project
+bq2_meta_label_versions
+bq2_meta_feature_versions
+bq2_meta_dataset_versions
+bq2_meta_model_versions
+bq2_meta_runs

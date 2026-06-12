@@ -1,0 +1,79 @@
+{
+  "run_id": "cleanup_bq2_obsolete_collections_20260611_072449",
+  "status": "success",
+  "mode": "dry_run",
+  "database": "market_data",
+  "mongo_uri": "mongodb://localhost:27017",
+  "raw_data_modified": false,
+  "include_bq1": false,
+  "start_time": "2026-06-11T07:24:49.420739+00:00",
+  "end_time": "2026-06-11T07:24:49.462668+00:00",
+  "duration_seconds": 0.042,
+  "obsolete_bq2_collections": [
+    "bq2_labels_ma_quality_m15_v1",
+    "bq2_features_ma_quality_m15_v1",
+    "bq2_dataset_ma_quality_m15_v1",
+    "bq2_predictions_ma_quality_m15_v1",
+    "bq2_dataset_ma_quality_m30_v1",
+    "bq2_predictions_ma_quality_m30_v1"
+  ],
+  "optional_bq1_collections": [],
+  "keep_bq2_collections": [
+    "bq2_labels_ma_quality_m30_v1",
+    "bq2_features_ma_quality_m30_v1",
+    "bq2_labels_candle_book_m15_v1",
+    "bq2_features_candle_book_m15_v1",
+    "bq2_dataset_candle_book_m15_v1",
+    "bq2_predictions_candle_book_m15_v1",
+    "bq2_api_decisions_m15_v1",
+    "bq2_meta_project",
+    "bq2_meta_label_versions",
+    "bq2_meta_feature_versions",
+    "bq2_meta_dataset_versions",
+    "bq2_meta_model_versions",
+    "bq2_meta_runs"
+  ],
+  "missing": [
+    "bq2_predictions_ma_quality_m30_v1"
+  ],
+  "blocked": [],
+  "actions": [
+    {
+      "collection": "bq2_labels_ma_quality_m15_v1",
+      "exists": true,
+      "estimated_count": 0,
+      "action": "dry_run_would_drop"
+    },
+    {
+      "collection": "bq2_features_ma_quality_m15_v1",
+      "exists": true,
+      "estimated_count": 0,
+      "action": "dry_run_would_drop"
+    },
+    {
+      "collection": "bq2_dataset_ma_quality_m15_v1",
+      "exists": true,
+      "estimated_count": 0,
+      "action": "dry_run_would_drop"
+    },
+    {
+      "collection": "bq2_predictions_ma_quality_m15_v1",
+      "exists": true,
+      "estimated_count": 0,
+      "action": "dry_run_would_drop"
+    },
+    {
+      "collection": "bq2_dataset_ma_quality_m30_v1",
+      "exists": true,
+      "estimated_count": 187818,
+      "action": "dry_run_would_drop"
+    },
+    {
+      "collection": "bq2_predictions_ma_quality_m30_v1",
+      "exists": false,
+      "action": "missing_skipped"
+    }
+  ],
+  "report_json_path": "C:\\Project\\BookQuality\\bq2\\01_database\\reports\\cleanup_bq2_obsolete_collections_report_20260611_072449.json",
+  "report_txt_path": "C:\\Project\\BookQuality\\bq2\\01_database\\reports\\cleanup_bq2_obsolete_collections_report_20260611_072449.txt"
+}

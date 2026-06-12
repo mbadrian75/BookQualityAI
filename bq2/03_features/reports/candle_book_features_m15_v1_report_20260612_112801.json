@@ -1,0 +1,96 @@
+{
+  "script_name": "01_build_candle_book_features_m15_v1.py",
+  "run_id": "candle_book_features_m15_v1_20260612_112801",
+  "status": "success",
+  "database": "market_data",
+  "symbol": "XAUUSD",
+  "start_time": "2026-06-12T11:28:01.190796+00:00",
+  "end_time": "2026-06-12T11:52:36.191485+00:00",
+  "duration_seconds": 1475.001,
+  "collections": {
+    "labels_source": "bq2_labels_candle_book_m15_v1",
+    "m1_source": "xauusd_m1",
+    "m5_source": "xauusd_m5",
+    "m15_source": "xauusd_m15",
+    "target": "bq2_features_candle_book_m15_v1"
+  },
+  "feature_config": {
+    "feature_version": "candle_book_features_m15_v1",
+    "label_version_expected": "candle_book_label_m15_v1",
+    "anchor_timeframe": "M15",
+    "input_timeframes": [
+      "M1",
+      "M5",
+      "M15"
+    ],
+    "m1_windows": [
+      5,
+      15,
+      30,
+      60
+    ],
+    "m5_windows": [
+      3,
+      6,
+      12,
+      24,
+      48
+    ],
+    "m15_windows": [
+      3,
+      5,
+      10,
+      20,
+      50
+    ],
+    "min_history": {
+      "m1": 60,
+      "m5": 48,
+      "m15": 50
+    },
+    "no_leak_rule": "m1/m5 datetime < decision_time; m15 datetime <= anchor_time"
+  },
+  "counts": {
+    "labels_loaded": 376828,
+    "labels_processed": 376828,
+    "features_built": 376779,
+    "upserted_or_modified": 376779,
+    "inserted": 376779,
+    "matched": 0,
+    "modified": 0,
+    "skipped_existing": 0,
+    "skipped_no_context": 49,
+    "skipped_no_label_y": 0,
+    "row_errors": 0
+  },
+  "feature_count": {
+    "min": 253,
+    "max": 253,
+    "last": 253,
+    "distinct": {
+      "253": 376779
+    }
+  },
+  "label_distribution": {
+    "SELL": 158682,
+    "BUY": 160641,
+    "NOTRADE": 57456
+  },
+  "skip_reasons": {
+    "m1:not_enough_history": 3,
+    "m5:not_enough_history": 12,
+    "m15:not_enough_history": 34
+  },
+  "errors": [],
+  "args": {
+    "limit": null,
+    "reset": true,
+    "start": null,
+    "end": null,
+    "skip_existing": false
+  },
+  "reset_deleted_count": 951,
+  "final_target_count": 376779,
+  "report_json_path": "C:\\Project\\BookQuality\\bq2\\03_features\\reports\\candle_book_features_m15_v1_report_20260612_112801.json",
+  "report_txt_path": "C:\\Project\\BookQuality\\bq2\\03_features\\reports\\candle_book_features_m15_v1_report_20260612_112801.txt"
+}

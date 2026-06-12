@@ -1,0 +1,62 @@
+Book & Quality v2 - Train MA Quality Model M30 v1 Report
+==========================================================================
+run_id                            : train_ma_quality_m30_v1_20260611_055333
+status                            : success
+database                          : market_data
+symbol                            : XAUUSD
+duration_seconds                  : 194.875
+
+Training Config
+--------------------------------------------------------------------------
+model_version                     : ma_quality_model_m30_v1
+dataset_version                   : ma_quality_dataset_m30_v1
+feature_version                   : ma_quality_features_m30_v1
+label_version                     : ma_quality_label_m30_v1
+target_set                        : core
+algorithm                         : sklearn.HistGradientBoosting
+max_iter                          : 50
+learning_rate                     : 0.05
+max_leaf_nodes                    : 31
+random_state                      : 42
+limit                             : 10000
+
+Counts
+--------------------------------------------------------------------------
+rows_loaded                       : 10000
+skipped_bad_x                     : 0
+skipped_bad_y                     : 0
+skipped_bad_split                 : 0
+skipped_feature_count_mismatch    : 0
+models_trained                    : 7
+
+Split Distribution Loaded
+--------------------------------------------------------------------------
+train                             : 10000
+
+Metrics Summary
+--------------------------------------------------------------------------
+predicted_direction (classification):
+  train    rows=10000 acc=0.9034 macro_f1=0.8452 weighted_f1=0.8985
+buy_risk_mode (classification):
+  train    rows=10000 acc=0.8137 macro_f1=0.6631 weighted_f1=0.7913
+sell_risk_mode (classification):
+  train    rows=10000 acc=0.8140 macro_f1=0.6473 weighted_f1=0.7882
+buy_lot_multiplier (classification):
+  train    rows=10000 acc=0.8175 macro_f1=0.6903 weighted_f1=0.7964
+sell_lot_multiplier (classification):
+  train    rows=10000 acc=0.8202 macro_f1=0.6826 weighted_f1=0.7968
+buy_quality_score (regression):
+  train    rows=10000 mae=26.3788 rmse=30.2610 r2=0.4237
+sell_quality_score (regression):
+  train    rows=10000 mae=24.8829 rmse=29.0704 r2=0.4007
+
+Outputs
+--------------------------------------------------------------------------
+model_path                        : C:\Project\BookQuality\bq2\06_models\ma_quality\ma_quality_model_m30_v1_core_20260611_055333.joblib
+latest_model_path                 : C:\Project\BookQuality\bq2\06_models\ma_quality\ma_quality_model_m30_v1_core_latest.joblib
+report_json                       : C:\Project\BookQuality\bq2\05_training\reports\ma_quality_train_m30_v1_report_20260611_055333.json
+report_txt                        : C:\Project\BookQuality\bq2\05_training\reports\ma_quality_train_m30_v1_report_20260611_055333.txt
+
+Warnings
+--------------------------------------------------------------------------
+- Validation or test split is empty. Use full dataset for reliable evaluation.

@@ -1,0 +1,39 @@
+Book & Quality - Book Entry Labels v1 Report
+======================================================================
+Run ID              : book_entry_labels_v1_20260610_074754
+Status              : success
+Database            : market_data
+Symbol              : XAUUSD
+Start Time          : 2026-06-10T07:47:54.089779+00:00
+End Time            : 2026-06-10T07:48:11.945477+00:00
+Duration Sec        : 17.856
+
+Config
+----------------------------------------------------------------------
+label_version           : book_entry_label_v1
+entry_rule              : Entry at next M15 open after anchor_time.
+tp_usd                  : 2.0
+sl_usd                  : 2.0
+horizon_m15             : 8
+ambiguous_policy        : NOTRADE
+
+Counts
+----------------------------------------------------------------------
+anchors_read            : 1000
+upserted_or_modified    : 1000
+skipped_existing        : 0
+skipped_no_entry        : 0
+skipped_no_future_m1    : 0
+row_errors              : 0
+
+Label Distribution
+----------------------------------------------------------------------
+BUY                     : 421
+SELL                    : 412
+NOTRADE                 : 167
+
+Reason Distribution
+----------------------------------------------------------------------
+sell_tp_before_sl       : 412
+buy_tp_before_sl        : 421
+no_clear_edge           : 167

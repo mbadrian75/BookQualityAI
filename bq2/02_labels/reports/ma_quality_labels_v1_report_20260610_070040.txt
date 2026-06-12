@@ -1,0 +1,59 @@
+Book & Quality v2 - MA Quality Labels v1 Report
+==========================================================================
+run_id                      : ma_quality_labels_v1_20260610_070040
+status                      : success
+database                    : market_data
+symbol                      : XAUUSD
+start_time                  : 2026-06-10T07:00:40.686592+00:00
+end_time                    : 2026-06-10T07:00:56.086270+00:00
+duration_seconds            : 15.4
+
+Collections
+--------------------------------------------------------------------------
+m15_source                  : xauusd_m15
+m30_source                  : xauusd_m30
+h1_source                   : xauusd_h1
+h4_source                   : xauusd_h4
+target                      : bq2_labels_ma_quality_m15_v1
+
+Config
+--------------------------------------------------------------------------
+label_version               : ma_quality_label_v1
+base_r_usd                  : 2.0
+trade_horizon_m15           : 64
+ma_periods                  : [20, 50, 100]
+m30_horizon_bars            : 8
+h1_horizon_bars             : 6
+h4_horizon_bars             : 4
+direction_threshold_r       : 0.35
+
+Counts
+--------------------------------------------------------------------------
+anchors_seen                : 1000
+anchors_processed           : 0
+upserted_or_modified        : 0
+inserted                    : 0
+matched                     : 0
+modified                    : 0
+skipped_existing            : 0
+skipped_no_entry            : 0
+skipped_no_future_trade_path: 0
+skipped_no_ma_context       : 1000
+row_errors                  : 0
+
+Prediction Distribution
+--------------------------------------------------------------------------
+BUY                         : 0
+SELL                        : 0
+RANGE                       : 0
+
+Phase Distribution
+--------------------------------------------------------------------------
+M30:
+H1:
+H4:
+
+Risk Distribution
+--------------------------------------------------------------------------
+buy:
+sell:

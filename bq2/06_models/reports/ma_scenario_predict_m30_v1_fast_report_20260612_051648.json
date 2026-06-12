@@ -1,0 +1,199 @@
+{
+  "script_name": "01_predict_ma_scenario_m30_v1_fast.py",
+  "run_id": "fast_predict_ma_scenario_m30_v1_20260612_051648",
+  "status": "success",
+  "database": "market_data",
+  "symbol": "XAUUSD",
+  "start_time": "2026-06-12T05:16:48.369256+00:00",
+  "end_time": "2026-06-12T05:17:35.203947+00:00",
+  "duration_seconds": 46.835,
+  "collections": {
+    "features_source": "bq2_features_ma_quality_m30_v1",
+    "target": "bq2_predictions_ma_scenario_m30_v1"
+  },
+  "model": {
+    "model_version": "ma_scenario_model_m30_v1",
+    "dataset_version": "ma_scenario_dataset_m30_v1",
+    "feature_version": "ma_quality_features_m30_v1",
+    "label_version": "ma_quality_label_m30_v1",
+    "trained_at": "2026-06-11T08:18:00.588929+00:00",
+    "feature_count": 302,
+    "targets": [
+      "predicted_direction",
+      "m30_future_direction",
+      "h1_future_direction",
+      "h4_future_direction",
+      "m30_phase",
+      "h1_phase",
+      "h4_phase"
+    ]
+  },
+  "counts": {
+    "features_seen": 1000,
+    "predictions_built": 1000,
+    "upserted_or_modified": 1000,
+    "inserted": 1000,
+    "matched": 0,
+    "modified": 0,
+    "skipped_existing": 0,
+    "skipped_missing_features": 0,
+    "skipped_feature_schema": 0,
+    "row_errors": 0
+  },
+  "prediction_distribution": {
+    "predicted_direction": {
+      "BUY": 579,
+      "SELL": 418,
+      "RANGE": 3
+    },
+    "m30_future_direction": {
+      "BUY": 547,
+      "SELL": 412,
+      "RANGE": 41
+    },
+    "h1_future_direction": {
+      "BUY": 516,
+      "SELL": 399,
+      "RANGE": 85
+    },
+    "h4_future_direction": {
+      "BUY": 660,
+      "SELL": 273,
+      "RANGE": 67
+    },
+    "m30_phase": {
+      "REVERSAL_DOWN_START": 85,
+      "DOWN_MIDDLE": 156,
+      "DOWN_START": 95,
+      "DOWN_EXHAUSTION": 44,
+      "REVERSAL_UP_START": 92,
+      "UP_END": 42,
+      "DOWN_END": 35,
+      "UP_MIDDLE": 274,
+      "UP_START": 47,
+      "UP_EXHAUSTION": 122,
+      "RANGE": 8
+    },
+    "h1_phase": {
+      "UP_MIDDLE": 212,
+      "UP_END": 16,
+      "REVERSAL_DOWN_START": 88,
+      "DOWN_MIDDLE": 128,
+      "DOWN_START": 113,
+      "DOWN_EXHAUSTION": 76,
+      "REVERSAL_UP_START": 71,
+      "UP_EXHAUSTION": 127,
+      "RANGE": 22,
+      "UP_START": 110,
+      "DOWN_END": 37
+    },
+    "h4_phase": {
+      "UP_START": 149,
+      "REVERSAL_DOWN_START": 71,
+      "DOWN_MIDDLE": 150,
+      "DOWN_EXHAUSTION": 40,
+      "REVERSAL_UP_START": 69,
+      "UP_MIDDLE": 331,
+      "UP_EXHAUSTION": 119,
+      "RANGE": 8,
+      "UP_END": 16,
+      "DOWN_START": 39,
+      "DOWN_END": 8
+    }
+  },
+  "confidence_accumulator": {
+    "predicted_direction": {
+      "sum": 728.50684836256,
+      "count": 1000,
+      "p70": 547,
+      "p80": 360
+    },
+    "m30_future_direction": {
+      "sum": 733.4578478666341,
+      "count": 1000,
+      "p70": 582,
+      "p80": 446
+    },
+    "h1_future_direction": {
+      "sum": 809.7220739066498,
+      "count": 1000,
+      "p70": 719,
+      "p80": 618
+    },
+    "h4_future_direction": {
+      "sum": 925.3634337606641,
+      "count": 1000,
+      "p70": 916,
+      "p80": 853
+    },
+    "m30_phase": {
+      "sum": 803.939062644859,
+      "count": 1000,
+      "p70": 730,
+      "p80": 590
+    },
+    "h1_phase": {
+      "sum": 893.0491225482724,
+      "count": 1000,
+      "p70": 896,
+      "p80": 801
+    },
+    "h4_phase": {
+      "sum": 991.0233990789349,
+      "count": 1000,
+      "p70": 1000,
+      "p80": 999
+    }
+  },
+  "confidence_summary": {
+    "predicted_direction": {
+      "avg_confidence": 0.728507,
+      "p70_rate": 0.547,
+      "p80_rate": 0.36
+    },
+    "m30_future_direction": {
+      "avg_confidence": 0.733458,
+      "p70_rate": 0.582,
+      "p80_rate": 0.446
+    },
+    "h1_future_direction": {
+      "avg_confidence": 0.809722,
+      "p70_rate": 0.719,
+      "p80_rate": 0.618
+    },
+    "h4_future_direction": {
+      "avg_confidence": 0.925363,
+      "p70_rate": 0.916,
+      "p80_rate": 0.853
+    },
+    "m30_phase": {
+      "avg_confidence": 0.803939,
+      "p70_rate": 0.73,
+      "p80_rate": 0.59
+    },
+    "h1_phase": {
+      "avg_confidence": 0.893049,
+      "p70_rate": 0.896,
+      "p80_rate": 0.801
+    },
+    "h4_phase": {
+      "avg_confidence": 0.991023,
+      "p70_rate": 1.0,
+      "p80_rate": 0.999
+    }
+  },
+  "errors": [],
+  "args": {
+    "limit": 1000,
+    "reset": true,
+    "start": null,
+    "end": null,
+    "skip_existing": false,
+    "model_path": null,
+    "batch_size": 5000
+  },
+  "reset_deleted_count": 1000,
+  "final_target_count": 1000,
+  "report_json_path": "C:\\Project\\BookQuality\\bq2\\06_models\\reports\\ma_scenario_predict_m30_v1_fast_report_20260612_051648.json",
+  "report_txt_path": "C:\\Project\\BookQuality\\bq2\\06_models\\reports\\ma_scenario_predict_m30_v1_fast_report_20260612_051648.txt"
+}

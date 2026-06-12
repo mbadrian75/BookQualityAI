@@ -1,0 +1,307 @@
+{
+  "script_name": "01_train_candle_book_m15_v1.py",
+  "run_id": "candle_book_train_m15_v1_20260612_131520",
+  "status": "success",
+  "database": "market_data",
+  "symbol": "XAUUSD",
+  "start_time": "2026-06-12T13:15:20.655009+00:00",
+  "end_time": "2026-06-12T13:41:22.780449+00:00",
+  "duration_seconds": 1562.125,
+  "collections": {
+    "dataset_source": "bq2_dataset_candle_book_m15_v1"
+  },
+  "training_config": {
+    "model_version": "candle_book_model_m15_v1",
+    "dataset_version": "candle_book_dataset_m15_v1",
+    "feature_version": "candle_book_features_m15_v1",
+    "label_version": "candle_book_label_m15_v1",
+    "target": "book_direction",
+    "classifier": "HistGradientBoostingClassifier",
+    "max_iter": 200,
+    "learning_rate": 0.05,
+    "l2_regularization": 0.1,
+    "max_leaf_nodes": 31,
+    "limit_per_split": null,
+    "sample_weight": true
+  },
+  "counts": {
+    "train": 308869,
+    "valid": 20600,
+    "test": 47310,
+    "rows_loaded": 376779,
+    "feature_count": 253,
+    "train_label_distribution": {
+      "SELL": 129569,
+      "BUY": 129803,
+      "NOTRADE": 49497
+    },
+    "valid_label_distribution": {
+      "NOTRADE": 2059,
+      "BUY": 9343,
+      "SELL": 9198
+    },
+    "test_label_distribution": {
+      "SELL": 19915,
+      "BUY": 21495,
+      "NOTRADE": 5900
+    }
+  },
+  "model_output": {
+    "model_path": "C:\\Project\\BookQuality\\bq2\\06_models\\candle_book\\candle_book_model_m15_v1_20260612_131520.joblib",
+    "latest_model_path": "C:\\Project\\BookQuality\\bq2\\06_models\\candle_book\\candle_book_model_m15_v1_latest.joblib",
+    "classes": [
+      "BUY",
+      "NOTRADE",
+      "SELL"
+    ],
+    "feature_count": 253
+  },
+  "metrics": {
+    "train": {
+      "rows": 308869,
+      "label_distribution": {
+        "SELL": 129569,
+        "BUY": 129803,
+        "NOTRADE": 49497
+      },
+      "prediction_distribution": {
+        "SELL": 104551,
+        "NOTRADE": 122101,
+        "BUY": 82217
+      },
+      "accuracy": 0.461652,
+      "macro_f1": 0.458372,
+      "weighted_f1": 0.4659,
+      "classes": [
+        "BUY",
+        "NOTRADE",
+        "SELL"
+      ],
+      "confidence": {
+        "avg_confidence": 0.455276,
+        "p60_rate": 0.057008,
+        "p70_rate": 0.005643,
+        "p80_rate": 6.5e-05
+      },
+      "log_loss": 0.991103,
+      "classification_report": {
+        "BUY": {
+          "precision": 0.5788340610822579,
+          "recall": 0.36663251234563143,
+          "f1-score": 0.4489199132157344,
+          "support": 129803.0
+        },
+        "NOTRADE": {
+          "precision": 0.30166829100498765,
+          "recall": 0.7441663131098855,
+          "f1-score": 0.42930570286366976,
+          "support": 49497.0
+        },
+        "SELL": {
+          "precision": 0.556340924524873,
+          "recall": 0.44891910873742946,
+          "f1-score": 0.4968904835127285,
+          "support": 129569.0
+        },
+        "accuracy": 0.46165202723484716,
+        "macro avg": {
+          "precision": 0.47894775887070623,
+          "recall": 0.5199059780643154,
+          "f1-score": 0.45837203319737757,
+          "support": 308869.0
+        },
+        "weighted avg": {
+          "precision": 0.5249818216794093,
+          "recall": 0.46165202723484716,
+          "f1-score": 0.4659001030470709,
+          "support": 308869.0
+        }
+      },
+      "confusion_matrix": [
+        [
+          47590,
+          43077,
+          39136
+        ],
+        [
+          5414,
+          36834,
+          7249
+        ],
+        [
+          29213,
+          42190,
+          58166
+        ]
+      ]
+    },
+    "valid": {
+      "rows": 20600,
+      "label_distribution": {
+        "NOTRADE": 2059,
+        "BUY": 9343,
+        "SELL": 9198
+      },
+      "prediction_distribution": {
+        "BUY": 7507,
+        "SELL": 8766,
+        "NOTRADE": 4327
+      },
+      "accuracy": 0.407816,
+      "macro_f1": 0.377615,
+      "weighted_f1": 0.416117,
+      "classes": [
+        "BUY",
+        "NOTRADE",
+        "SELL"
+      ],
+      "confidence": {
+        "avg_confidence": 0.440445,
+        "p60_rate": 0.010728,
+        "p70_rate": 0.000534,
+        "p80_rate": 0.0
+      },
+      "log_loss": 0.997198,
+      "classification_report": {
+        "BUY": {
+          "precision": 0.4587718129745571,
+          "recall": 0.3686182168468372,
+          "f1-score": 0.40878338278931753,
+          "support": 9343.0
+        },
+        "NOTRADE": {
+          "precision": 0.197134273168477,
+          "recall": 0.41427877610490527,
+          "f1-score": 0.26714688380833074,
+          "support": 2059.0
+        },
+        "SELL": {
+          "precision": 0.4681724845995893,
+          "recall": 0.4461839530332681,
+          "f1-score": 0.45691382765531063,
+          "support": 9198.0
+        },
+        "accuracy": 0.4078155339805825,
+        "macro avg": {
+          "precision": 0.37469285691420784,
+          "recall": 0.4096936486616702,
+          "f1-score": 0.37761469808431963,
+          "support": 20600.0
+        },
+        "weighted avg": {
+          "precision": 0.43681820536030114,
+          "recall": 0.4078155339805825,
+          "f1-score": 0.4161170857250239,
+          "support": 20600.0
+        }
+      },
+      "confusion_matrix": [
+        [
+          3444,
+          1875,
+          4024
+        ],
+        [
+          568,
+          853,
+          638
+        ],
+        [
+          3495,
+          1599,
+          4104
+        ]
+      ]
+    },
+    "test": {
+      "rows": 47310,
+      "label_distribution": {
+        "SELL": 19915,
+        "BUY": 21495,
+        "NOTRADE": 5900
+      },
+      "prediction_distribution": {
+        "SELL": 19676,
+        "BUY": 17304,
+        "NOTRADE": 10330
+      },
+      "accuracy": 0.438766,
+      "macro_f1": 0.436704,
+      "weighted_f1": 0.439032,
+      "classes": [
+        "BUY",
+        "NOTRADE",
+        "SELL"
+      ],
+      "confidence": {
+        "avg_confidence": 0.469615,
+        "p60_rate": 0.068823,
+        "p70_rate": 0.021856,
+        "p80_rate": 0.000169
+      },
+      "log_loss": 0.960827,
+      "classification_report": {
+        "BUY": {
+          "precision": 0.48584142394822005,
+          "recall": 0.39111421260758317,
+          "f1-score": 0.4333616845794995,
+          "support": 21495.0
+        },
+        "NOTRADE": {
+          "precision": 0.3365924491771539,
+          "recall": 0.5893220338983051,
+          "f1-score": 0.42846580406654344,
+          "support": 5900.0
+        },
+        "SELL": {
+          "precision": 0.4510063020939215,
+          "recall": 0.44559377353753454,
+          "f1-score": 0.44828370084110025,
+          "support": 19915.0
+        },
+        "accuracy": 0.4387655886704714,
+        "macro avg": {
+          "precision": 0.4244800584064318,
+          "recall": 0.47534334001447426,
+          "f1-score": 0.4367037298290477,
+          "support": 47310.0
+        },
+        "weighted avg": {
+          "precision": 0.45256494111419665,
+          "recall": 0.4387655886704714,
+          "f1-score": 0.43903249960430063,
+          "support": 47310.0
+        }
+      },
+      "confusion_matrix": [
+        [
+          8407,
+          3563,
+          9525
+        ],
+        [
+          1146,
+          3477,
+          1277
+        ],
+        [
+          7751,
+          3290,
+          8874
+        ]
+      ]
+    }
+  },
+  "errors": [],
+  "args": {
+    "limit_per_split": null,
+    "max_iter": 200,
+    "learning_rate": 0.05,
+    "l2_regularization": 0.1,
+    "max_leaf_nodes": 31,
+    "random_state": 42,
+    "no_sample_weight": false
+  },
+  "report_json_path": "C:\\Project\\BookQuality\\bq2\\05_training\\reports\\candle_book_train_m15_v1_report_20260612_131520.json",
+  "report_txt_path": "C:\\Project\\BookQuality\\bq2\\05_training\\reports\\candle_book_train_m15_v1_report_20260612_131520.txt"
+}

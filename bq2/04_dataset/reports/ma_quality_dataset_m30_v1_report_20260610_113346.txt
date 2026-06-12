@@ -1,0 +1,71 @@
+Book & Quality v2 - MA Quality Dataset M30 v1 Report
+==========================================================================
+run_id                            : ma_quality_dataset_m30_v1_20260610_113346
+status                            : success
+database                          : market_data
+symbol                            : XAUUSD
+start_time                        : 2026-06-10T11:33:46.756409+00:00
+end_time                          : 2026-06-10T11:39:20.353212+00:00
+duration_seconds                  : 333.597
+
+Collections
+--------------------------------------------------------------------------
+features_source                   : bq2_features_ma_quality_m30_v1
+target                            : bq2_dataset_ma_quality_m30_v1
+
+Config
+--------------------------------------------------------------------------
+dataset_version                   : ma_quality_dataset_m30_v1
+feature_version                   : ma_quality_features_m30_v1
+label_version                     : ma_quality_label_m30_v1
+anchor_timeframe                  : M30
+train_end                         : 2023-01-01 00:00:00
+valid_end                         : 2024-01-01 00:00:00
+test_end                          : None
+require_no_leak_ok                : True
+keep_feature_dict                 : False
+
+Counts
+--------------------------------------------------------------------------
+features_seen                     : 187818
+rows_built                        : 187818
+upserted_or_modified              : 187818
+inserted                          : 187818
+matched                           : 0
+modified                          : 0
+skipped_existing                  : 0
+skipped_missing_features          : 0
+skipped_missing_y                 : 0
+skipped_no_leak_not_ok            : 0
+skipped_schema_mismatch           : 0
+skipped_ignored_split             : 0
+row_errors                        : 0
+
+Feature Schema
+--------------------------------------------------------------------------
+feature_count                     : 302
+first_doc_feature_count_field     : 302
+feature_names_export              : C:\Project\BookQuality\bq2\04_dataset\exports\ma_quality_m30_v1_feature_names_20260610_113346.json
+
+Split Distribution
+--------------------------------------------------------------------------
+train                             : 153874
+valid                             : 10301
+test                              : 23643
+
+Target Distribution
+--------------------------------------------------------------------------
+predicted_direction:
+  SELL                           : 79979
+  RANGE                          : 19953
+  BUY                            : 87886
+buy_risk_mode:
+  BLOCK                          : 116966
+  NORMAL_RISK                    : 16248
+  HIGH_RISK                      : 13766
+  LOW_RISK                       : 40838
+sell_risk_mode:
+  LOW_RISK                       : 38833
+  BLOCK                          : 118807
+  HIGH_RISK                      : 14234
+  NORMAL_RISK                    : 15944

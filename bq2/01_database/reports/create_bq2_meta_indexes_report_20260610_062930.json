@@ -1,0 +1,251 @@
+{
+  "run_id": "create_bq2_meta_indexes_20260610_062930",
+  "status": "success",
+  "database": "market_data",
+  "symbol": "XAUUSD",
+  "start_time": "2026-06-10T06:29:30.480582+00:00",
+  "end_time": "2026-06-10T06:29:32.019513+00:00",
+  "duration_seconds": 1.539,
+  "reset_bq2": false,
+  "raw_data_modified": false,
+  "actions_count": 50,
+  "actions": [
+    {
+      "collection": "bq2_labels_ma_quality_m15_v1",
+      "action": "created"
+    },
+    {
+      "collection": "bq2_labels_ma_quality_m15_v1",
+      "action": "index",
+      "name": "uq_symbol_anchor_time"
+    },
+    {
+      "collection": "bq2_labels_ma_quality_m15_v1",
+      "action": "index",
+      "name": "ix_label_version_anchor_time"
+    },
+    {
+      "collection": "bq2_features_ma_quality_m15_v1",
+      "action": "created"
+    },
+    {
+      "collection": "bq2_features_ma_quality_m15_v1",
+      "action": "index",
+      "name": "uq_symbol_anchor_time"
+    },
+    {
+      "collection": "bq2_features_ma_quality_m15_v1",
+      "action": "index",
+      "name": "ix_feature_version_anchor_time"
+    },
+    {
+      "collection": "bq2_features_ma_quality_m15_v1",
+      "action": "index",
+      "name": "ix_feature_version_feature_count"
+    },
+    {
+      "collection": "bq2_dataset_ma_quality_m15_v1",
+      "action": "created"
+    },
+    {
+      "collection": "bq2_dataset_ma_quality_m15_v1",
+      "action": "index",
+      "name": "uq_symbol_anchor_time"
+    },
+    {
+      "collection": "bq2_dataset_ma_quality_m15_v1",
+      "action": "index",
+      "name": "ix_dataset_version_anchor_time"
+    },
+    {
+      "collection": "bq2_dataset_ma_quality_m15_v1",
+      "action": "index",
+      "name": "ix_split_anchor_time"
+    },
+    {
+      "collection": "bq2_predictions_ma_quality_m15_v1",
+      "action": "created"
+    },
+    {
+      "collection": "bq2_predictions_ma_quality_m15_v1",
+      "action": "index",
+      "name": "uq_symbol_anchor_time"
+    },
+    {
+      "collection": "bq2_predictions_ma_quality_m15_v1",
+      "action": "index",
+      "name": "ix_model_version_anchor_time"
+    },
+    {
+      "collection": "bq2_labels_candle_book_m15_v1",
+      "action": "created"
+    },
+    {
+      "collection": "bq2_labels_candle_book_m15_v1",
+      "action": "index",
+      "name": "uq_symbol_anchor_time"
+    },
+    {
+      "collection": "bq2_labels_candle_book_m15_v1",
+      "action": "index",
+      "name": "ix_label_version_anchor_time"
+    },
+    {
+      "collection": "bq2_features_candle_book_m15_v1",
+      "action": "created"
+    },
+    {
+      "collection": "bq2_features_candle_book_m15_v1",
+      "action": "index",
+      "name": "uq_symbol_anchor_time"
+    },
+    {
+      "collection": "bq2_features_candle_book_m15_v1",
+      "action": "index",
+      "name": "ix_feature_version_anchor_time"
+    },
+    {
+      "collection": "bq2_features_candle_book_m15_v1",
+      "action": "index",
+      "name": "ix_feature_version_feature_count"
+    },
+    {
+      "collection": "bq2_dataset_candle_book_m15_v1",
+      "action": "created"
+    },
+    {
+      "collection": "bq2_dataset_candle_book_m15_v1",
+      "action": "index",
+      "name": "uq_symbol_anchor_time"
+    },
+    {
+      "collection": "bq2_dataset_candle_book_m15_v1",
+      "action": "index",
+      "name": "ix_dataset_version_anchor_time"
+    },
+    {
+      "collection": "bq2_dataset_candle_book_m15_v1",
+      "action": "index",
+      "name": "ix_split_anchor_time"
+    },
+    {
+      "collection": "bq2_predictions_candle_book_m15_v1",
+      "action": "created"
+    },
+    {
+      "collection": "bq2_predictions_candle_book_m15_v1",
+      "action": "index",
+      "name": "uq_symbol_anchor_time"
+    },
+    {
+      "collection": "bq2_predictions_candle_book_m15_v1",
+      "action": "index",
+      "name": "ix_model_version_anchor_time"
+    },
+    {
+      "collection": "bq2_api_decisions_m15_v1",
+      "action": "created"
+    },
+    {
+      "collection": "bq2_api_decisions_m15_v1",
+      "action": "index",
+      "name": "ix_symbol_decision_time"
+    },
+    {
+      "collection": "bq2_api_decisions_m15_v1",
+      "action": "index",
+      "name": "ix_final_signal_decision_time"
+    },
+    {
+      "collection": "bq2_meta_project",
+      "action": "created"
+    },
+    {
+      "collection": "bq2_meta_project",
+      "action": "index",
+      "name": "ix_name"
+    },
+    {
+      "collection": "bq2_meta_project",
+      "action": "index",
+      "name": "ix_version"
+    },
+    {
+      "collection": "bq2_meta_label_versions",
+      "action": "created"
+    },
+    {
+      "collection": "bq2_meta_label_versions",
+      "action": "index",
+      "name": "ix_name"
+    },
+    {
+      "collection": "bq2_meta_label_versions",
+      "action": "index",
+      "name": "ix_version"
+    },
+    {
+      "collection": "bq2_meta_feature_versions",
+      "action": "created"
+    },
+    {
+      "collection": "bq2_meta_feature_versions",
+      "action": "index",
+      "name": "ix_name"
+    },
+    {
+      "collection": "bq2_meta_feature_versions",
+      "action": "index",
+      "name": "ix_version"
+    },
+    {
+      "collection": "bq2_meta_dataset_versions",
+      "action": "created"
+    },
+    {
+      "collection": "bq2_meta_dataset_versions",
+      "action": "index",
+      "name": "ix_name"
+    },
+    {
+      "collection": "bq2_meta_dataset_versions",
+      "action": "index",
+      "name": "ix_version"
+    },
+    {
+      "collection": "bq2_meta_model_versions",
+      "action": "created"
+    },
+    {
+      "collection": "bq2_meta_model_versions",
+      "action": "index",
+      "name": "ix_name"
+    },
+    {
+      "collection": "bq2_meta_model_versions",
+      "action": "index",
+      "name": "ix_version"
+    },
+    {
+      "collection": "bq2_meta_runs",
+      "action": "created"
+    },
+    {
+      "collection": "bq2_meta_runs",
+      "action": "index",
+      "name": "ix_name"
+    },
+    {
+      "collection": "bq2_meta_runs",
+      "action": "index",
+      "name": "ix_version"
+    },
+    {
+      "collection": "bq2_meta_project",
+      "action": "upsert_project_meta"
+    }
+  ],
+  "errors": [],
+  "report_json_path": "C:\\Project\\BookQuality\\bq2\\01_database\\reports\\create_bq2_meta_indexes_report_20260610_062930.json",
+  "report_txt_path": "C:\\Project\\BookQuality\\bq2\\01_database\\reports\\create_bq2_meta_indexes_report_20260610_062930.txt"
+}

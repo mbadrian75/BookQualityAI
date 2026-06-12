@@ -1,0 +1,74 @@
+Book & Quality v2 - Train MA Quality Model M30 v1 Report
+==========================================================================
+run_id                            : train_ma_quality_m30_v1_20260611_060942
+status                            : success
+database                          : market_data
+symbol                            : XAUUSD
+duration_seconds                  : 2649.473
+
+Training Config
+--------------------------------------------------------------------------
+model_version                     : ma_quality_model_m30_v1
+dataset_version                   : ma_quality_dataset_m30_v1
+feature_version                   : ma_quality_features_m30_v1
+label_version                     : ma_quality_label_m30_v1
+target_set                        : core
+algorithm                         : sklearn.HistGradientBoosting
+max_iter                          : 200
+learning_rate                     : 0.05
+max_leaf_nodes                    : 31
+random_state                      : 42
+limit                             : None
+
+Counts
+--------------------------------------------------------------------------
+rows_loaded                       : 187818
+skipped_bad_x                     : 0
+skipped_bad_y                     : 0
+skipped_bad_split                 : 0
+skipped_feature_count_mismatch    : 0
+models_trained                    : 7
+
+Split Distribution Loaded
+--------------------------------------------------------------------------
+train                             : 153874
+valid                             : 10301
+test                              : 23643
+
+Metrics Summary
+--------------------------------------------------------------------------
+predicted_direction (classification):
+  train    rows=153874 acc=0.7730 macro_f1=0.6046 weighted_f1=0.7440
+  valid    rows=10301 acc=0.6757 macro_f1=0.4759 weighted_f1=0.6429
+  test     rows=23643 acc=0.6698 macro_f1=0.4746 weighted_f1=0.6364
+buy_risk_mode (classification):
+  train    rows=153874 acc=0.6589 macro_f1=0.3009 weighted_f1=0.5565
+  valid    rows=10301 acc=0.6188 macro_f1=0.1940 weighted_f1=0.4781
+  test     rows=23643 acc=0.6401 macro_f1=0.1951 weighted_f1=0.4996
+sell_risk_mode (classification):
+  train    rows=153874 acc=0.6565 macro_f1=0.2873 weighted_f1=0.5492
+  valid    rows=10301 acc=0.6290 macro_f1=0.1945 weighted_f1=0.4903
+  test     rows=23643 acc=0.6877 macro_f1=0.2086 weighted_f1=0.5668
+buy_lot_multiplier (classification):
+  train    rows=153874 acc=0.6558 macro_f1=0.2356 weighted_f1=0.5500
+  valid    rows=10301 acc=0.6215 macro_f1=0.1284 weighted_f1=0.4774
+  test     rows=23643 acc=0.6401 macro_f1=0.1305 weighted_f1=0.5000
+sell_lot_multiplier (classification):
+  train    rows=153874 acc=0.6535 macro_f1=0.2167 weighted_f1=0.5430
+  valid    rows=10301 acc=0.6316 macro_f1=0.1300 weighted_f1=0.4914
+  test     rows=23643 acc=0.6907 macro_f1=0.1378 weighted_f1=0.5665
+buy_quality_score (regression):
+  train    rows=153874 mae=31.6079 rmse=35.9844 r2=0.1533
+  valid    rows=10301 mae=33.8944 rmse=40.1392 r2=-0.0194
+  test     rows=23643 mae=32.2350 rmse=39.1553 r2=-0.0289
+sell_quality_score (regression):
+  train    rows=153874 mae=31.4668 rmse=35.9027 r2=0.1489
+  valid    rows=10301 mae=34.2077 rmse=39.0860 r2=-0.0136
+  test     rows=23643 mae=31.9343 rmse=35.7663 r2=-0.0655
+
+Outputs
+--------------------------------------------------------------------------
+model_path                        : C:\Project\BookQuality\bq2\06_models\ma_quality\ma_quality_model_m30_v1_core_20260611_060942.joblib
+latest_model_path                 : C:\Project\BookQuality\bq2\06_models\ma_quality\ma_quality_model_m30_v1_core_latest.joblib
+report_json                       : C:\Project\BookQuality\bq2\05_training\reports\ma_quality_train_m30_v1_report_20260611_060942.json
+report_txt                        : C:\Project\BookQuality\bq2\05_training\reports\ma_quality_train_m30_v1_report_20260611_060942.txt

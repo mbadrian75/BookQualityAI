@@ -1,0 +1,173 @@
+{
+  "script_name": "01_train_ma_quality_m30_v1.py",
+  "run_id": "train_ma_quality_m30_v1_20260611_055333",
+  "status": "success",
+  "database": "market_data",
+  "symbol": "XAUUSD",
+  "start_time": "2026-06-11T05:53:33.539009+00:00",
+  "end_time": "2026-06-11T05:56:48.414257+00:00",
+  "duration_seconds": 194.875,
+  "training_config": {
+    "model_version": "ma_quality_model_m30_v1",
+    "dataset_version": "ma_quality_dataset_m30_v1",
+    "feature_version": "ma_quality_features_m30_v1",
+    "label_version": "ma_quality_label_m30_v1",
+    "target_set": "core",
+    "algorithm": "sklearn.HistGradientBoosting",
+    "max_iter": 50,
+    "learning_rate": 0.05,
+    "max_leaf_nodes": 31,
+    "random_state": 42,
+    "limit": 10000
+  },
+  "counts": {
+    "rows_loaded": 10000,
+    "skipped_bad_x": 0,
+    "skipped_bad_y": 0,
+    "skipped_bad_split": 0,
+    "skipped_feature_count_mismatch": 0,
+    "models_trained": 7
+  },
+  "feature_count": 302,
+  "split_distribution_loaded": {
+    "train": 10000
+  },
+  "targets_trained": [
+    "predicted_direction",
+    "buy_risk_mode",
+    "sell_risk_mode",
+    "buy_lot_multiplier",
+    "sell_lot_multiplier",
+    "buy_quality_score",
+    "sell_quality_score"
+  ],
+  "metrics": {
+    "predicted_direction": {
+      "target": "predicted_direction",
+      "type": "classification",
+      "classes": [
+        "BUY",
+        "RANGE",
+        "SELL"
+      ],
+      "split_metrics": {
+        "train": {
+          "rows": 10000,
+          "accuracy": 0.9034,
+          "macro_f1": 0.8452051332102274,
+          "weighted_f1": 0.8984761018181594
+        }
+      }
+    },
+    "buy_risk_mode": {
+      "target": "buy_risk_mode",
+      "type": "classification",
+      "classes": [
+        "BLOCK",
+        "HIGH_RISK",
+        "LOW_RISK",
+        "NORMAL_RISK"
+      ],
+      "split_metrics": {
+        "train": {
+          "rows": 10000,
+          "accuracy": 0.8137,
+          "macro_f1": 0.6631286587073597,
+          "weighted_f1": 0.7913277883961687
+        }
+      }
+    },
+    "sell_risk_mode": {
+      "target": "sell_risk_mode",
+      "type": "classification",
+      "classes": [
+        "BLOCK",
+        "HIGH_RISK",
+        "LOW_RISK",
+        "NORMAL_RISK"
+      ],
+      "split_metrics": {
+        "train": {
+          "rows": 10000,
+          "accuracy": 0.814,
+          "macro_f1": 0.647252820765954,
+          "weighted_f1": 0.7881682446766446
+        }
+      }
+    },
+    "buy_lot_multiplier": {
+      "target": "buy_lot_multiplier",
+      "type": "classification",
+      "classes": [
+        "0.0",
+        "0.25",
+        "0.5",
+        "1.0",
+        "1.5",
+        "2.0"
+      ],
+      "split_metrics": {
+        "train": {
+          "rows": 10000,
+          "accuracy": 0.8175,
+          "macro_f1": 0.6902804262389831,
+          "weighted_f1": 0.7964004064077396
+        }
+      }
+    },
+    "sell_lot_multiplier": {
+      "target": "sell_lot_multiplier",
+      "type": "classification",
+      "classes": [
+        "0.0",
+        "0.25",
+        "0.5",
+        "1.0",
+        "1.5",
+        "2.0"
+      ],
+      "split_metrics": {
+        "train": {
+          "rows": 10000,
+          "accuracy": 0.8202,
+          "macro_f1": 0.6825949721081784,
+          "weighted_f1": 0.7968057447211951
+        }
+      }
+    },
+    "buy_quality_score": {
+      "target": "buy_quality_score",
+      "type": "regression",
+      "split_metrics": {
+        "train": {
+          "rows": 10000,
+          "mae": 26.37878482641692,
+          "rmse": 30.260954425703225,
+          "r2": 0.42374002846820213
+        }
+      }
+    },
+    "sell_quality_score": {
+      "target": "sell_quality_score",
+      "type": "regression",
+      "split_metrics": {
+        "train": {
+          "rows": 10000,
+          "mae": 24.88286742550538,
+          "rmse": 29.070376472152287,
+          "r2": 0.4007000730859034
+        }
+      }
+    }
+  },
+  "outputs": {
+    "model_path": "C:\\Project\\BookQuality\\bq2\\06_models\\ma_quality\\ma_quality_model_m30_v1_core_20260611_055333.joblib",
+    "latest_model_path": "C:\\Project\\BookQuality\\bq2\\06_models\\ma_quality\\ma_quality_model_m30_v1_core_latest.joblib",
+    "report_json": "C:\\Project\\BookQuality\\bq2\\05_training\\reports\\ma_quality_train_m30_v1_report_20260611_055333.json",
+    "report_txt": "C:\\Project\\BookQuality\\bq2\\05_training\\reports\\ma_quality_train_m30_v1_report_20260611_055333.txt"
+  },
+  "warnings": [
+    "Validation or test split is empty. Use full dataset for reliable evaluation."
+  ],
+  "errors": []
+}
