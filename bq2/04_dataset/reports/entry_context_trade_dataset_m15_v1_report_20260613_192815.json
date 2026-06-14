@@ -1,0 +1,50 @@
+{
+  "run_id": "entry_context_trade_dataset_m15_v1_20260613_192815",
+  "status": "success",
+  "database": "market_data",
+  "symbol": "XAUUSD",
+  "start_time": "2026-06-13T19:28:15.258101+00:00",
+  "end_time": "2026-06-13T19:28:21.025066+00:00",
+  "duration_seconds": 5.767,
+  "collections": {
+    "source_dataset": "bq2_dataset_entry_context_m15_v1",
+    "labels_source": "bq2_labels_entry_context_m15_v1",
+    "target": "bq2_dataset_entry_context_trade_m15_v1"
+  },
+  "config": {
+    "dataset_version": "entry_context_trade_dataset_m15_v1",
+    "source_dataset_version": "entry_context_dataset_m15_v1",
+    "label_version": "entry_context_label_m15_v1",
+    "target": "entry_label"
+  },
+  "counts": {
+    "source_rows_seen": 1000,
+    "rows_built": 1000
+  },
+  "feature_schema": {
+    "feature_count": 306,
+    "feature_names_export": "C:\\Project\\BookQuality\\bq2\\04_dataset\\exports\\entry_context_trade_m15_v1_feature_names_20260613_192815.json",
+    "source_feature_names_path": "C:\\Project\\BookQuality\\bq2\\04_dataset\\exports\\entry_context_m15_v1_feature_names_20260613_145421.json"
+  },
+  "split_distribution": {
+    "train": 1000
+  },
+  "label_distribution": {
+    "SELL": 323,
+    "NOTRADE": 335,
+    "BUY": 342
+  },
+  "label_method_distribution": {
+    "sell_quality_dominant": 323,
+    "low_quality": 232,
+    "buy_quality_dominant": 342,
+    "low_future_movement": 103
+  },
+  "errors": [],
+  "args": {
+    "limit": 1000,
+    "reset": true
+  },
+  "report_json_path": "C:\\Project\\BookQuality\\bq2\\04_dataset\\reports\\entry_context_trade_dataset_m15_v1_report_20260613_192815.json",
+  "report_txt_path": "C:\\Project\\BookQuality\\bq2\\04_dataset\\reports\\entry_context_trade_dataset_m15_v1_report_20260613_192815.txt"
+}

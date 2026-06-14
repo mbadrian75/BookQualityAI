@@ -1,0 +1,97 @@
+{
+  "project_code": "SCE",
+  "database": "market_data",
+  "label_checker_tf": "M1",
+  "mapping": {
+    "M1": {
+      "collection": "xauusd_m1",
+      "datetime_field": "datetime",
+      "ohlc_fields": {
+        "open": "open",
+        "high": "high",
+        "low": "low",
+        "close": "close",
+        "volume": "volume"
+      },
+      "estimated_count": 5604412,
+      "first_time": "2010-01-03 18:00:00",
+      "last_time": "2025-12-31 16:57:00",
+      "status": "valid_raw_candidate"
+    },
+    "M5": {
+      "collection": "xauusd_m5",
+      "datetime_field": "datetime",
+      "ohlc_fields": {
+        "open": "open",
+        "high": "high",
+        "low": "low",
+        "close": "close",
+        "volume": "volume"
+      },
+      "estimated_count": 1127947,
+      "first_time": "2010-01-03 18:00:00",
+      "last_time": "2025-12-31 16:55:00",
+      "status": "valid_raw_candidate"
+    },
+    "M15": {
+      "collection": "xauusd_m15",
+      "datetime_field": "datetime",
+      "ohlc_fields": {
+        "open": "open",
+        "high": "high",
+        "low": "low",
+        "close": "close",
+        "volume": "volume"
+      },
+      "estimated_count": 376837,
+      "first_time": "2010-01-03 18:00:00",
+      "last_time": "2025-12-31 16:45:00",
+      "status": "valid_raw_candidate"
+    },
+    "M30": {
+      "collection": "xauusd_m30",
+      "datetime_field": "datetime",
+      "ohlc_fields": {
+        "open": "open",
+        "high": "high",
+        "low": "low",
+        "close": "close",
+        "volume": "volume"
+      },
+      "estimated_count": 188895,
+      "first_time": "2010-01-03 18:00:00",
+      "last_time": "2025-12-31 16:30:00",
+      "status": "valid_raw_candidate"
+    },
+    "H1": {
+      "collection": "xauusd_h1",
+      "datetime_field": "datetime",
+      "ohlc_fields": {
+        "open": "open",
+        "high": "high",
+        "low": "low",
+        "close": "close",
+        "volume": "volume"
+      },
+      "estimated_count": 95009,
+      "first_time": "2010-01-03 18:00:00",
+      "last_time": "2025-12-31 16:00:00",
+      "status": "valid_raw_candidate"
+    },
+    "H4": {
+      "collection": "xauusd_h4",
+      "datetime_field": "datetime",
+      "ohlc_fields": {
+        "open": "open",
+        "high": "high",
+        "low": "low",
+        "close": "close",
+        "volume": "volume"
+      },
+      "estimated_count": 25550,
+      "first_time": "2010-01-03 16:00:00",
+      "last_time": "2025-12-31 16:00:00",
+      "status": "valid_raw_candidate"
+    }
+  }
+}

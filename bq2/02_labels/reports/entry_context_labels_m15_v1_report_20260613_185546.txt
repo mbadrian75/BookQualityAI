@@ -1,0 +1,54 @@
+Book & Quality v2 - Entry Context Labels M15 v1 Report
+==========================================================================
+run_id                            : entry_context_labels_m15_v1_20260613_185546
+status                            : success
+database                          : market_data
+symbol                            : XAUUSD
+start_time                        : 2026-06-13T18:55:46.125123+00:00
+end_time                          : 2026-06-13T18:55:54.504993+00:00
+duration_seconds                  : 8.38
+
+Collections
+--------------------------------------------------------------------------
+source_dataset                    : bq2_dataset_entry_context_m15_v1
+raw_m15                           : xauusd_m15
+target                            : bq2_labels_entry_context_m15_v1
+
+Config
+--------------------------------------------------------------------------
+label_version                     : entry_context_label_m15_v1
+source_dataset_version            : entry_context_dataset_m15_v1
+target                            : entry_label
+horizon_m15                       : 4
+runup_weight                      : 0.65
+close_weight                      : 0.35
+risk_weight                       : 0.6
+min_favorable_runup_usd           : 0.8
+min_quality_score                 : 0.2
+min_quality_gap                   : 0.3
+
+Counts
+--------------------------------------------------------------------------
+anchors_seen                      : 1000
+labels_built                      : 1000
+
+Label Distribution
+--------------------------------------------------------------------------
+SELL                              : 446
+BUY                               : 475
+NOTRADE                           : 79
+
+Label Method Distribution
+--------------------------------------------------------------------------
+sell_quality_dominant             : 446
+buy_quality_dominant              : 475
+small_quality_gap                 : 41
+low_quality                       : 14
+low_future_movement               : 24
+
+Quality Summary
+--------------------------------------------------------------------------
+avg_buy_quality                   : 0.401811
+avg_sell_quality                  : 0.525052
+avg_abs_quality_gap               : 3.765542
+max_abs_quality_gap               : 36.79

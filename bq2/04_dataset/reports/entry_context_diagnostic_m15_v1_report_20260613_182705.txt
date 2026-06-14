@@ -1,0 +1,49 @@
+Book & Quality v2 - Entry Context Dataset M15 v1 Diagnostic Report
+==========================================================================
+run_id                            : entry_context_diagnostic_m15_v1_20260613_182705
+status                            : success
+database                          : market_data
+symbol                            : XAUUSD
+start_time                        : 2026-06-13T18:27:05.449676+00:00
+end_time                          : 2026-06-13T18:27:16.587902+00:00
+duration_seconds                  : 11.138
+
+Counts
+--------------------------------------------------------------------------
+rows_scanned                      : 50000
+split_distribution                : {'train': 50000}
+target_distribution               : {'SELL': 19435, 'BUY': 20381, 'UNCLEAR': 10184}
+
+Feature Schema
+--------------------------------------------------------------------------
+feature_count_distribution        : {306: 50000}
+book_feature_count                : 253
+ma_feature_count                  : 53
+
+MA Context Distributions
+--------------------------------------------------------------------------
+predicted_direction               : {'BUY': 28116, 'SELL': 21342, 'RANGE': 542}
+m30_future_direction              : {'BUY': 26213, 'SELL': 20959, 'RANGE': 2828}
+h1_future_direction               : {'BUY': 26855, 'SELL': 19313, 'RANGE': 3832}
+h4_future_direction               : {'BUY': 28318, 'SELL': 15908, 'RANGE': 5774}
+m30_phase                         : {'REVERSAL_DOWN_START': 4853, 'DOWN_MIDDLE': 7691, 'DOWN_START': 3575, 'DOWN_EXHAUSTION': 2804, 'REVERSAL_UP_START': 4761, 'UP_END': 2478, 'DOWN_END': 2779, 'UP_MIDDLE': 11076, 'UP_START': 4195, 'UP_EXHAUSTION': 4933, 'RANGE': 855}
+h1_phase                          : {'UP_MIDDLE': 12102, 'UP_END': 1514, 'REVERSAL_DOWN_START': 3852, 'DOWN_MIDDLE': 7383, 'DOWN_START': 4199, 'DOWN_EXHAUSTION': 3382, 'REVERSAL_UP_START': 3980, 'UP_EXHAUSTION': 6704, 'RANGE': 1144, 'UP_START': 3993, 'DOWN_END': 1747}
+h4_phase                          : {'UP_START': 5245, 'REVERSAL_DOWN_START': 2930, 'DOWN_MIDDLE': 6654, 'DOWN_EXHAUSTION': 2815, 'REVERSAL_UP_START': 3345, 'UP_MIDDLE': 13668, 'UP_EXHAUSTION': 8031, 'RANGE': 764, 'UP_END': 1080, 'DOWN_START': 4396, 'DOWN_END': 1072}
+
+MA Feature Summary
+--------------------------------------------------------------------------
+ma_columns                        : 53
+nonzero_columns                   : 53
+all_zero_columns                  : 0
+constant_columns                  : 6
+zero_column_indexes_first_30      : []
+avg_nonzero_rate                  : 0.311302
+
+Target by MA Predicted Direction
+--------------------------------------------------------------------------
+BUY                               : {'SELL': 10384, 'BUY': 11529, 'UNCLEAR': 6203}
+SELL                              : {'BUY': 8680, 'SELL': 8881, 'UNCLEAR': 3781}
+RANGE                             : {'SELL': 170, 'BUY': 172, 'UNCLEAR': 200}
+
+Warnings
+--------------------------------------------------------------------------

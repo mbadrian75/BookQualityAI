@@ -1,0 +1,68 @@
+Book & Quality v2 - Cleanup Obsolete BQ2 Collections v1 Report
+==========================================================================
+run_id                            : cleanup_obsolete_bq2_collections_v1_20260613_185249
+status                            : success
+mode                              : execute
+database                          : market_data
+symbol                            : XAUUSD
+start_time                        : 2026-06-13T18:52:49.873352+00:00
+end_time                          : 2026-06-13T18:52:49.998305+00:00
+duration_seconds                  : 0.125
+
+Summary
+--------------------------------------------------------------------------
+collections_total                 : 44
+kept_total                        : 36
+obsolete_bq2_total                : 8
+dropped_total                     : 8
+dry_run                           : False
+
+Kept Collections
+--------------------------------------------------------------------------
+bq2_dataset_candle_book_direction_m15_v3      keep_active        count=376785
+bq2_dataset_entry_context_m15_v1              keep_active        count=374696
+bq2_dataset_ma_scenario_m30_v1                keep_active        count=187818
+bq2_features_candle_book_direction_m15_v3     keep_active        count=367821
+bq2_features_ma_quality_m30_v1                keep_active        count=187818
+bq2_labels_candle_book_direction_m15_v3       keep_active        count=376834
+bq2_labels_ma_quality_m30_v1                  keep_active        count=187967
+bq2_meta_dataset_versions                     keep_meta          count=0
+bq2_meta_feature_versions                     keep_meta          count=0
+bq2_meta_label_versions                       keep_meta          count=0
+bq2_meta_model_versions                       keep_meta          count=0
+bq2_meta_project                              keep_meta          count=1
+bq2_meta_runs                                 keep_meta          count=0
+bq2_predictions_ma_scenario_m30_v1            keep_active        count=187818
+bq_api_decisions_m15_v1                       keep_non_bq2       count=0
+bq_dataset_book_entry_m15_v1                  keep_non_bq2       count=0
+bq_dataset_trade_quality_m15_v1               keep_non_bq2       count=0
+bq_features_book_entry_m15_v1                 keep_non_bq2       count=376836
+bq_features_trade_quality_m15_v1              keep_non_bq2       count=1000
+bq_labels_book_entry_m15_v1                   keep_non_bq2       count=1000
+bq_labels_trade_quality_m15_v1                keep_non_bq2       count=376836
+bq_meta_dataset_versions                      keep_non_bq2       count=2
+bq_meta_feature_versions                      keep_non_bq2       count=2
+bq_meta_label_versions                        keep_non_bq2       count=2
+bq_meta_model_versions                        keep_non_bq2       count=2
+bq_meta_project                               keep_non_bq2       count=1
+bq_meta_runs                                  keep_non_bq2       count=1
+bq_predictions_book_entry_m15_v1              keep_non_bq2       count=0
+bq_predictions_trade_quality_m15_v1           keep_non_bq2       count=0
+xauusd_d1                                     keep_raw           count=4978
+xauusd_h1                                     keep_raw           count=95009
+xauusd_h4                                     keep_raw           count=25550
+xauusd_m1                                     keep_raw           count=5604412
+xauusd_m15                                    keep_raw           count=376837
+xauusd_m30                                    keep_raw           count=188895
+xauusd_m5                                     keep_raw           count=1127947
+
+Drop Candidates / Dropped
+--------------------------------------------------------------------------
+bq2_api_decisions_m15_v1                      dropped      count=0
+bq2_dataset_candle_book_m15_v1                dropped      count=376779
+bq2_dataset_candle_book_side_m15_v2           dropped      count=376779
+bq2_features_candle_book_m15_v1               dropped      count=376779
+bq2_features_candle_book_side_m15_v2          dropped      count=376779
+bq2_labels_candle_book_m15_v1                 dropped      count=376828
+bq2_labels_candle_book_side_m15_v2            dropped      count=376828
+bq2_predictions_candle_book_m15_v1            dropped      count=0

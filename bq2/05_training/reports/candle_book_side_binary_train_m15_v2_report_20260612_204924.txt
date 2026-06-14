@@ -1,0 +1,223 @@
+Book & Quality v2 - Train Candle Book Side Binary Model M15 v2 Report
+==========================================================================
+run_id                            : candle_book_side_binary_train_m15_v2_20260612_204924
+status                            : success
+database                          : market_data
+symbol                            : XAUUSD
+start_time                        : 2026-06-12T20:49:24.182508+00:00
+end_time                          : 2026-06-12T20:50:19.349054+00:00
+duration_seconds                  : 55.167
+
+Collections
+--------------------------------------------------------------------------
+dataset_source                    : bq2_dataset_candle_book_side_m15_v2
+
+Training Config
+--------------------------------------------------------------------------
+model_version                     : candle_book_side_binary_model_m15_v2
+dataset_version                   : candle_book_side_dataset_m15_v2
+feature_version                   : candle_book_side_features_m15_v2
+label_version                     : candle_book_side_label_m15_v2
+targets                           : ['buy_win', 'sell_win']
+target_logic                      : WIN=1; LOSS/FLAT/AMBIGUOUS=0; optional drop AMBIGUOUS rows
+classifier                        : HistGradientBoostingClassifier
+max_iter                          : 50
+learning_rate                     : 0.05
+l2_regularization                 : 0.1
+max_leaf_nodes                    : 31
+limit_per_split                   : 5000
+sample_weight                     : True
+drop_ambiguous                    : False
+
+Counts
+--------------------------------------------------------------------------
+train_seen                        : 5000
+valid_seen                        : 5000
+test_seen                         : 5000
+train_used                        : 5000
+valid_used                        : 5000
+test_used                         : 5000
+rows_loaded                       : 15000
+feature_count                     : 253
+skipped_ambiguous_train           : 0
+skipped_ambiguous_valid           : 0
+skipped_ambiguous_test            : 0
+skipped_bad_y_train               : 0
+skipped_bad_y_valid               : 0
+skipped_bad_y_test                : 0
+
+Model Output
+--------------------------------------------------------------------------
+model_path                        : C:\Project\BookQuality\bq2\06_models\candle_book\candle_book_side_binary_model_m15_v2_20260612_204924.joblib
+latest_model_path                 : C:\Project\BookQuality\bq2\06_models\candle_book\candle_book_side_binary_model_m15_v2_latest.joblib
+targets                           : ['buy_win', 'sell_win']
+feature_count                     : 253
+classes                           : {'buy_win': [0, 1], 'sell_win': [0, 1]}
+
+Metrics
+--------------------------------------------------------------------------
+Target: buy_win
+  train:
+    rows                         : 5000
+    true_win_rate                : 0.4568
+    accuracy_at_0_50             : 0.889
+    not_win_precision            : 0.922896
+    not_win_recall               : 0.868189
+    not_win_f1                   : 0.894707
+    win_precision                : 0.853579
+    win_recall                   : 0.913748
+    win_f1                       : 0.882639
+    macro_f1                     : 0.888673
+    roc_auc                      : 0.959492
+    log_loss                     : 0.499746
+    brier_score                  : 0.157365
+    avg_p_win                    : 0.490227
+    p60_rate                     : 0.271
+    p70_rate                     : 0.071
+    prediction_distribution_at_0_50: {'WIN': 2445, 'NOT_WIN': 2555}
+    confusion_matrix_labels_[NOT_WIN,WIN]: [[2358, 358], [197, 2087]]
+    threshold_analysis:
+      p>=0.50: {'coverage': 0.489, 'rows': 2445, 'actual_win_rate': 0.853579}
+      p>=0.55: {'coverage': 0.3842, 'rows': 1921, 'actual_win_rate': 0.929724}
+      p>=0.60: {'coverage': 0.271, 'rows': 1355, 'actual_win_rate': 0.969004}
+      p>=0.65: {'coverage': 0.1528, 'rows': 764, 'actual_win_rate': 0.979058}
+      p>=0.70: {'coverage': 0.071, 'rows': 355, 'actual_win_rate': 0.997183}
+      p>=0.75: {'coverage': 0.0234, 'rows': 117, 'actual_win_rate': 1.0}
+      p>=0.80: {'coverage': 0.004, 'rows': 20, 'actual_win_rate': 1.0}
+  valid:
+    rows                         : 5000
+    true_win_rate                : 0.4748
+    accuracy_at_0_50             : 0.5254
+    not_win_precision            : 0.552468
+    not_win_recall               : 0.507235
+    not_win_f1                   : 0.528886
+    win_precision                : 0.500193
+    win_recall                   : 0.545493
+    win_f1                       : 0.521862
+    macro_f1                     : 0.525374
+    roc_auc                      : 0.528856
+    log_loss                     : 0.708088
+    brier_score                  : 0.256877
+    avg_p_win                    : 0.502052
+    p60_rate                     : 0.2
+    p70_rate                     : 0.0324
+    prediction_distribution_at_0_50: {'WIN': 2589, 'NOT_WIN': 2411}
+    confusion_matrix_labels_[NOT_WIN,WIN]: [[1332, 1294], [1079, 1295]]
+    threshold_analysis:
+      p>=0.50: {'coverage': 0.5178, 'rows': 2589, 'actual_win_rate': 0.500193}
+      p>=0.55: {'coverage': 0.352, 'rows': 1760, 'actual_win_rate': 0.498295}
+      p>=0.60: {'coverage': 0.2, 'rows': 1000, 'actual_win_rate': 0.517}
+      p>=0.65: {'coverage': 0.0932, 'rows': 466, 'actual_win_rate': 0.517167}
+      p>=0.70: {'coverage': 0.0324, 'rows': 162, 'actual_win_rate': 0.604938}
+      p>=0.75: {'coverage': 0.0058, 'rows': 29, 'actual_win_rate': 0.689655}
+      p>=0.80: {'coverage': 0.0, 'rows': 0, 'actual_win_rate': None}
+  test:
+    rows                         : 5000
+    true_win_rate                : 0.4782
+    accuracy_at_0_50             : 0.497
+    not_win_precision            : 0.517696
+    not_win_recall               : 0.527022
+    not_win_f1                   : 0.522317
+    win_precision                : 0.473549
+    win_recall                   : 0.464241
+    win_f1                       : 0.468849
+    macro_f1                     : 0.495583
+    roc_auc                      : 0.486522
+    log_loss                     : 0.7244
+    brier_score                  : 0.264622
+    avg_p_win                    : 0.489467
+    p60_rate                     : 0.1698
+    p70_rate                     : 0.027
+    prediction_distribution_at_0_50: {'WIN': 2344, 'NOT_WIN': 2656}
+    confusion_matrix_labels_[NOT_WIN,WIN]: [[1375, 1234], [1281, 1110]]
+    threshold_analysis:
+      p>=0.50: {'coverage': 0.4688, 'rows': 2344, 'actual_win_rate': 0.473549}
+      p>=0.55: {'coverage': 0.301, 'rows': 1505, 'actual_win_rate': 0.451827}
+      p>=0.60: {'coverage': 0.1698, 'rows': 849, 'actual_win_rate': 0.447585}
+      p>=0.65: {'coverage': 0.078, 'rows': 390, 'actual_win_rate': 0.448718}
+      p>=0.70: {'coverage': 0.027, 'rows': 135, 'actual_win_rate': 0.488889}
+      p>=0.75: {'coverage': 0.005, 'rows': 25, 'actual_win_rate': 0.64}
+      p>=0.80: {'coverage': 0.0002, 'rows': 1, 'actual_win_rate': 0.0}
+
+Target: sell_win
+  train:
+    rows                         : 5000
+    true_win_rate                : 0.436
+    accuracy_at_0_50             : 0.8802
+    not_win_precision            : 0.928599
+    not_win_recall               : 0.853191
+    not_win_f1                   : 0.8893
+    win_precision                : 0.828144
+    win_recall                   : 0.915138
+    win_f1                       : 0.86947
+    macro_f1                     : 0.879385
+    roc_auc                      : 0.955364
+    log_loss                     : 0.49416
+    brier_score                  : 0.155408
+    avg_p_win                    : 0.484922
+    p60_rate                     : 0.2854
+    p70_rate                     : 0.0704
+    prediction_distribution_at_0_50: {'WIN': 2409, 'NOT_WIN': 2591}
+    confusion_matrix_labels_[NOT_WIN,WIN]: [[2406, 414], [185, 1995]]
+    threshold_analysis:
+      p>=0.50: {'coverage': 0.4818, 'rows': 2409, 'actual_win_rate': 0.828144}
+      p>=0.55: {'coverage': 0.387, 'rows': 1935, 'actual_win_rate': 0.90801}
+      p>=0.60: {'coverage': 0.2854, 'rows': 1427, 'actual_win_rate': 0.961458}
+      p>=0.65: {'coverage': 0.1684, 'rows': 842, 'actual_win_rate': 0.983373}
+      p>=0.70: {'coverage': 0.0704, 'rows': 352, 'actual_win_rate': 0.991477}
+      p>=0.75: {'coverage': 0.0122, 'rows': 61, 'actual_win_rate': 1.0}
+      p>=0.80: {'coverage': 0.0016, 'rows': 8, 'actual_win_rate': 1.0}
+  valid:
+    rows                         : 5000
+    true_win_rate                : 0.4578
+    accuracy_at_0_50             : 0.5082
+    not_win_precision            : 0.550562
+    not_win_recall               : 0.506086
+    not_win_f1                   : 0.527388
+    win_precision                : 0.466108
+    win_recall                   : 0.510703
+    win_f1                       : 0.487388
+    macro_f1                     : 0.507388
+    roc_auc                      : 0.510866
+    log_loss                     : 0.715095
+    brier_score                  : 0.260233
+    avg_p_win                    : 0.496988
+    p60_rate                     : 0.1986
+    p70_rate                     : 0.0316
+    prediction_distribution_at_0_50: {'WIN': 2508, 'NOT_WIN': 2492}
+    confusion_matrix_labels_[NOT_WIN,WIN]: [[1372, 1339], [1120, 1169]]
+    threshold_analysis:
+      p>=0.50: {'coverage': 0.5016, 'rows': 2508, 'actual_win_rate': 0.466108}
+      p>=0.55: {'coverage': 0.3382, 'rows': 1691, 'actual_win_rate': 0.464814}
+      p>=0.60: {'coverage': 0.1986, 'rows': 993, 'actual_win_rate': 0.455186}
+      p>=0.65: {'coverage': 0.0924, 'rows': 462, 'actual_win_rate': 0.45671}
+      p>=0.70: {'coverage': 0.0316, 'rows': 158, 'actual_win_rate': 0.487342}
+      p>=0.75: {'coverage': 0.0038, 'rows': 19, 'actual_win_rate': 0.526316}
+      p>=0.80: {'coverage': 0.0, 'rows': 0, 'actual_win_rate': None}
+  test:
+    rows                         : 5000
+    true_win_rate                : 0.4168
+    accuracy_at_0_50             : 0.5192
+    not_win_precision            : 0.601507
+    not_win_recall               : 0.520233
+    not_win_f1                   : 0.557926
+    win_precision                : 0.435432
+    win_recall                   : 0.517754
+    win_f1                       : 0.473038
+    macro_f1                     : 0.515482
+    roc_auc                      : 0.52736
+    log_loss                     : 0.710703
+    brier_score                  : 0.25786
+    avg_p_win                    : 0.491787
+    p60_rate                     : 0.1994
+    p70_rate                     : 0.0348
+    prediction_distribution_at_0_50: {'WIN': 2478, 'NOT_WIN': 2522}
+    confusion_matrix_labels_[NOT_WIN,WIN]: [[1517, 1399], [1005, 1079]]
+    threshold_analysis:
+      p>=0.50: {'coverage': 0.4956, 'rows': 2478, 'actual_win_rate': 0.435432}
+      p>=0.55: {'coverage': 0.3424, 'rows': 1712, 'actual_win_rate': 0.429907}
+      p>=0.60: {'coverage': 0.1994, 'rows': 997, 'actual_win_rate': 0.417252}
+      p>=0.65: {'coverage': 0.096, 'rows': 480, 'actual_win_rate': 0.420833}
+      p>=0.70: {'coverage': 0.0348, 'rows': 174, 'actual_win_rate': 0.425287}
+      p>=0.75: {'coverage': 0.003, 'rows': 15, 'actual_win_rate': 0.4}
+      p>=0.80: {'coverage': 0.0002, 'rows': 1, 'actual_win_rate': 0.0}

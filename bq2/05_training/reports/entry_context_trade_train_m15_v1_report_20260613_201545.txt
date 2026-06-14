@@ -1,0 +1,164 @@
+Book & Quality v2 - Train Entry Context Trade Model M15 v1 Report
+==========================================================================
+run_id                            : entry_context_trade_train_m15_v1_20260613_201545
+status                            : success
+database                          : market_data
+symbol                            : XAUUSD
+start_time                        : 2026-06-13T20:15:45.267536+00:00
+end_time                          : 2026-06-13T20:16:42.758275+00:00
+duration_seconds                  : 57.491
+
+Collections
+--------------------------------------------------------------------------
+dataset_source                    : bq2_dataset_entry_context_trade_m15_v1
+
+Training Config
+--------------------------------------------------------------------------
+model_version                     : entry_context_trade_model_m15_v1
+dataset_version                   : entry_context_trade_dataset_m15_v1
+source_dataset_version            : entry_context_dataset_m15_v1
+label_version                     : entry_context_label_m15_v1
+target                            : entry_label
+classifier                        : HistGradientBoostingClassifier
+max_iter                          : 50
+learning_rate                     : 0.03
+l2_regularization                 : 1.0
+max_leaf_nodes                    : 15
+limit_per_split                   : 5000
+sample_weight                     : True
+
+Counts
+--------------------------------------------------------------------------
+train                             : 5000
+valid                             : 5000
+test                              : 5000
+rows_loaded                       : 15000
+feature_count                     : 306
+train_label_distribution          : {'SELL': 1510, 'NOTRADE': 1894, 'BUY': 1596}
+valid_label_distribution          : {'BUY': 1859, 'SELL': 1788, 'NOTRADE': 1353}
+test_label_distribution           : {'SELL': 1564, 'BUY': 1785, 'NOTRADE': 1651}
+
+Model Output
+--------------------------------------------------------------------------
+model_path                        : C:\Project\BookQuality\bq2\06_models\entry_context\entry_context_trade_model_m15_v1_20260613_201545.joblib
+latest_model_path                 : C:\Project\BookQuality\bq2\06_models\entry_context\entry_context_trade_model_m15_v1_latest.joblib
+classes                           : [np.str_('BUY'), np.str_('NOTRADE'), np.str_('SELL')]
+feature_count                     : 306
+feature_names_source              : C:\Project\BookQuality\bq2\04_dataset\exports\entry_context_trade_m15_v1_feature_names_20260613_192950.json
+
+Metrics
+--------------------------------------------------------------------------
+train:
+  rows                           : 5000
+  accuracy                       : 0.6646
+  macro_f1                       : 0.664877
+  weighted_f1                    : 0.664486
+  log_loss                       : 0.8840818382426092
+  label_distribution:
+    SELL                       : 1510
+    NOTRADE                    : 1894
+    BUY                        : 1596
+  prediction_distribution:
+    BUY                        : 1572
+    SELL                       : 1612
+    NOTRADE                    : 1816
+  classes                        : [np.str_('BUY'), np.str_('NOTRADE'), np.str_('SELL')]
+  confusion_matrix_labels        : [np.str_('BUY'), np.str_('NOTRADE'), np.str_('SELL')]
+  confusion_matrix               : [[1049, 327, 220], [326, 1225, 343], [197, 264, 1049]]
+  avg_confidence                 : 0.467347
+  p60_rate                       : 0.0376
+  p70_rate                       : 0.0022
+  p80_rate                       : 0.0
+  avg_trade_prob                 : 0.408119
+  avg_trade_edge                 : 0.068941
+  avg_buy_sell_gap               : 0.155415
+  trade_threshold_analysis:
+    trade_prob>=0.45           : {'coverage': 0.3368, 'rows': 1684, 'actual_match_rate': 0.811758, 'actual_notrade_rate': 0.123515, 'pred_buy_rows': 830, 'pred_sell_rows': 854}
+    trade_prob>=0.50           : {'coverage': 0.1864, 'rows': 932, 'actual_match_rate': 0.89485, 'actual_notrade_rate': 0.074034, 'pred_buy_rows': 472, 'pred_sell_rows': 460}
+    trade_prob>=0.55           : {'coverage': 0.0784, 'rows': 392, 'actual_match_rate': 0.954082, 'actual_notrade_rate': 0.030612, 'pred_buy_rows': 191, 'pred_sell_rows': 201}
+    trade_prob>=0.60           : {'coverage': 0.0154, 'rows': 77, 'actual_match_rate': 0.987013, 'actual_notrade_rate': 0.0, 'pred_buy_rows': 31, 'pred_sell_rows': 46}
+    trade_prob>=0.65           : {'coverage': 0.0014, 'rows': 7, 'actual_match_rate': 1.0, 'actual_notrade_rate': 0.0, 'pred_buy_rows': 1, 'pred_sell_rows': 6}
+    trade_prob>=0.70           : {'coverage': 0.0, 'rows': 0, 'actual_match_rate': None, 'actual_notrade_rate': None, 'pred_buy_rows': 0, 'pred_sell_rows': 0}
+  trade_edge_analysis:
+    trade_edge>=0.00           : {'coverage': 0.6368, 'rows': 3184, 'actual_match_rate': 0.65892, 'actual_notrade_rate': 0.210113, 'pred_buy_rows': 1572, 'pred_sell_rows': 1612}
+    trade_edge>=0.05           : {'coverage': 0.5744, 'rows': 2872, 'actual_match_rate': 0.670265, 'actual_notrade_rate': 0.194986, 'pred_buy_rows': 1408, 'pred_sell_rows': 1464}
+    trade_edge>=0.10           : {'coverage': 0.5018, 'rows': 2509, 'actual_match_rate': 0.691511, 'actual_notrade_rate': 0.174572, 'pred_buy_rows': 1233, 'pred_sell_rows': 1276}
+    trade_edge>=0.15           : {'coverage': 0.4154, 'rows': 2077, 'actual_match_rate': 0.728455, 'actual_notrade_rate': 0.144921, 'pred_buy_rows': 1041, 'pred_sell_rows': 1036}
+    trade_edge>=0.20           : {'coverage': 0.3212, 'rows': 1606, 'actual_match_rate': 0.780822, 'actual_notrade_rate': 0.10274, 'pred_buy_rows': 824, 'pred_sell_rows': 782}
+    trade_edge>=0.30           : {'coverage': 0.131, 'rows': 655, 'actual_match_rate': 0.912977, 'actual_notrade_rate': 0.039695, 'pred_buy_rows': 351, 'pred_sell_rows': 304}
+valid:
+  rows                           : 5000
+  accuracy                       : 0.3822
+  macro_f1                       : 0.342097
+  weighted_f1                    : 0.358035
+  log_loss                       : 1.101704992140398
+  label_distribution:
+    BUY                        : 1859
+    SELL                       : 1788
+    NOTRADE                    : 1353
+  prediction_distribution:
+    BUY                        : 2402
+    SELL                       : 2201
+    NOTRADE                    : 397
+  classes                        : [np.str_('BUY'), np.str_('NOTRADE'), np.str_('SELL')]
+  confusion_matrix_labels        : [np.str_('BUY'), np.str_('NOTRADE'), np.str_('SELL')]
+  confusion_matrix               : [[937, 133, 789], [609, 153, 591], [856, 111, 821]]
+  avg_confidence                 : 0.458117
+  p60_rate                       : 0.0128
+  p70_rate                       : 0.0
+  p80_rate                       : 0.0
+  avg_trade_prob                 : 0.449878
+  avg_trade_edge                 : 0.191564
+  avg_buy_sell_gap               : 0.158068
+  trade_threshold_analysis:
+    trade_prob>=0.45           : {'coverage': 0.4834, 'rows': 2417, 'actual_match_rate': 0.405875, 'actual_notrade_rate': 0.240381, 'pred_buy_rows': 1371, 'pred_sell_rows': 1046}
+    trade_prob>=0.50           : {'coverage': 0.2378, 'rows': 1189, 'actual_match_rate': 0.421362, 'actual_notrade_rate': 0.238015, 'pred_buy_rows': 709, 'pred_sell_rows': 480}
+    trade_prob>=0.55           : {'coverage': 0.079, 'rows': 395, 'actual_match_rate': 0.407595, 'actual_notrade_rate': 0.243038, 'pred_buy_rows': 231, 'pred_sell_rows': 164}
+    trade_prob>=0.60           : {'coverage': 0.0122, 'rows': 61, 'actual_match_rate': 0.52459, 'actual_notrade_rate': 0.245902, 'pred_buy_rows': 25, 'pred_sell_rows': 36}
+    trade_prob>=0.65           : {'coverage': 0.0022, 'rows': 11, 'actual_match_rate': 0.545455, 'actual_notrade_rate': 0.363636, 'pred_buy_rows': 1, 'pred_sell_rows': 10}
+    trade_prob>=0.70           : {'coverage': 0.0, 'rows': 0, 'actual_match_rate': None, 'actual_notrade_rate': None, 'pred_buy_rows': 0, 'pred_sell_rows': 0}
+  trade_edge_analysis:
+    trade_edge>=0.00           : {'coverage': 0.9206, 'rows': 4603, 'actual_match_rate': 0.381925, 'actual_notrade_rate': 0.2607, 'pred_buy_rows': 2402, 'pred_sell_rows': 2201}
+    trade_edge>=0.05           : {'coverage': 0.8788, 'rows': 4394, 'actual_match_rate': 0.385981, 'actual_notrade_rate': 0.254665, 'pred_buy_rows': 2311, 'pred_sell_rows': 2083}
+    trade_edge>=0.10           : {'coverage': 0.816, 'rows': 4080, 'actual_match_rate': 0.387745, 'actual_notrade_rate': 0.254167, 'pred_buy_rows': 2156, 'pred_sell_rows': 1924}
+    trade_edge>=0.15           : {'coverage': 0.705, 'rows': 3525, 'actual_match_rate': 0.396596, 'actual_notrade_rate': 0.249929, 'pred_buy_rows': 1905, 'pred_sell_rows': 1620}
+    trade_edge>=0.20           : {'coverage': 0.5432, 'rows': 2716, 'actual_match_rate': 0.407585, 'actual_notrade_rate': 0.238586, 'pred_buy_rows': 1510, 'pred_sell_rows': 1206}
+    trade_edge>=0.30           : {'coverage': 0.1748, 'rows': 874, 'actual_match_rate': 0.422197, 'actual_notrade_rate': 0.237986, 'pred_buy_rows': 556, 'pred_sell_rows': 318}
+test:
+  rows                           : 5000
+  accuracy                       : 0.3762
+  macro_f1                       : 0.371519
+  weighted_f1                    : 0.370527
+  log_loss                       : 1.1121203347141921
+  label_distribution:
+    SELL                       : 1564
+    BUY                        : 1785
+    NOTRADE                    : 1651
+  prediction_distribution:
+    SELL                       : 2460
+    BUY                        : 1611
+    NOTRADE                    : 929
+  classes                        : [np.str_('BUY'), np.str_('NOTRADE'), np.str_('SELL')]
+  confusion_matrix_labels        : [np.str_('BUY'), np.str_('NOTRADE'), np.str_('SELL')]
+  confusion_matrix               : [[611, 292, 882], [455, 444, 752], [545, 193, 826]]
+  avg_confidence                 : 0.457921
+  p60_rate                       : 0.0254
+  p70_rate                       : 0.0
+  p80_rate                       : 0.0
+  avg_trade_prob                 : 0.434777
+  avg_trade_edge                 : 0.141538
+  avg_buy_sell_gap               : 0.162792
+  trade_threshold_analysis:
+    trade_prob>=0.45           : {'coverage': 0.4206, 'rows': 2103, 'actual_match_rate': 0.352829, 'actual_notrade_rate': 0.300999, 'pred_buy_rows': 762, 'pred_sell_rows': 1341}
+    trade_prob>=0.50           : {'coverage': 0.2144, 'rows': 1072, 'actual_match_rate': 0.356343, 'actual_notrade_rate': 0.294776, 'pred_buy_rows': 336, 'pred_sell_rows': 736}
+    trade_prob>=0.55           : {'coverage': 0.0778, 'rows': 389, 'actual_match_rate': 0.352185, 'actual_notrade_rate': 0.293059, 'pred_buy_rows': 75, 'pred_sell_rows': 314}
+    trade_prob>=0.60           : {'coverage': 0.022, 'rows': 110, 'actual_match_rate': 0.372727, 'actual_notrade_rate': 0.290909, 'pred_buy_rows': 9, 'pred_sell_rows': 101}
+    trade_prob>=0.65           : {'coverage': 0.0026, 'rows': 13, 'actual_match_rate': 0.615385, 'actual_notrade_rate': 0.230769, 'pred_buy_rows': 0, 'pred_sell_rows': 13}
+    trade_prob>=0.70           : {'coverage': 0.0, 'rows': 0, 'actual_match_rate': None, 'actual_notrade_rate': None, 'pred_buy_rows': 0, 'pred_sell_rows': 0}
+  trade_edge_analysis:
+    trade_edge>=0.00           : {'coverage': 0.8142, 'rows': 4071, 'actual_match_rate': 0.352985, 'actual_notrade_rate': 0.296487, 'pred_buy_rows': 1611, 'pred_sell_rows': 2460}
+    trade_edge>=0.05           : {'coverage': 0.753, 'rows': 3765, 'actual_match_rate': 0.355644, 'actual_notrade_rate': 0.288977, 'pred_buy_rows': 1501, 'pred_sell_rows': 2264}
+    trade_edge>=0.10           : {'coverage': 0.6712, 'rows': 3356, 'actual_match_rate': 0.363528, 'actual_notrade_rate': 0.281287, 'pred_buy_rows': 1342, 'pred_sell_rows': 2014}
+    trade_edge>=0.15           : {'coverage': 0.5624, 'rows': 2812, 'actual_match_rate': 0.359886, 'actual_notrade_rate': 0.282717, 'pred_buy_rows': 1122, 'pred_sell_rows': 1690}
+    trade_edge>=0.20           : {'coverage': 0.4236, 'rows': 2118, 'actual_match_rate': 0.361662, 'actual_notrade_rate': 0.280453, 'pred_buy_rows': 829, 'pred_sell_rows': 1289}
+    trade_edge>=0.30           : {'coverage': 0.1336, 'rows': 668, 'actual_match_rate': 0.362275, 'actual_notrade_rate': 0.263473, 'pred_buy_rows': 219, 'pred_sell_rows': 449}

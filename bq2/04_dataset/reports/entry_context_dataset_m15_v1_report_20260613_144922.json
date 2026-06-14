@@ -1,0 +1,70 @@
+{
+  "run_id": "entry_context_dataset_m15_v1_20260613_144922",
+  "status": "success",
+  "database": "market_data",
+  "symbol": "XAUUSD",
+  "start_time": "2026-06-13T14:49:22.520117+00:00",
+  "end_time": "2026-06-13T14:50:03.252757+00:00",
+  "duration_seconds": 40.733,
+  "collections": {
+    "book_dataset_source": "bq2_dataset_candle_book_direction_m15_v3",
+    "ma_predictions_source": "bq2_predictions_ma_scenario_m30_v1",
+    "target": "bq2_dataset_entry_context_m15_v1"
+  },
+  "config": {
+    "dataset_version": "entry_context_dataset_m15_v1",
+    "book_feature_version": "candle_book_direction_features_m15_v3",
+    "book_label_version": "candle_book_direction_label_m15_v3",
+    "ma_model_version": "ma_scenario_model_m30_v1",
+    "target": "book_direction",
+    "train_end": "2023-01-01 00:00:00",
+    "valid_end": "2024-01-01 00:00:00",
+    "max_ma_lag_minutes": 60.0,
+    "require_no_leak_ok": true
+  },
+  "counts": {
+    "book_rows_seen": 3058,
+    "skipped_missing_ma_prediction": 2058,
+    "rows_built": 1000,
+    "upserted_or_modified": 1000,
+    "ma_predictions_loaded": 187818,
+    "ma_predictions_skipped_no_time": 0
+  },
+  "feature_schema": {
+    "book_feature_count": 253,
+    "ma_feature_count": 53,
+    "feature_count": 306,
+    "feature_names_export": "C:\\Project\\BookQuality\\bq2\\04_dataset\\exports\\entry_context_m15_v1_feature_names_20260613_144922.json",
+    "book_feature_names_source": "C:\\Project\\BookQuality\\bq2\\04_dataset\\exports\\candle_book_direction_m15_v3_feature_names_20260613_075337.json"
+  },
+  "split_distribution": {
+    "train": 1000
+  },
+  "direction_distribution": {
+    "SELL": 405,
+    "BUY": 426,
+    "UNCLEAR": 169
+  },
+  "ma_match_distribution": {
+    "lag_min": 0.0,
+    "lag_p50": 0.0,
+    "lag_max": 15.0,
+    "lag_sample_rows": 1000
+  },
+  "errors": [],
+  "args": {
+    "limit": 1000,
+    "reset": true,
+    "max_ma_lag_minutes": 60.0,
+    "start_time": null
+  },
+  "label_method_distribution": {
+    "sell_pressure_dominant": 405,
+    "buy_pressure_dominant": 426,
+    "small_gap_usd": 75,
+    "low_total_pressure": 93,
+    "small_gap_ratio": 1
+  },
+  "report_json_path": "C:\\Project\\BookQuality\\bq2\\04_dataset\\reports\\entry_context_dataset_m15_v1_report_20260613_144922.json",
+  "report_txt_path": "C:\\Project\\BookQuality\\bq2\\04_dataset\\reports\\entry_context_dataset_m15_v1_report_20260613_144922.txt"
+}

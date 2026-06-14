@@ -1,0 +1,113 @@
+Side Context Entry AI - Raw Sources Inspection Report
+================================================================
+run_id                   : sce_raw_sources_inspection_20260614_152214
+status                   : success
+project_name             : Side Context Entry AI
+project_code             : SCE
+database                 : market_data
+mongo_uri                : mongodb://localhost:27017
+raw_data_modified         : False
+database_modified         : False
+report_folder_policy      : local_section_reports
+
+Summary:
+total_collections         : 21
+sce_collections_skipped   : 14
+raw_collections_checked   : 7
+missing_required_tfs      : None
+detected_config_path      : C:\Project\BookQuality\side_context_entry_ai\config\sce_raw_collections_detected.json
+
+Detected timeframe mapping:
+- M1: xauusd_m1 | time=datetime | count=5604412 | from=2010-01-03 18:00:00 | to=2025-12-31 16:57:00 | status=valid_raw_candidate
+- M5: xauusd_m5 | time=datetime | count=1127947 | from=2010-01-03 18:00:00 | to=2025-12-31 16:55:00 | status=valid_raw_candidate
+- M15: xauusd_m15 | time=datetime | count=376837 | from=2010-01-03 18:00:00 | to=2025-12-31 16:45:00 | status=valid_raw_candidate
+- M30: xauusd_m30 | time=datetime | count=188895 | from=2010-01-03 18:00:00 | to=2025-12-31 16:30:00 | status=valid_raw_candidate
+- H1: xauusd_h1 | time=datetime | count=95009 | from=2010-01-03 18:00:00 | to=2025-12-31 16:00:00 | status=valid_raw_candidate
+- H4: xauusd_h4 | time=datetime | count=25550 | from=2010-01-03 16:00:00 | to=2025-12-31 16:00:00 | status=valid_raw_candidate
+
+Collection details:
+- collection             : xauusd_d1
+  status                 : valid_raw_candidate
+  estimated_count        : 4978
+  inferred_tf            : D1
+  tf_from_name           : D1
+  tf_from_delta          : D1
+  median_delta_seconds   : 86400.0
+  datetime_field         : datetime
+  ohlc_fields            : {'open': 'open', 'high': 'high', 'low': 'low', 'close': 'close', 'volume': 'volume'}
+  first_time             : 2010-01-03 00:00:00
+  last_time              : 2025-12-31 00:00:00
+
+- collection             : xauusd_h1
+  status                 : valid_raw_candidate
+  estimated_count        : 95009
+  inferred_tf            : H1
+  tf_from_name           : H1
+  tf_from_delta          : H1
+  median_delta_seconds   : 3600.0
+  datetime_field         : datetime
+  ohlc_fields            : {'open': 'open', 'high': 'high', 'low': 'low', 'close': 'close', 'volume': 'volume'}
+  first_time             : 2010-01-03 18:00:00
+  last_time              : 2025-12-31 16:00:00
+
+- collection             : xauusd_h4
+  status                 : valid_raw_candidate
+  estimated_count        : 25550
+  inferred_tf            : H4
+  tf_from_name           : H4
+  tf_from_delta          : H4
+  median_delta_seconds   : 14400.0
+  datetime_field         : datetime
+  ohlc_fields            : {'open': 'open', 'high': 'high', 'low': 'low', 'close': 'close', 'volume': 'volume'}
+  first_time             : 2010-01-03 16:00:00
+  last_time              : 2025-12-31 16:00:00
+
+- collection             : xauusd_m1
+  status                 : valid_raw_candidate
+  estimated_count        : 5604412
+  inferred_tf            : M1
+  tf_from_name           : M1
+  tf_from_delta          : M1
+  median_delta_seconds   : 60.0
+  datetime_field         : datetime
+  ohlc_fields            : {'open': 'open', 'high': 'high', 'low': 'low', 'close': 'close', 'volume': 'volume'}
+  first_time             : 2010-01-03 18:00:00
+  last_time              : 2025-12-31 16:57:00
+
+- collection             : xauusd_m15
+  status                 : valid_raw_candidate
+  estimated_count        : 376837
+  inferred_tf            : M15
+  tf_from_name           : M15
+  tf_from_delta          : M15
+  median_delta_seconds   : 900.0
+  datetime_field         : datetime
+  ohlc_fields            : {'open': 'open', 'high': 'high', 'low': 'low', 'close': 'close', 'volume': 'volume'}
+  first_time             : 2010-01-03 18:00:00
+  last_time              : 2025-12-31 16:45:00
+
+- collection             : xauusd_m30
+  status                 : valid_raw_candidate
+  estimated_count        : 188895
+  inferred_tf            : M30
+  tf_from_name           : M30
+  tf_from_delta          : M30
+  median_delta_seconds   : 1800.0
+  datetime_field         : datetime
+  ohlc_fields            : {'open': 'open', 'high': 'high', 'low': 'low', 'close': 'close', 'volume': 'volume'}
+  first_time             : 2010-01-03 18:00:00
+  last_time              : 2025-12-31 16:30:00
+
+- collection             : xauusd_m5
+  status                 : valid_raw_candidate
+  estimated_count        : 1127947
+  inferred_tf            : M5
+  tf_from_name           : M5
+  tf_from_delta          : M5
+  median_delta_seconds   : 300.0
+  datetime_field         : datetime
+  ohlc_fields            : {'open': 'open', 'high': 'high', 'low': 'low', 'close': 'close', 'volume': 'volume'}
+  first_time             : 2010-01-03 18:00:00
+  last_time              : 2025-12-31 16:55:00
+
+End of report.

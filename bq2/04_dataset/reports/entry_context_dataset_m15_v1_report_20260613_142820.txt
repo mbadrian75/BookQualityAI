@@ -1,0 +1,51 @@
+Book & Quality v2 - Entry Context Dataset M15 v1 Report
+==========================================================================
+run_id                            : entry_context_dataset_m15_v1_20260613_142820
+status                            : success_with_warnings
+database                          : market_data
+symbol                            : XAUUSD
+start_time                        : 2026-06-13T14:28:20.432314+00:00
+end_time                          : 2026-06-13T14:28:47.810307+00:00
+duration_seconds                  : 27.378
+
+Collections
+--------------------------------------------------------------------------
+book_dataset_source               : bq2_dataset_candle_book_direction_m15_v3
+ma_predictions_source             : bq2_predictions_ma_scenario_m30_v1
+target                            : bq2_dataset_entry_context_m15_v1
+
+Config
+--------------------------------------------------------------------------
+dataset_version                   : entry_context_dataset_m15_v1
+book_feature_version              : candle_book_direction_features_m15_v3
+book_label_version                : candle_book_direction_label_m15_v3
+ma_model_version                  : ma_scenario_model_m30_v1
+target                            : book_direction
+train_end                         : 2023-01-01 00:00:00
+valid_end                         : 2024-01-01 00:00:00
+max_ma_lag_minutes                : 60.0
+require_no_leak_ok                : True
+
+Counts
+--------------------------------------------------------------------------
+book_rows_seen                    : 1000
+skipped_missing_ma_prediction     : 1000
+ma_predictions_loaded             : 187818
+ma_predictions_skipped_no_time    : 0
+
+Feature Schema
+--------------------------------------------------------------------------
+book_feature_count                : 253
+ma_feature_count                  : 53
+feature_count                     : 306
+feature_names_export              : C:\Project\BookQuality\bq2\04_dataset\exports\entry_context_m15_v1_feature_names_20260613_142820.json
+book_feature_names_source         : C:\Project\BookQuality\bq2\04_dataset\exports\candle_book_direction_m15_v3_feature_names_20260613_075337.json
+
+Split Distribution
+--------------------------------------------------------------------------
+
+Direction Distribution
+--------------------------------------------------------------------------
+
+MA Match Distribution
+--------------------------------------------------------------------------

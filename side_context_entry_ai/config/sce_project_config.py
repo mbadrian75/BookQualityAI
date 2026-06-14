@@ -1,0 +1,41 @@
+# -*- coding: utf-8 -*-
+"""SCE Project Config. Every parameter is declared in one clear line."""
+
+PROJECT_NAME = "Side Context Entry AI"
+PROJECT_CODE = "SCE"
+DB_NAME = "market_data"
+MONGO_URI = "mongodb://localhost:27017"
+DERIVED_PREFIX = "sce_"
+ANCHOR_TF = "M5"
+CANDLE_CONTEXT_TF = "M15"
+MA_CONTEXT_TFS = ["M30", "H1", "H4"]
+LABEL_CHECKER_TF = "M1"
+RAW_M1_AS_FEATURE = False
+TRAINING_MODE = "integrated"
+SIDE_BASED = True
+SIDES = ["BUY", "SELL"]
+ENTRY_LABELS = ["GOOD_ENTRY", "BAD_ENTRY", "WAIT"]
+ENTRY_TP_BUCKETS = ["NO_TRADE", "SMALL", "NORMAL", "LARGE"]
+TP_LEVELS_ATR = [0.5, 0.8, 1.2, 1.6]
+FAIL_RATIO_OF_TP = 0.5
+COLL_META_PROJECT = "sce_meta_project"
+COLL_META_RUNS = "sce_meta_runs"
+COLL_META_FEATURE_VERSIONS = "sce_meta_feature_versions"
+COLL_META_LABEL_VERSIONS = "sce_meta_label_versions"
+COLL_META_DATASET_VERSIONS = "sce_meta_dataset_versions"
+COLL_META_MODEL_VERSIONS = "sce_meta_model_versions"
+COLL_LABELS_ENTRY_SIDE_M5_V1 = "sce_labels_entry_side_m5_v1"
+COLL_FEATURES_MA_CONTEXT_M5_V1 = "sce_features_ma_context_m5_v1"
+COLL_FEATURES_CANDLE_ENTRY_M5_V1 = "sce_features_candle_entry_m5_v1"
+COLL_FEATURES_INTEGRATED_ENTRY_M5_V1 = "sce_features_integrated_entry_m5_v1"
+COLL_DATASET_INTEGRATED_ENTRY_M5_V1 = "sce_dataset_integrated_entry_m5_v1"
+COLL_PREDICTIONS_INTEGRATED_ENTRY_M5_V1 = "sce_predictions_integrated_entry_m5_v1"
+COLL_BACKTEST_RESULTS_M5_V1 = "sce_backtest_results_m5_v1"
+COLL_API_DECISIONS_M5_V1 = "sce_api_decisions_m5_v1"
+COLLECTIONS = [COLL_META_PROJECT, COLL_META_RUNS, COLL_META_FEATURE_VERSIONS, COLL_META_LABEL_VERSIONS, COLL_META_DATASET_VERSIONS, COLL_META_MODEL_VERSIONS, COLL_LABELS_ENTRY_SIDE_M5_V1, COLL_FEATURES_MA_CONTEXT_M5_V1, COLL_FEATURES_CANDLE_ENTRY_M5_V1, COLL_FEATURES_INTEGRATED_ENTRY_M5_V1, COLL_DATASET_INTEGRATED_ENTRY_M5_V1, COLL_PREDICTIONS_INTEGRATED_ENTRY_M5_V1, COLL_BACKTEST_RESULTS_M5_V1, COLL_API_DECISIONS_M5_V1]
+FEATURE_VERSION_MA_CONTEXT_M5_V1 = "sce_ma_context_m5_v1"
+FEATURE_VERSION_CANDLE_ENTRY_M5_V1 = "sce_candle_entry_m5_v1"
+FEATURE_VERSION_INTEGRATED_ENTRY_M5_V1 = "sce_integrated_entry_m5_v1"
+LABEL_VERSION_ENTRY_SIDE_M5_V1 = "sce_entry_side_m5_v1"
+DATASET_VERSION_INTEGRATED_ENTRY_M5_V1 = "sce_dataset_integrated_entry_m5_v1"
+MODEL_VERSION_INTEGRATED_ENTRY_M5_V1 = "sce_integrated_entry_m5_v1"

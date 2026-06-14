@@ -1,0 +1,50 @@
+Book & Quality v2 - Entry Context Trade Dataset M15 v1 Report
+==========================================================================
+run_id                            : entry_context_trade_dataset_m15_v1_20260613_192815
+status                            : success
+database                          : market_data
+symbol                            : XAUUSD
+start_time                        : 2026-06-13T19:28:15.258101+00:00
+end_time                          : 2026-06-13T19:28:21.025066+00:00
+duration_seconds                  : 5.767
+
+Collections
+--------------------------------------------------------------------------
+source_dataset                    : bq2_dataset_entry_context_m15_v1
+labels_source                     : bq2_labels_entry_context_m15_v1
+target                            : bq2_dataset_entry_context_trade_m15_v1
+
+Config
+--------------------------------------------------------------------------
+dataset_version                   : entry_context_trade_dataset_m15_v1
+source_dataset_version            : entry_context_dataset_m15_v1
+label_version                     : entry_context_label_m15_v1
+target                            : entry_label
+
+Counts
+--------------------------------------------------------------------------
+source_rows_seen                  : 1000
+rows_built                        : 1000
+
+Feature Schema
+--------------------------------------------------------------------------
+feature_count                     : 306
+feature_names_export              : C:\Project\BookQuality\bq2\04_dataset\exports\entry_context_trade_m15_v1_feature_names_20260613_192815.json
+source_feature_names_path         : C:\Project\BookQuality\bq2\04_dataset\exports\entry_context_m15_v1_feature_names_20260613_145421.json
+
+Split Distribution
+--------------------------------------------------------------------------
+train                             : 1000
+
+Label Distribution
+--------------------------------------------------------------------------
+SELL                              : 323
+NOTRADE                           : 335
+BUY                               : 342
+
+Label Method Distribution
+--------------------------------------------------------------------------
+sell_quality_dominant             : 323
+low_quality                       : 232
+buy_quality_dominant              : 342
+low_future_movement               : 103

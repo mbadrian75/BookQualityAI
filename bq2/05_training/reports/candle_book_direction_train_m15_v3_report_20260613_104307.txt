@@ -1,0 +1,149 @@
+Book & Quality v2 - Train Candle Book Direction Model M15 v3 Report
+==========================================================================
+run_id                            : candle_book_direction_train_m15_v3_20260613_104307
+status                            : success
+database                          : market_data
+symbol                            : XAUUSD
+start_time                        : 2026-06-13T10:43:07.025250+00:00
+end_time                          : 2026-06-13T10:51:45.929392+00:00
+duration_seconds                  : 518.904
+
+Collections
+--------------------------------------------------------------------------
+dataset_source                    : bq2_dataset_candle_book_direction_m15_v3
+
+Training Config
+--------------------------------------------------------------------------
+model_version                     : candle_book_direction_model_m15_v3
+dataset_version                   : candle_book_direction_dataset_m15_v3
+feature_version                   : candle_book_direction_features_m15_v3
+label_version                     : candle_book_direction_label_m15_v3
+target                            : book_direction
+classifier                        : HistGradientBoostingClassifier
+max_iter                          : 120
+learning_rate                     : 0.03
+l2_regularization                 : 1.0
+max_leaf_nodes                    : 15
+limit_per_split                   : None
+sample_weight                     : True
+
+Counts
+--------------------------------------------------------------------------
+train                             : 308869
+valid                             : 20600
+test                              : 47316
+rows_loaded                       : 376785
+feature_count                     : 253
+train_label_distribution          : {'UNCLEAR': 75204, 'SELL': 116607, 'BUY': 117058}
+valid_label_distribution          : {'BUY': 8566, 'SELL': 8501, 'UNCLEAR': 3533}
+test_label_distribution           : {'SELL': 21072, 'UNCLEAR': 3979, 'BUY': 22265}
+
+Model Output
+--------------------------------------------------------------------------
+model_path                        : C:\Project\BookQuality\bq2\06_models\candle_book\candle_book_direction_model_m15_v3_20260613_104307.joblib
+latest_model_path                 : C:\Project\BookQuality\bq2\06_models\candle_book\candle_book_direction_model_m15_v3_latest.joblib
+classes                           : [np.str_('BUY'), np.str_('SELL'), np.str_('UNCLEAR')]
+feature_count                     : 253
+feature_names_source              : C:\Project\BookQuality\bq2\04_dataset\exports\candle_book_direction_m15_v3_feature_names_20260613_075337.json
+
+Metrics
+--------------------------------------------------------------------------
+train:
+  rows                           : 308869
+  accuracy                       : 0.458515
+  macro_f1                       : 0.460262
+  weighted_f1                    : 0.45081
+  log_loss                       : 1.0069895977372114
+  label_distribution:
+    UNCLEAR                    : 75204
+    SELL                       : 116607
+    BUY                        : 117058
+  prediction_distribution:
+    SELL                       : 104087
+    BUY                        : 86884
+    UNCLEAR                    : 117898
+  classes                        : [np.str_('BUY'), np.str_('SELL'), np.str_('UNCLEAR')]
+  confusion_matrix_labels        : [np.str_('BUY'), np.str_('SELL'), np.str_('UNCLEAR')]
+  confusion_matrix               : [[41752, 41746, 33560], [34786, 48676, 33145], [10346, 13665, 51193]]
+  avg_confidence                 : 0.466463
+  p60_rate                       : 0.110885
+  p70_rate                       : 0.050973
+  p80_rate                       : 0.009341
+  avg_buy_sell_gap               : 0.032574
+  gap10_rate                     : 0.039836
+  gap20_rate                     : 0.000223
+  gap30_rate                     : 3.6e-05
+  gap_threshold_analysis:
+    gap>=0.05                  : {'coverage': 0.197598, 'rows': 61032, 'actual_direction_match_rate': 0.51999, 'pred_buy_rows': 30883, 'pred_sell_rows': 30149}
+    gap>=0.10                  : {'coverage': 0.038725, 'rows': 11961, 'actual_direction_match_rate': 0.566926, 'pred_buy_rows': 8782, 'pred_sell_rows': 3179}
+    gap>=0.15                  : {'coverage': 0.004235, 'rows': 1308, 'actual_direction_match_rate': 0.646024, 'pred_buy_rows': 1219, 'pred_sell_rows': 89}
+    gap>=0.20                  : {'coverage': 0.000214, 'rows': 66, 'actual_direction_match_rate': 0.80303, 'pred_buy_rows': 56, 'pred_sell_rows': 10}
+    gap>=0.25                  : {'coverage': 7.8e-05, 'rows': 24, 'actual_direction_match_rate': 0.833333, 'pred_buy_rows': 22, 'pred_sell_rows': 2}
+    gap>=0.30                  : {'coverage': 3.6e-05, 'rows': 11, 'actual_direction_match_rate': 0.818182, 'pred_buy_rows': 11, 'pred_sell_rows': 0}
+    gap>=0.40                  : {'coverage': 3e-06, 'rows': 1, 'actual_direction_match_rate': 0.0, 'pred_buy_rows': 1, 'pred_sell_rows': 0}
+valid:
+  rows                           : 20600
+  accuracy                       : 0.431311
+  macro_f1                       : 0.424576
+  weighted_f1                    : 0.431499
+  log_loss                       : 1.0054318652404939
+  label_distribution:
+    BUY                        : 8566
+    SELL                       : 8501
+    UNCLEAR                    : 3533
+  prediction_distribution:
+    BUY                        : 7594
+    SELL                       : 8778
+    UNCLEAR                    : 4228
+  classes                        : [np.str_('BUY'), np.str_('SELL'), np.str_('UNCLEAR')]
+  confusion_matrix_labels        : [np.str_('BUY'), np.str_('SELL'), np.str_('UNCLEAR')]
+  confusion_matrix               : [[3403, 3770, 1393], [3256, 3946, 1299], [935, 1062, 1536]]
+  avg_confidence                 : 0.439249
+  p60_rate                       : 0.028641
+  p70_rate                       : 0.009272
+  p80_rate                       : 0.000874
+  avg_buy_sell_gap               : 0.039423
+  gap10_rate                     : 0.064175
+  gap20_rate                     : 4.9e-05
+  gap30_rate                     : 0.0
+  gap_threshold_analysis:
+    gap>=0.05                  : {'coverage': 0.281602, 'rows': 5801, 'actual_direction_match_rate': 0.461127, 'pred_buy_rows': 2989, 'pred_sell_rows': 2812}
+    gap>=0.10                  : {'coverage': 0.062864, 'rows': 1295, 'actual_direction_match_rate': 0.457915, 'pred_buy_rows': 944, 'pred_sell_rows': 351}
+    gap>=0.15                  : {'coverage': 0.007136, 'rows': 147, 'actual_direction_match_rate': 0.387755, 'pred_buy_rows': 138, 'pred_sell_rows': 9}
+    gap>=0.20                  : {'coverage': 4.9e-05, 'rows': 1, 'actual_direction_match_rate': 1.0, 'pred_buy_rows': 1, 'pred_sell_rows': 0}
+    gap>=0.25                  : {'coverage': 0.0, 'rows': 0, 'actual_direction_match_rate': None, 'pred_buy_rows': 0, 'pred_sell_rows': 0}
+    gap>=0.30                  : {'coverage': 0.0, 'rows': 0, 'actual_direction_match_rate': None, 'pred_buy_rows': 0, 'pred_sell_rows': 0}
+    gap>=0.40                  : {'coverage': 0.0, 'rows': 0, 'actual_direction_match_rate': None, 'pred_buy_rows': 0, 'pred_sell_rows': 0}
+test:
+  rows                           : 47316
+  accuracy                       : 0.463966
+  macro_f1                       : 0.383441
+  weighted_f1                    : 0.456824
+  log_loss                       : 0.9225330352130197
+  label_distribution:
+    SELL                       : 21072
+    UNCLEAR                    : 3979
+    BUY                        : 22265
+  prediction_distribution:
+    SELL                       : 23353
+    BUY                        : 22292
+    UNCLEAR                    : 1671
+  classes                        : [np.str_('BUY'), np.str_('SELL'), np.str_('UNCLEAR')]
+  confusion_matrix_labels        : [np.str_('BUY'), np.str_('SELL'), np.str_('UNCLEAR')]
+  confusion_matrix               : [[10761, 10858, 646], [9913, 10663, 496], [1618, 1832, 529]]
+  avg_confidence                 : 0.460117
+  p60_rate                       : 0.002536
+  p70_rate                       : 0.000211
+  p80_rate                       : 0.0
+  avg_buy_sell_gap               : 0.042461
+  gap10_rate                     : 0.066912
+  gap20_rate                     : 0.000465
+  gap30_rate                     : 0.0
+  gap_threshold_analysis:
+    gap>=0.05                  : {'coverage': 0.337793, 'rows': 15983, 'actual_direction_match_rate': 0.476631, 'pred_buy_rows': 8043, 'pred_sell_rows': 7940}
+    gap>=0.10                  : {'coverage': 0.066827, 'rows': 3162, 'actual_direction_match_rate': 0.491145, 'pred_buy_rows': 2285, 'pred_sell_rows': 877}
+    gap>=0.15                  : {'coverage': 0.006636, 'rows': 314, 'actual_direction_match_rate': 0.461783, 'pred_buy_rows': 249, 'pred_sell_rows': 65}
+    gap>=0.20                  : {'coverage': 0.000465, 'rows': 22, 'actual_direction_match_rate': 0.454545, 'pred_buy_rows': 1, 'pred_sell_rows': 21}
+    gap>=0.25                  : {'coverage': 2.1e-05, 'rows': 1, 'actual_direction_match_rate': 1.0, 'pred_buy_rows': 0, 'pred_sell_rows': 1}
+    gap>=0.30                  : {'coverage': 0.0, 'rows': 0, 'actual_direction_match_rate': None, 'pred_buy_rows': 0, 'pred_sell_rows': 0}
+    gap>=0.40                  : {'coverage': 0.0, 'rows': 0, 'actual_direction_match_rate': None, 'pred_buy_rows': 0, 'pred_sell_rows': 0}

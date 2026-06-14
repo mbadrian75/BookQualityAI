@@ -1,0 +1,382 @@
+{
+  "run_id": "entry_context_train_m15_v1_20260613_182010",
+  "status": "success",
+  "database": "market_data",
+  "symbol": "XAUUSD",
+  "start_time": "2026-06-13T18:20:10.466519+00:00",
+  "end_time": "2026-06-13T18:21:05.344361+00:00",
+  "duration_seconds": 54.878,
+  "collections": {
+    "dataset_source": "bq2_dataset_entry_context_m15_v1"
+  },
+  "training_config": {
+    "model_version": "entry_context_model_m15_v1",
+    "dataset_version": "entry_context_dataset_m15_v1",
+    "book_feature_version": "candle_book_direction_features_m15_v3",
+    "book_label_version": "candle_book_direction_label_m15_v3",
+    "ma_model_version": "ma_scenario_model_m30_v1",
+    "target": "book_direction",
+    "classifier": "HistGradientBoostingClassifier",
+    "max_iter": 50,
+    "learning_rate": 0.03,
+    "l2_regularization": 1.0,
+    "max_leaf_nodes": 15,
+    "limit_per_split": 5000,
+    "sample_weight": true
+  },
+  "counts": {
+    "train": 5000,
+    "valid": 5000,
+    "test": 5000,
+    "rows_loaded": 15000,
+    "feature_count": 306,
+    "train_label_distribution": {
+      "SELL": 1869,
+      "BUY": 1933,
+      "UNCLEAR": 1198
+    },
+    "valid_label_distribution": {
+      "BUY": 2225,
+      "SELL": 2198,
+      "UNCLEAR": 577
+    },
+    "test_label_distribution": {
+      "SELL": 2033,
+      "UNCLEAR": 845,
+      "BUY": 2122
+    }
+  },
+  "model_output": {
+    "model_path": "C:\\Project\\BookQuality\\bq2\\06_models\\entry_context\\entry_context_model_m15_v1_20260613_182010.joblib",
+    "latest_model_path": "C:\\Project\\BookQuality\\bq2\\06_models\\entry_context\\entry_context_model_m15_v1_latest.joblib",
+    "classes": [
+      "BUY",
+      "SELL",
+      "UNCLEAR"
+    ],
+    "feature_count": 306,
+    "feature_names_source": "C:\\Project\\BookQuality\\bq2\\04_dataset\\exports\\entry_context_m15_v1_feature_names_20260613_145421.json"
+  },
+  "metrics": {
+    "train": {
+      "rows": 5000,
+      "accuracy": 0.646,
+      "macro_f1": 0.644129,
+      "weighted_f1": 0.647931,
+      "log_loss": 0.8824173517016801,
+      "label_distribution": {
+        "SELL": 1869,
+        "BUY": 1933,
+        "UNCLEAR": 1198
+      },
+      "prediction_distribution": {
+        "BUY": 1588,
+        "SELL": 1712,
+        "UNCLEAR": 1700
+      },
+      "classes": [
+        "BUY",
+        "SELL",
+        "UNCLEAR"
+      ],
+      "confusion_matrix_labels": [
+        "BUY",
+        "SELL",
+        "UNCLEAR"
+      ],
+      "confusion_matrix": [
+        [
+          1143,
+          344,
+          446
+        ],
+        [
+          314,
+          1194,
+          361
+        ],
+        [
+          131,
+          174,
+          893
+        ]
+      ],
+      "avg_confidence": 0.477371,
+      "p60_rate": 0.0836,
+      "p70_rate": 0.0068,
+      "p80_rate": 0.0,
+      "avg_buy_sell_gap": 0.109151,
+      "gap10_rate": 0.4456,
+      "gap20_rate": 0.1618,
+      "gap30_rate": 0.0386,
+      "gap_threshold_analysis": {
+        "gap>=0.05": {
+          "coverage": 0.5104,
+          "rows": 2552,
+          "actual_direction_match_rate": 0.774687,
+          "pred_buy_rows": 1213,
+          "pred_sell_rows": 1339
+        },
+        "gap>=0.10": {
+          "coverage": 0.3706,
+          "rows": 1853,
+          "actual_direction_match_rate": 0.840259,
+          "pred_buy_rows": 856,
+          "pred_sell_rows": 997
+        },
+        "gap>=0.15": {
+          "coverage": 0.25,
+          "rows": 1250,
+          "actual_direction_match_rate": 0.8888,
+          "pred_buy_rows": 577,
+          "pred_sell_rows": 673
+        },
+        "gap>=0.20": {
+          "coverage": 0.1572,
+          "rows": 786,
+          "actual_direction_match_rate": 0.928753,
+          "pred_buy_rows": 376,
+          "pred_sell_rows": 410
+        },
+        "gap>=0.25": {
+          "coverage": 0.0812,
+          "rows": 406,
+          "actual_direction_match_rate": 0.975369,
+          "pred_buy_rows": 214,
+          "pred_sell_rows": 192
+        },
+        "gap>=0.30": {
+          "coverage": 0.0386,
+          "rows": 193,
+          "actual_direction_match_rate": 0.968912,
+          "pred_buy_rows": 99,
+          "pred_sell_rows": 94
+        },
+        "gap>=0.40": {
+          "coverage": 0.0052,
+          "rows": 26,
+          "actual_direction_match_rate": 1.0,
+          "pred_buy_rows": 18,
+          "pred_sell_rows": 8
+        }
+      }
+    },
+    "valid": {
+      "rows": 5000,
+      "accuracy": 0.4348,
+      "macro_f1": 0.370003,
+      "weighted_f1": 0.4274,
+      "log_loss": 0.9983591633709795,
+      "label_distribution": {
+        "BUY": 2225,
+        "SELL": 2198,
+        "UNCLEAR": 577
+      },
+      "prediction_distribution": {
+        "SELL": 2309,
+        "BUY": 2394,
+        "UNCLEAR": 297
+      },
+      "classes": [
+        "BUY",
+        "SELL",
+        "UNCLEAR"
+      ],
+      "confusion_matrix_labels": [
+        "BUY",
+        "SELL",
+        "UNCLEAR"
+      ],
+      "confusion_matrix": [
+        [
+          1069,
+          1043,
+          113
+        ],
+        [
+          1079,
+          1020,
+          99
+        ],
+        [
+          246,
+          246,
+          85
+        ]
+      ],
+      "avg_confidence": 0.479203,
+      "p60_rate": 0.0478,
+      "p70_rate": 0.0004,
+      "p80_rate": 0.0,
+      "avg_buy_sell_gap": 0.133549,
+      "gap10_rate": 0.5452,
+      "gap20_rate": 0.2408,
+      "gap30_rate": 0.075,
+      "gap_threshold_analysis": {
+        "gap>=0.05": {
+          "coverage": 0.7328,
+          "rows": 3664,
+          "actual_direction_match_rate": 0.445415,
+          "pred_buy_rows": 1888,
+          "pred_sell_rows": 1776
+        },
+        "gap>=0.10": {
+          "coverage": 0.5336,
+          "rows": 2668,
+          "actual_direction_match_rate": 0.444153,
+          "pred_buy_rows": 1414,
+          "pred_sell_rows": 1254
+        },
+        "gap>=0.15": {
+          "coverage": 0.3682,
+          "rows": 1841,
+          "actual_direction_match_rate": 0.461706,
+          "pred_buy_rows": 1010,
+          "pred_sell_rows": 831
+        },
+        "gap>=0.20": {
+          "coverage": 0.2402,
+          "rows": 1201,
+          "actual_direction_match_rate": 0.470441,
+          "pred_buy_rows": 678,
+          "pred_sell_rows": 523
+        },
+        "gap>=0.25": {
+          "coverage": 0.14,
+          "rows": 700,
+          "actual_direction_match_rate": 0.475714,
+          "pred_buy_rows": 393,
+          "pred_sell_rows": 307
+        },
+        "gap>=0.30": {
+          "coverage": 0.075,
+          "rows": 375,
+          "actual_direction_match_rate": 0.490667,
+          "pred_buy_rows": 219,
+          "pred_sell_rows": 156
+        },
+        "gap>=0.40": {
+          "coverage": 0.0144,
+          "rows": 72,
+          "actual_direction_match_rate": 0.458333,
+          "pred_buy_rows": 42,
+          "pred_sell_rows": 30
+        }
+      }
+    },
+    "test": {
+      "rows": 5000,
+      "accuracy": 0.4288,
+      "macro_f1": 0.416117,
+      "weighted_f1": 0.427121,
+      "log_loss": 1.032259749018488,
+      "label_distribution": {
+        "SELL": 2033,
+        "UNCLEAR": 845,
+        "BUY": 2122
+      },
+      "prediction_distribution": {
+        "SELL": 2334,
+        "BUY": 1811,
+        "UNCLEAR": 855
+      },
+      "classes": [
+        "BUY",
+        "SELL",
+        "UNCLEAR"
+      ],
+      "confusion_matrix_labels": [
+        "BUY",
+        "SELL",
+        "UNCLEAR"
+      ],
+      "confusion_matrix": [
+        [
+          808,
+          999,
+          315
+        ],
+        [
+          785,
+          1022,
+          226
+        ],
+        [
+          218,
+          313,
+          314
+        ]
+      ],
+      "avg_confidence": 0.471529,
+      "p60_rate": 0.0418,
+      "p70_rate": 0.0002,
+      "p80_rate": 0.0,
+      "avg_buy_sell_gap": 0.123953,
+      "gap10_rate": 0.5278,
+      "gap20_rate": 0.204,
+      "gap30_rate": 0.048,
+      "gap_threshold_analysis": {
+        "gap>=0.05": {
+          "coverage": 0.6546,
+          "rows": 3273,
+          "actual_direction_match_rate": 0.439658,
+          "pred_buy_rows": 1389,
+          "pred_sell_rows": 1884
+        },
+        "gap>=0.10": {
+          "coverage": 0.49,
+          "rows": 2450,
+          "actual_direction_match_rate": 0.439184,
+          "pred_buy_rows": 1016,
+          "pred_sell_rows": 1434
+        },
+        "gap>=0.15": {
+          "coverage": 0.331,
+          "rows": 1655,
+          "actual_direction_match_rate": 0.444109,
+          "pred_buy_rows": 674,
+          "pred_sell_rows": 981
+        },
+        "gap>=0.20": {
+          "coverage": 0.2022,
+          "rows": 1011,
+          "actual_direction_match_rate": 0.452028,
+          "pred_buy_rows": 427,
+          "pred_sell_rows": 584
+        },
+        "gap>=0.25": {
+          "coverage": 0.1064,
+          "rows": 532,
+          "actual_direction_match_rate": 0.471805,
+          "pred_buy_rows": 251,
+          "pred_sell_rows": 281
+        },
+        "gap>=0.30": {
+          "coverage": 0.048,
+          "rows": 240,
+          "actual_direction_match_rate": 0.4625,
+          "pred_buy_rows": 130,
+          "pred_sell_rows": 110
+        },
+        "gap>=0.40": {
+          "coverage": 0.0052,
+          "rows": 26,
+          "actual_direction_match_rate": 0.5,
+          "pred_buy_rows": 13,
+          "pred_sell_rows": 13
+        }
+      }
+    }
+  },
+  "errors": [],
+  "args": {
+    "limit_per_split": 5000,
+    "max_iter": 50,
+    "learning_rate": 0.03,
+    "l2_regularization": 1.0,
+    "max_leaf_nodes": 15,
+    "no_sample_weight": false
+  },
+  "report_json_path": "C:\\Project\\BookQuality\\bq2\\05_training\\reports\\entry_context_train_m15_v1_report_20260613_182010.json",
+  "report_txt_path": "C:\\Project\\BookQuality\\bq2\\05_training\\reports\\entry_context_train_m15_v1_report_20260613_182010.txt"
+}

@@ -1,0 +1,61 @@
+{
+  "run_id": "entry_context_labels_m15_v1_20260613_190030",
+  "status": "success",
+  "database": "market_data",
+  "symbol": "XAUUSD",
+  "start_time": "2026-06-13T19:00:30.817502+00:00",
+  "end_time": "2026-06-13T19:13:08.858786+00:00",
+  "duration_seconds": 758.041,
+  "collections": {
+    "source_dataset": "bq2_dataset_entry_context_m15_v1",
+    "raw_m15": "xauusd_m15",
+    "target": "bq2_labels_entry_context_m15_v1"
+  },
+  "config": {
+    "label_version": "entry_context_label_m15_v1",
+    "source_dataset_version": "entry_context_dataset_m15_v1",
+    "target": "entry_label",
+    "horizon_m15": 4,
+    "runup_weight": 0.65,
+    "close_weight": 0.35,
+    "risk_weight": 0.8,
+    "min_favorable_runup_usd": 1.2,
+    "min_quality_score": 0.8,
+    "min_quality_gap": 1.0
+  },
+  "counts": {
+    "anchors_seen": 374696,
+    "labels_built": 374696
+  },
+  "label_distribution": {
+    "SELL": 120939,
+    "NOTRADE": 130892,
+    "BUY": 122865
+  },
+  "label_method_distribution": {
+    "sell_quality_dominant": 120939,
+    "low_quality": 67251,
+    "buy_quality_dominant": 122865,
+    "low_future_movement": 63641
+  },
+  "quality_summary": {
+    "avg_buy_quality": 0.005543,
+    "avg_sell_quality": 0.077736,
+    "avg_abs_quality_gap": 4.589671,
+    "max_abs_quality_gap": 194.5019
+  },
+  "errors": [],
+  "args": {
+    "limit": null,
+    "reset": true,
+    "horizon_m15": 4,
+    "runup_weight": 0.65,
+    "close_weight": 0.35,
+    "risk_weight": 0.8,
+    "min_favorable_runup_usd": 1.2,
+    "min_quality_score": 0.8,
+    "min_quality_gap": 1.0
+  },
+  "report_json_path": "C:\\Project\\BookQuality\\bq2\\02_labels\\reports\\entry_context_labels_m15_v1_report_20260613_190030.json",
+  "report_txt_path": "C:\\Project\\BookQuality\\bq2\\02_labels\\reports\\entry_context_labels_m15_v1_report_20260613_190030.txt"
+}

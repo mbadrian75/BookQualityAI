@@ -1,0 +1,258 @@
+{
+  "run_id": "reset_to_raw_only_v1_20260613_211211",
+  "status": "success",
+  "mode": "dry_run",
+  "database": "market_data",
+  "symbol": "XAUUSD",
+  "start_time": "2026-06-13T21:12:11.374723+00:00",
+  "end_time": "2026-06-13T21:12:11.474940+00:00",
+  "duration_seconds": 0.1,
+  "raw_data_modified": false,
+  "summary": {
+    "collections_total": 38,
+    "kept_total": 7,
+    "drop_candidates_total": 31,
+    "dropped_total": 0,
+    "dry_run": true
+  },
+  "kept_collections": [
+    {
+      "name": "xauusd_d1",
+      "reason": "keep_raw",
+      "count": 4978
+    },
+    {
+      "name": "xauusd_h1",
+      "reason": "keep_raw",
+      "count": 95009
+    },
+    {
+      "name": "xauusd_h4",
+      "reason": "keep_raw",
+      "count": 25550
+    },
+    {
+      "name": "xauusd_m1",
+      "reason": "keep_raw",
+      "count": 5604412
+    },
+    {
+      "name": "xauusd_m15",
+      "reason": "keep_raw",
+      "count": 376837
+    },
+    {
+      "name": "xauusd_m30",
+      "reason": "keep_raw",
+      "count": 188895
+    },
+    {
+      "name": "xauusd_m5",
+      "reason": "keep_raw",
+      "count": 1127947
+    }
+  ],
+  "drop_collections": [
+    {
+      "name": "bq2_dataset_candle_book_direction_m15_v3",
+      "reason": "drop_derived",
+      "action": "would_drop",
+      "count": 376785
+    },
+    {
+      "name": "bq2_dataset_entry_context_m15_v1",
+      "reason": "drop_derived",
+      "action": "would_drop",
+      "count": 374696
+    },
+    {
+      "name": "bq2_dataset_entry_context_trade_m15_v1",
+      "reason": "drop_derived",
+      "action": "would_drop",
+      "count": 374696
+    },
+    {
+      "name": "bq2_dataset_ma_scenario_m30_v1",
+      "reason": "drop_derived",
+      "action": "would_drop",
+      "count": 187818
+    },
+    {
+      "name": "bq2_features_candle_book_direction_m15_v3",
+      "reason": "drop_derived",
+      "action": "would_drop",
+      "count": 367821
+    },
+    {
+      "name": "bq2_features_ma_quality_m30_v1",
+      "reason": "drop_derived",
+      "action": "would_drop",
+      "count": 187818
+    },
+    {
+      "name": "bq2_labels_candle_book_direction_m15_v3",
+      "reason": "drop_derived",
+      "action": "would_drop",
+      "count": 376834
+    },
+    {
+      "name": "bq2_labels_entry_context_m15_v1",
+      "reason": "drop_derived",
+      "action": "would_drop",
+      "count": 374696
+    },
+    {
+      "name": "bq2_labels_ma_quality_m30_v1",
+      "reason": "drop_derived",
+      "action": "would_drop",
+      "count": 187967
+    },
+    {
+      "name": "bq2_meta_dataset_versions",
+      "reason": "drop_derived",
+      "action": "would_drop",
+      "count": 0
+    },
+    {
+      "name": "bq2_meta_feature_versions",
+      "reason": "drop_derived",
+      "action": "would_drop",
+      "count": 0
+    },
+    {
+      "name": "bq2_meta_label_versions",
+      "reason": "drop_derived",
+      "action": "would_drop",
+      "count": 0
+    },
+    {
+      "name": "bq2_meta_model_versions",
+      "reason": "drop_derived",
+      "action": "would_drop",
+      "count": 0
+    },
+    {
+      "name": "bq2_meta_project",
+      "reason": "drop_derived",
+      "action": "would_drop",
+      "count": 1
+    },
+    {
+      "name": "bq2_meta_runs",
+      "reason": "drop_derived",
+      "action": "would_drop",
+      "count": 0
+    },
+    {
+      "name": "bq2_predictions_ma_scenario_m30_v1",
+      "reason": "drop_derived",
+      "action": "would_drop",
+      "count": 187818
+    },
+    {
+      "name": "bq_api_decisions_m15_v1",
+      "reason": "drop_derived",
+      "action": "would_drop",
+      "count": 0
+    },
+    {
+      "name": "bq_dataset_book_entry_m15_v1",
+      "reason": "drop_derived",
+      "action": "would_drop",
+      "count": 0
+    },
+    {
+      "name": "bq_dataset_trade_quality_m15_v1",
+      "reason": "drop_derived",
+      "action": "would_drop",
+      "count": 0
+    },
+    {
+      "name": "bq_features_book_entry_m15_v1",
+      "reason": "drop_derived",
+      "action": "would_drop",
+      "count": 376836
+    },
+    {
+      "name": "bq_features_trade_quality_m15_v1",
+      "reason": "drop_derived",
+      "action": "would_drop",
+      "count": 1000
+    },
+    {
+      "name": "bq_labels_book_entry_m15_v1",
+      "reason": "drop_derived",
+      "action": "would_drop",
+      "count": 1000
+    },
+    {
+      "name": "bq_labels_trade_quality_m15_v1",
+      "reason": "drop_derived",
+      "action": "would_drop",
+      "count": 376836
+    },
+    {
+      "name": "bq_meta_dataset_versions",
+      "reason": "drop_derived",
+      "action": "would_drop",
+      "count": 2
+    },
+    {
+      "name": "bq_meta_feature_versions",
+      "reason": "drop_derived",
+      "action": "would_drop",
+      "count": 2
+    },
+    {
+      "name": "bq_meta_label_versions",
+      "reason": "drop_derived",
+      "action": "would_drop",
+      "count": 2
+    },
+    {
+      "name": "bq_meta_model_versions",
+      "reason": "drop_derived",
+      "action": "would_drop",
+      "count": 2
+    },
+    {
+      "name": "bq_meta_project",
+      "reason": "drop_derived",
+      "action": "would_drop",
+      "count": 1
+    },
+    {
+      "name": "bq_meta_runs",
+      "reason": "drop_derived",
+      "action": "would_drop",
+      "count": 1
+    },
+    {
+      "name": "bq_predictions_book_entry_m15_v1",
+      "reason": "drop_derived",
+      "action": "would_drop",
+      "count": 0
+    },
+    {
+      "name": "bq_predictions_trade_quality_m15_v1",
+      "reason": "drop_derived",
+      "action": "would_drop",
+      "count": 0
+    }
+  ],
+  "errors": [],
+  "config": {
+    "raw_keep": [
+      "xauusd_d1",
+      "xauusd_h1",
+      "xauusd_h4",
+      "xauusd_m1",
+      "xauusd_m15",
+      "xauusd_m30",
+      "xauusd_m5"
+    ],
+    "confirm_text": "RESET_TO_RAW_ONLY"
+  },
+  "report_json_path": "C:\\Project\\BookQuality\\bq2\\01_database\\reports\\reset_to_raw_only_v1_report_20260613_211211.json",
+  "report_txt_path": "C:\\Project\\BookQuality\\bq2\\01_database\\reports\\reset_to_raw_only_v1_report_20260613_211211.txt"
+}

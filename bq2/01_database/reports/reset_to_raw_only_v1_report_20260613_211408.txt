@@ -1,0 +1,63 @@
+Book & Quality v2 - Reset to Raw Collections Only v1 Report
+==========================================================================
+run_id                            : reset_to_raw_only_v1_20260613_211408
+status                            : success
+mode                              : execute
+database                          : market_data
+symbol                            : XAUUSD
+start_time                        : 2026-06-13T21:14:08.055486+00:00
+end_time                          : 2026-06-13T21:14:08.236901+00:00
+duration_seconds                  : 0.181
+raw_data_modified                 : False
+
+Summary
+--------------------------------------------------------------------------
+collections_total                 : 38
+kept_total                        : 7
+drop_candidates_total             : 31
+dropped_total                     : 31
+dry_run                           : False
+
+Kept Raw/System Collections
+--------------------------------------------------------------------------
+xauusd_d1                                     keep_raw       count=4978
+xauusd_h1                                     keep_raw       count=95009
+xauusd_h4                                     keep_raw       count=25550
+xauusd_m1                                     keep_raw       count=5604412
+xauusd_m15                                    keep_raw       count=376837
+xauusd_m30                                    keep_raw       count=188895
+xauusd_m5                                     keep_raw       count=1127947
+
+Drop Candidates / Dropped
+--------------------------------------------------------------------------
+bq2_dataset_candle_book_direction_m15_v3      dropped      count=376785
+bq2_dataset_entry_context_m15_v1              dropped      count=374696
+bq2_dataset_entry_context_trade_m15_v1        dropped      count=374696
+bq2_dataset_ma_scenario_m30_v1                dropped      count=187818
+bq2_features_candle_book_direction_m15_v3     dropped      count=367821
+bq2_features_ma_quality_m30_v1                dropped      count=187818
+bq2_labels_candle_book_direction_m15_v3       dropped      count=376834
+bq2_labels_entry_context_m15_v1               dropped      count=374696
+bq2_labels_ma_quality_m30_v1                  dropped      count=187967
+bq2_meta_dataset_versions                     dropped      count=0
+bq2_meta_feature_versions                     dropped      count=0
+bq2_meta_label_versions                       dropped      count=0
+bq2_meta_model_versions                       dropped      count=0
+bq2_meta_project                              dropped      count=1
+bq2_meta_runs                                 dropped      count=0
+bq2_predictions_ma_scenario_m30_v1            dropped      count=187818
+bq_api_decisions_m15_v1                       dropped      count=0
+bq_dataset_book_entry_m15_v1                  dropped      count=0
+bq_dataset_trade_quality_m15_v1               dropped      count=0
+bq_features_book_entry_m15_v1                 dropped      count=376836
+bq_features_trade_quality_m15_v1              dropped      count=1000
+bq_labels_book_entry_m15_v1                   dropped      count=1000
+bq_labels_trade_quality_m15_v1                dropped      count=376836
+bq_meta_dataset_versions                      dropped      count=2
+bq_meta_feature_versions                      dropped      count=2
+bq_meta_label_versions                        dropped      count=2
+bq_meta_model_versions                        dropped      count=2
+bq_meta_project                               dropped      count=1
+bq_meta_runs                                  dropped      count=1
+bq_predictions_book_entry_m15_v1              dropped      count=0
+bq_predictions_trade_quality_m15_v1           dropped      count=0

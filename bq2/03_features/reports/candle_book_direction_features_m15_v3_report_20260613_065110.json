@@ -1,0 +1,86 @@
+{
+  "script_name": "04_build_candle_book_direction_features_m15_v3.py",
+  "run_id": "candle_book_direction_features_m15_v3_20260613_065110",
+  "status": "failed",
+  "database": "market_data",
+  "symbol": "XAUUSD",
+  "start_time": "2026-06-13T06:51:10.858987+00:00",
+  "end_time": "2026-06-13T06:51:15.933210+00:00",
+  "duration_seconds": 5.074,
+  "collections": {
+    "labels_source": "bq2_labels_candle_book_direction_m15_v3",
+    "m1_source": "xauusd_m1",
+    "m5_source": "xauusd_m5",
+    "m15_source": "xauusd_m15",
+    "target": "bq2_features_candle_book_direction_m15_v3"
+  },
+  "feature_config": {
+    "feature_version": "candle_book_direction_features_m15_v3",
+    "label_version_expected": "candle_book_direction_label_m15_v3",
+    "anchor_timeframe": "M15",
+    "input_timeframes": [
+      "M1",
+      "M5",
+      "M15"
+    ],
+    "m1_windows": [
+      5,
+      15,
+      30,
+      60
+    ],
+    "m5_windows": [
+      3,
+      6,
+      12,
+      24,
+      48
+    ],
+    "m15_windows": [
+      3,
+      5,
+      10,
+      20,
+      50
+    ],
+    "min_history": {
+      "m1": 60,
+      "m5": 48,
+      "m15": 50
+    },
+    "no_leak_rule": "m1/m5 datetime < decision_time; m15 datetime <= anchor_time"
+  },
+  "counts": {
+    "labels_loaded": 0,
+    "labels_processed": 0,
+    "features_built": 0,
+    "upserted_or_modified": 0,
+    "inserted": 0,
+    "matched": 0,
+    "modified": 0,
+    "skipped_existing": 0,
+    "skipped_no_context": 0,
+    "skipped_no_label_y": 0,
+    "row_errors": 0
+  },
+  "feature_count": {
+    "min": null,
+    "max": null,
+    "last": null,
+    "distinct": {}
+  },
+  "label_distribution": {},
+  "skip_reasons": {},
+  "errors": [
+    "localhost:27017: [WinError 10061] No connection could be made because the target machine actively refused it (configured timeouts: socketTimeoutMS: 20000.0ms, connectTimeoutMS: 20000.0ms), Timeout: 5.0s, Topology Description: <TopologyDescription id: 6a2cfddeb03ae5a25cf61fdb, topology_type: Unknown, servers: [<ServerDescription ('localhost', 27017) server_type: Unknown, rtt: None, error=AutoReconnect('localhost:27017: [WinError 10061] No connection could be made because the target machine actively refused it (configured timeouts: socketTimeoutMS: 20000.0ms, connectTimeoutMS: 20000.0ms)')>]>"
+  ],
+  "args": {
+    "limit": null,
+    "reset": true,
+    "start": null,
+    "end": null,
+    "skip_existing": false
+  },
+  "report_json_path": "C:\\Project\\BookQuality\\bq2\\03_features\\reports\\candle_book_direction_features_m15_v3_report_20260613_065110.json",
+  "report_txt_path": "C:\\Project\\BookQuality\\bq2\\03_features\\reports\\candle_book_direction_features_m15_v3_report_20260613_065110.txt"
+}

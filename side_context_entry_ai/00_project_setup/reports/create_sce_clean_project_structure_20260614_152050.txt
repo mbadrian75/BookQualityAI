@@ -1,0 +1,37 @@
+Side Context Entry AI - Clean Project Structure Report
+================================================================
+run_id                   : create_sce_clean_project_structure_20260614_152050
+status                   : success
+project_name             : Side Context Entry AI
+project_code             : SCE
+root                     : C:\Project\BookQuality\side_context_entry_ai
+database                 : market_data
+derived_prefix           : sce_
+raw_data_modified         : False
+previous_folders_modified : False
+
+Folder policy:
+- each script is located inside its own section folder
+- each section writes reports inside its own local reports folder
+- shared project parameters are in config/sce_project_config.py
+
+created_count            : 0
+
+already_exists_count     : 15
+- already_exists         : 00_project_setup/reports
+- already_exists         : config
+- already_exists         : docs
+- already_exists         : 01_database/bootstrap/reports
+- already_exists         : 01_database/inspect_raw/reports
+- already_exists         : 02_labels/entry_side/reports
+- already_exists         : 03_features/ma_context/reports
+- already_exists         : 03_features/candle_entry/reports
+- already_exists         : 03_features/integrated_entry/reports
+- already_exists         : 04_dataset/integrated_entry/reports
+- already_exists         : 05_training/integrated_entry/reports
+- already_exists         : 06_models/integrated_entry/reports
+- already_exists         : 07_api/decision_engine/reports
+- already_exists         : 08_backtest/integrated_entry/reports
+- already_exists         : 09_logs
+
+End of report.

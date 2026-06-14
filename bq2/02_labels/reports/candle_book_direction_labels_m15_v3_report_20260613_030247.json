@@ -1,0 +1,72 @@
+{
+  "script_name": "03_build_candle_book_direction_labels_m15_v3.py",
+  "run_id": "candle_book_direction_labels_m15_v3_20260613_030247",
+  "status": "success",
+  "database": "market_data",
+  "symbol": "XAUUSD",
+  "start_time": "2026-06-13T03:02:47.485560+00:00",
+  "end_time": "2026-06-13T03:07:04.533266+00:00",
+  "duration_seconds": 257.048,
+  "collections": {
+    "m15_source": "xauusd_m15",
+    "target": "bq2_labels_candle_book_direction_m15_v3"
+  },
+  "label_config": {
+    "label_version": "candle_book_direction_label_m15_v3",
+    "anchor_timeframe": "M15",
+    "entry_rule": "entry_time = next M15 open after anchor_time",
+    "purpose": "predict directional candle pressure in the next 30 minutes",
+    "horizon_m15": 2,
+    "wick_weight": 0.65,
+    "close_weight": 0.35,
+    "min_total_pressure_usd": 0.8,
+    "min_gap_usd": 0.25,
+    "min_gap_ratio": 0.08
+  },
+  "counts": {
+    "m15_loaded": 376837,
+    "anchors_seen": 376834,
+    "labels_built": 376834,
+    "upserted_or_modified": 376834,
+    "inserted": 376834,
+    "matched": 0,
+    "modified": 0,
+    "skipped_existing": 0,
+    "skipped_no_future_path": 0,
+    "row_errors": 0
+  },
+  "direction_distribution": {
+    "SELL": 146194,
+    "BUY": 147916,
+    "UNCLEAR": 82724
+  },
+  "label_method_distribution": {
+    "sell_pressure_dominant": 146194,
+    "buy_pressure_dominant": 147916,
+    "small_gap_usd": 30093,
+    "low_total_pressure": 51850,
+    "small_gap_ratio": 781
+  },
+  "pressure_summary": {
+    "avg_buy_pressure": 1.271081,
+    "avg_sell_pressure": 1.289132,
+    "avg_abs_pressure_gap": 1.713854,
+    "avg_gap_ratio": 0.610742
+  },
+  "errors": [],
+  "args": {
+    "limit": null,
+    "reset": true,
+    "start": null,
+    "end": null,
+    "skip_existing": false,
+    "horizon_m15": null,
+    "min_total_pressure_usd": null,
+    "min_gap_usd": null,
+    "min_gap_ratio": null
+  },
+  "reset_deleted_count": 1000,
+  "final_target_count": 376834,
+  "report_json_path": "C:\\Project\\BookQuality\\bq2\\02_labels\\reports\\candle_book_direction_labels_m15_v3_report_20260613_030247.json",
+  "report_txt_path": "C:\\Project\\BookQuality\\bq2\\02_labels\\reports\\candle_book_direction_labels_m15_v3_report_20260613_030247.txt"
+}
