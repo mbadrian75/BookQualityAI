@@ -1,0 +1,113 @@
+Side Context Entry AI - Integrated Entry Feature Builder Report
+================================================================================
+run_id                   : sce_build_integrated_entry_features_20260615_135556
+status                   : failed
+project_name             : Side Context Entry AI
+project_code             : SCE
+database                 : market_data
+ma_collection             : sce_features_ma_context_m5_v1
+candle_collection         : sce_features_candle_entry_m5_v1
+target_collection         : sce_features_integrated_entry_m5_v1
+feature_version           : sce_integrated_entry_m5_v1
+ma_feature_version        : sce_ma_context_m5_v1
+candle_feature_version    : sce_candle_entry_m5_v1
+raw_data_modified         : False
+m1_as_feature             : False
+label_targets_included    : False
+report_folder_policy      : local_section_reports
+
+Runtime parameters:
+limit                     : 0
+start_time                : 
+end_time                  : 
+batch_size                : 5000
+clear_existing            : 1
+
+Counts:
+cleared_existing_docs     : 50000
+
+Side distribution:
+
+Skip reasons:
+
+Error:
+Traceback (most recent call last):
+  File "C:\Project\BookQuality\side_context_entry_ai\03_features\integrated_entry\09_build_sce_integrated_entry_features.py", line 207, in main
+    for ma_doc in cursor:
+                  ^^^^^^
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python314\Lib\site-packages\pymongo\synchronous\command_cursor.py", line 342, in __next__
+    return self.next()
+           ~~~~~~~~~^^
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python314\Lib\site-packages\pymongo\synchronous\command_cursor.py", line 335, in next
+    doc = self._try_next(True)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python314\Lib\site-packages\pymongo\synchronous\command_cursor.py", line 347, in _try_next
+    self._refresh()
+    ~~~~~~~~~~~~~^^
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python314\Lib\site-packages\pymongo\synchronous\command_cursor.py", line 307, in _refresh
+    self._send_message(
+    ~~~~~~~~~~~~~~~~~~^
+        self._getmore_class(
+        ^^^^^^^^^^^^^^^^^^^^
+    ...<12 lines>...
+        )
+        ^
+    )
+    ^
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python314\Lib\site-packages\pymongo\synchronous\command_cursor.py", line 254, in _send_message
+    response = client._run_operation(
+        operation, self._unpack_response, address=self._address
+    )
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python314\Lib\site-packages\pymongo\_csot.py", line 125, in csot_wrapper
+    return func(self, *args, **kwargs)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python314\Lib\site-packages\pymongo\synchronous\mongo_client.py", line 1938, in _run_operation
+    return self._retryable_read(
+           ~~~~~~~~~~~~~~~~~~~~^
+        _cmd,
+        ^^^^^
+    ...<4 lines>...
+        operation=operation.name,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python314\Lib\site-packages\pymongo\synchronous\mongo_client.py", line 2047, in _retryable_read
+    return self._retry_internal(
+           ~~~~~~~~~~~~~~~~~~~~^
+        func,
+        ^^^^^
+    ...<7 lines>...
+        operation_id=operation_id,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python314\Lib\site-packages\pymongo\_csot.py", line 125, in csot_wrapper
+    return func(self, *args, **kwargs)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python314\Lib\site-packages\pymongo\synchronous\mongo_client.py", line 2014, in _retry_internal
+    ).run()
+      ~~~^^
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python314\Lib\site-packages\pymongo\synchronous\mongo_client.py", line 2765, in run
+    return self._read() if self._is_read else self._write()
+           ~~~~~~~~~~^^
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python314\Lib\site-packages\pymongo\synchronous\mongo_client.py", line 2926, in _read
+    return self._func(self._session, self._server, conn, read_pref)  # type: ignore
+           ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python314\Lib\site-packages\pymongo\synchronous\mongo_client.py", line 1929, in _cmd
+    return server.run_operation(
+           ~~~~~~~~~~~~~~~~~~~~^
+        conn,
+        ^^^^^
+    ...<4 lines>...
+        self,
+        ^^^^^
+    )
+    ^
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python314\Lib\site-packages\pymongo\synchronous\helpers.py", line 47, in inner
+    return func(*args, **kwargs)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python314\Lib\site-packages\pymongo\synchronous\server.py", line 227, in run_operation
+    _check_command_response(first, conn.max_wire_version, pool_opts=conn.opts)  # type:ignore[has-type]
+    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python314\Lib\site-packages\pymongo\helpers_shared.py", line 282, in _check_command_response
+    raise CursorNotFound(errmsg, code, response, max_wire_version)
+pymongo.errors.CursorNotFound: cursor id 6446174159192310332 not found, full error: {'ok': 0.0, 'errmsg': 'cursor id 6446174159192310332 not found', 'code': 43, 'codeName': 'CursorNotFound'}
+
+
+End of report.

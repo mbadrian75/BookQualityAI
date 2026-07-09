@@ -1,0 +1,148 @@
+Side Context Entry AI - MA Context Feature QA Report
+========================================================================
+run_id                   : sce_validate_ma_context_features_20260615_120919
+status                   : success
+project_name             : Side Context Entry AI
+project_code             : SCE
+database                 : market_data
+collection               : sce_features_ma_context_m5_v1
+feature_version           : sce_ma_context_m5_v1
+database_modified         : False
+raw_data_modified         : False
+report_folder_policy      : local_section_reports
+
+Summary:
+total_docs                      : 2246610
+unique_anchor_count             : 1123305
+invalid_side_count              : 0
+check_pairs                     : 1
+
+Side counts:
+BUY                             : 1123305 | 50.0000%
+SELL                            : 1123305 | 50.0000%
+
+Alignment distributions:
+m30_alignment:
+  bear                        : 683572 | 30.4268%
+  bull                        : 811048 | 36.1010%
+  mixed                       : 751990 | 33.4722%
+h1_alignment:
+  bear                        : 672006 | 29.9120%
+  bull                        : 819954 | 36.4974%
+  mixed                       : 754650 | 33.5906%
+h4_alignment:
+  bear                        : 627532 | 27.9324%
+  bull                        : 861294 | 38.3375%
+  mixed                       : 757784 | 33.7301%
+
+Trend phase distributions:
+m30_trend_phase:
+  continuation                : 505561 | 22.5033%
+  late_or_extended            : 12256 | 0.5455%
+  mixed_or_range              : 751990 | 33.4722%
+  pullback_or_start           : 496501 | 22.1000%
+  weak_or_reversal_risk       : 480302 | 21.3790%
+h1_trend_phase:
+  continuation                : 629064 | 28.0006%
+  late_or_extended            : 32016 | 1.4251%
+  mixed_or_range              : 754650 | 33.5906%
+  pullback_or_start           : 342459 | 15.2434%
+  weak_or_reversal_risk       : 488421 | 21.7404%
+h4_trend_phase:
+  continuation                : 663563 | 29.5362%
+  late_or_extended            : 176980 | 7.8776%
+  mixed_or_range              : 757784 | 33.7301%
+  pullback_or_start           : 158155 | 7.0397%
+  weak_or_reversal_risk       : 490128 | 21.8163%
+
+Context totals:
+ma_context_side_alignment_total:
+  -3                          : 251775 | 11.2069%
+  -2                          : 324626 | 14.4496%
+  -1                          : 342008 | 15.2233%
+  0                           : 409792 | 18.2405%
+  1                           : 342008 | 15.2233%
+  2                           : 324626 | 14.4496%
+  3                           : 251775 | 11.2069%
+ma_context_side_slope_total:
+  0                           : 250696 | 11.1589%
+  1                           : 225273 | 10.0272%
+  2                           : 216320 | 9.6287%
+  3                           : 223695 | 9.9570%
+  4                           : 207411 | 9.2322%
+  5                           : 207345 | 9.2292%
+  6                           : 223676 | 9.9562%
+  7                           : 216345 | 9.6298%
+  8                           : 225188 | 10.0235%
+  9                           : 250661 | 11.1573%
+ma_context_all_aligned:
+  False                       : 1994835 | 88.7931%
+  True                        : 251775 | 11.2069%
+
+Missing critical fields:
+anchor_time                     : 0
+entry_time                      : 0
+side                            : 0
+entry_price                     : 0
+feature_version                 : 0
+m30_ma20                        : 0
+m30_ma50                        : 0
+m30_ma100                       : 0
+m30_alignment                   : 0
+m30_trend_phase                 : 0
+m30_context_tp_capacity         : 0
+h1_ma20                         : 0
+h1_ma50                         : 0
+h1_ma100                        : 0
+h1_alignment                    : 0
+h1_trend_phase                  : 0
+h1_context_tp_capacity          : 0
+h4_ma20                         : 0
+h4_ma50                         : 0
+h4_ma100                        : 0
+h4_alignment                    : 0
+h4_trend_phase                  : 0
+h4_context_tp_capacity          : 0
+ma_context_side_alignment_total : 0
+ma_context_side_slope_total     : 0
+ma_context_tp_capacity_min      : 0
+ma_context_tp_capacity_avg      : 0
+
+Pair integrity:
+row_count=2 | side_count=2 : 1123305
+
+Year x Side counts:
+year=2010 | side=BUY : 67414
+year=2010 | side=SELL : 67414
+year=2011 | side=BUY : 71901
+year=2011 | side=SELL : 71901
+year=2012 | side=BUY : 71466
+year=2012 | side=SELL : 71466
+year=2013 | side=BUY : 71437
+year=2013 | side=SELL : 71437
+year=2014 | side=BUY : 70868
+year=2014 | side=SELL : 70868
+year=2015 | side=BUY : 70850
+year=2015 | side=SELL : 70850
+year=2016 | side=BUY : 70865
+year=2016 | side=SELL : 70865
+year=2017 | side=BUY : 70635
+year=2017 | side=SELL : 70635
+year=2018 | side=BUY : 70974
+year=2018 | side=SELL : 70974
+year=2019 | side=BUY : 70715
+year=2019 | side=SELL : 70715
+year=2020 | side=BUY : 70878
+year=2020 | side=SELL : 70878
+year=2021 | side=BUY : 70686
+year=2021 | side=SELL : 70686
+year=2022 | side=BUY : 70928
+year=2022 | side=SELL : 70928
+year=2023 | side=BUY : 61794
+year=2023 | side=SELL : 61794
+year=2024 | side=BUY : 71133
+year=2024 | side=SELL : 71133
+year=2025 | side=BUY : 70761
+year=2025 | side=SELL : 70761
+
+End of report.

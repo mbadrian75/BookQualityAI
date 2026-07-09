@@ -1,0 +1,47 @@
+SCE Channel-Zone Feature Build Report
+================================================================================
+started_at             : 2026-06-17 12:30:21.557860
+finished_at            : 2026-06-17 13:55:14.597774
+duration_seconds       : 5093.04
+
+Mongo
+--------------------------------------------------------------------------------
+mongo_uri              : mongodb://localhost:27017
+db                     : market_data
+m5_collection          : xauusd_m5
+m15_collection         : xauusd_m15
+output_collection      : sce_features_channel_zone_entry_m5_v2
+drop_output            : True
+
+Parameters
+--------------------------------------------------------------------------------
+start                  : None
+end                    : None
+lookback_m15           : 20
+datetime_is_open       : True
+ma_period              : 20
+cci_period             : 20
+atr_period             : 14
+
+Counts
+--------------------------------------------------------------------------------
+m5_rows_loaded         : 1,127,947
+m15_rows_loaded        : 376,837
+processed_anchor_rows  : 1,127,947
+bulk_batches           : 452
+written_or_updated≈    : 2,255,776
+output_docs_total≈     : 2,255,776
+skipped_no_history     : 59
+skipped_build_none     : 0
+
+Feature version
+--------------------------------------------------------------------------------
+sce_channel_zone_entry_m5_v2
+
+Design
+--------------------------------------------------------------------------------
+Lower feature block replaced:
+old M5/M15 candle feature block -> 20-M15 Channel-Zone Feature Block
+
+Higher timeframe context:
+unchanged: M30/H1/H4 MA context must be joined by the existing pipeline.

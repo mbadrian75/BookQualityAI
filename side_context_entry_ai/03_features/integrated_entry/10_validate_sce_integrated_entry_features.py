@@ -1,0 +1,220 @@
+# -*- coding: utf-8 -*-
+"""
+SCE Integrated Entry Feature QA
+
+Location:
+03_features/integrated_entry/
+
+Report:
+03_features/integrated_entry/reports/
+
+Purpose:
+- Validate integrated feature collection after build
+- Does not modify database
+"""
+from __future__ import annotations
+
+import argparse
+import sys
+import traceback
+from datetime import datetime
+from pathlib import Path
+from typing import Any, Dict, List
+
+ROOT = Path(__file__).resolve().parents[2]
+sys.path.insert(0, str(ROOT))
+
+try:
+    from pymongo import MongoClient
+except ImportError as exc:
+    print("ERROR: pymongo is not installed. Run: pip install pymongo")
+    raise exc
+
+from config.sce_project_config import (
+    COLL_FEATURES_INTEGRATED_ENTRY_M5_V1,
+    DB_NAME,
+    FEATURE_VERSION_CANDLE_ENTRY_M5_V1,
+    FEATURE_VERSION_INTEGRATED_ENTRY_M5_V1,
+    FEATURE_VERSION_MA_CONTEXT_M5_V1,
+    MONGO_URI,
+    PROJECT_CODE,
+    PROJECT_NAME,
+    SIDES,
+)
+
+RUN_TYPE = "sce_validate_integrated_entry_features"
+RUN_ID = f"{RUN_TYPE}_{datetime.now().strftime('%Y%m%d_%H%M%S')}"
+
+CRITICAL_FIELDS = [
+    "anchor_time", "entry_time", "side", "entry_price", "feature_version", "ma_feature_version", "candle_feature_version",
+    "m30_ma20", "m30_ma50", "m30_ma100", "m30_alignment", "m30_trend_phase", "m30_context_tp_capacity",
+    "h1_ma20", "h1_ma50", "h1_ma100", "h1_alignment", "h1_trend_phase", "h1_context_tp_capacity",
+    "h4_ma20", "h4_ma50", "h4_ma100", "h4_alignment", "h4_trend_phase", "h4_context_tp_capacity",
+    "ma_context_side_alignment_total", "ma_context_side_slope_total", "ma_context_tp_capacity_min", "ma_context_tp_capacity_avg",
+    "m5_open", "m5_high", "m5_low", "m5_close", "m5_range", "m5_body", "m5_direction", "m5_side_body_power", "m5_side_rejection_wick_ratio",
+    "m15_open", "m15_high", "m15_low", "m15_close", "m15_range", "m15_body", "m15_direction", "m15_side_body_power", "m15_side_rejection_wick_ratio",
+    "side_body_power_total", "side_rejection_wick_total", "candle_context_agreement", "candle_rejection_agreement",
+]
+
+TARGET_FIELDS_FORBIDDEN = ["entry_label", "entry_tp_bucket", "max_entry_success_tp_atr", "success_tp_levels_atr", "fail_tp_levels_atr"]
+
+
+def parse_args() -> argparse.Namespace:
+    parser = argparse.ArgumentParser(description="Validate SCE integrated entry features.")
+    parser.add_argument("--mongo-uri", default=MONGO_URI)
+    parser.add_argument("--database", default=DB_NAME)
+    parser.add_argument("--collection", default=COLL_FEATURES_INTEGRATED_ENTRY_M5_V1)
+    parser.add_argument("--feature-version", default=FEATURE_VERSION_INTEGRATED_ENTRY_M5_V1)
+    parser.add_argument("--check-pairs", type=int, default=1, choices=[0, 1])
+    return parser.parse_args()
+
+
+def run_pipeline(coll, pipeline: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
+    return list(coll.aggregate(pipeline, allowDiskUse=True))
+
+
+def kv_counts(coll, field: str, query: Dict[str, Any]) -> Dict[str, int]:
+    rows = run_pipeline(coll, [{"$match": query}, {"$group": {"_id": f"${field}", "count": {"$sum": 1}}}, {"$sort": {"_id": 1}}])
+    return {str(row["_id"]): int(row["count"]) for row in rows}
+
+
+def pair_integrity(coll, query: Dict[str, Any]) -> List[Dict[str, Any]]:
+    return run_pipeline(coll, [
+        {"$match": query},
+        {"$group": {"_id": "$anchor_time", "row_count": {"$sum": 1}, "sides": {"$addToSet": "$side"}}},
+        {"$project": {"row_count": 1, "side_count": {"$size": "$sides"}}},
+        {"$group": {"_id": {"row_count": "$row_count", "side_count": "$side_count"}, "anchor_count": {"$sum": 1}}},
+        {"$sort": {"_id.row_count": 1, "_id.side_count": 1}},
+    ])
+
+
+def year_side_counts(coll, query: Dict[str, Any]) -> List[Dict[str, Any]]:
+    return run_pipeline(coll, [
+        {"$match": query},
+        {"$project": {"year": {"$year": "$anchor_time"}, "side": 1}},
+        {"$group": {"_id": {"year": "$year", "side": "$side"}, "count": {"$sum": 1}}},
+        {"$sort": {"_id.year": 1, "_id.side": 1}},
+    ])
+
+
+def pct(part: int, total: int) -> str:
+    return "0.0000%" if total == 0 else f"{(part / total) * 100:.4f}%"
+
+
+def write_report(args: argparse.Namespace, status: str, stats: Dict[str, Any], error_text: str = "") -> Path:
+    report_dir = Path(__file__).resolve().parent / "reports"
+    report_dir.mkdir(parents=True, exist_ok=True)
+    report_path = report_dir / f"{RUN_ID}.txt"
+    total = int(stats.get("total_docs", 0))
+    lines: List[str] = []
+    lines.append("Side Context Entry AI - Integrated Entry Feature QA Report")
+    lines.append("=" * 80)
+    lines.append(f"run_id                   : {RUN_ID}")
+    lines.append(f"status                   : {status}")
+    lines.append(f"project_name             : {PROJECT_NAME}")
+    lines.append(f"project_code             : {PROJECT_CODE}")
+    lines.append(f"database                 : {args.database}")
+    lines.append(f"collection               : {args.collection}")
+    lines.append(f"feature_version           : {args.feature_version}")
+    lines.append("database_modified         : False")
+    lines.append("raw_data_modified         : False")
+    lines.append("report_folder_policy      : local_section_reports")
+    lines.append("")
+    lines.append("Summary:")
+    for key, value in stats.get("summary", {}).items():
+        lines.append(f"{key:36}: {value}")
+    lines.append("")
+    lines.append("Side counts:")
+    for key, value in stats.get("side_counts", {}).items():
+        lines.append(f"{key:36}: {value} | {pct(value, total)}")
+    lines.append("")
+    lines.append("Source version counts:")
+    for field in ["ma_feature_version", "candle_feature_version", "label_targets_included"]:
+        lines.append(f"{field}:")
+        for key, value in stats.get(field, {}).items():
+            lines.append(f"  {key:32}: {value} | {pct(value, total)}")
+    lines.append("")
+    lines.append("Missing critical fields:")
+    for key, value in stats.get("missing_fields", {}).items():
+        lines.append(f"{key:36}: {value}")
+    lines.append("")
+    lines.append("Forbidden target fields present:")
+    for key, value in stats.get("forbidden_target_fields", {}).items():
+        lines.append(f"{key:36}: {value}")
+    lines.append("")
+    lines.append("Pair integrity:")
+    for row in stats.get("pair_integrity", []):
+        lines.append(f"row_count={row['_id'].get('row_count')} | side_count={row['_id'].get('side_count')} : {row.get('anchor_count')}")
+    lines.append("")
+    lines.append("Year x Side counts:")
+    for row in stats.get("year_side_counts", []):
+        rid = row["_id"]
+        lines.append(f"year={rid.get('year')} | side={rid.get('side')} : {row.get('count')}")
+    if error_text:
+        lines.append("")
+        lines.append("Error:")
+        lines.append(error_text)
+    lines.append("")
+    lines.append("End of report.")
+    report_path.write_text("\n".join(lines), encoding="utf-8")
+    return report_path
+
+
+def main() -> int:
+    args = parse_args()
+    client = None
+    stats: Dict[str, Any] = {}
+    try:
+        client = MongoClient(args.mongo_uri, serverSelectionTimeoutMS=5000)
+        client.admin.command("ping")
+        db = client[args.database]
+        coll = db[args.collection]
+        query = {"feature_version": args.feature_version}
+        total_docs = coll.count_documents(query)
+        invalid_side_count = coll.count_documents({**query, "side": {"$nin": SIDES}})
+        wrong_ma_version_count = coll.count_documents({**query, "ma_feature_version": {"$ne": FEATURE_VERSION_MA_CONTEXT_M5_V1}})
+        wrong_candle_version_count = coll.count_documents({**query, "candle_feature_version": {"$ne": FEATURE_VERSION_CANDLE_ENTRY_M5_V1}})
+        target_included_count = coll.count_documents({**query, "label_targets_included": {"$ne": False}})
+        missing_fields = {field: coll.count_documents({**query, field: {"$exists": False}}) for field in CRITICAL_FIELDS}
+        forbidden_target_fields = {field: coll.count_documents({**query, field: {"$exists": True}}) for field in TARGET_FIELDS_FORBIDDEN}
+        side_counts = kv_counts(coll, "side", query)
+        pairs = pair_integrity(coll, query) if args.check_pairs == 1 else []
+        unique_anchor_count = sum(int(row.get("anchor_count", 0)) for row in pairs) if pairs else None
+        stats = {
+            "total_docs": total_docs,
+            "summary": {
+                "total_docs": total_docs,
+                "unique_anchor_count": unique_anchor_count,
+                "invalid_side_count": invalid_side_count,
+                "wrong_ma_version_count": wrong_ma_version_count,
+                "wrong_candle_version_count": wrong_candle_version_count,
+                "target_included_count": target_included_count,
+                "check_pairs": args.check_pairs,
+            },
+            "side_counts": side_counts,
+            "ma_feature_version": kv_counts(coll, "ma_feature_version", query),
+            "candle_feature_version": kv_counts(coll, "candle_feature_version", query),
+            "label_targets_included": kv_counts(coll, "label_targets_included", query),
+            "missing_fields": missing_fields,
+            "forbidden_target_fields": forbidden_target_fields,
+            "pair_integrity": pairs,
+            "year_side_counts": year_side_counts(coll, query),
+        }
+        report_path = write_report(args, "success", stats)
+        print("SCE integrated entry feature QA completed.")
+        print(f"Report: {report_path}")
+        return 0
+    except Exception:
+        error_text = traceback.format_exc()
+        print("ERROR: SCE integrated entry feature QA failed.")
+        print(error_text)
+        report_path = write_report(args, "failed", stats, error_text)
+        print(f"Failure report: {report_path}")
+        return 1
+    finally:
+        if client is not None:
+            client.close()
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())

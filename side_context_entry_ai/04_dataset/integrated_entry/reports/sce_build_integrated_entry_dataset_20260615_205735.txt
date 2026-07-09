@@ -1,0 +1,59 @@
+Side Context Entry AI - Integrated Entry Dataset Builder Report
+================================================================================
+run_id                   : sce_build_integrated_entry_dataset_20260615_205735
+status                   : success
+project_name             : Side Context Entry AI
+project_code             : SCE
+database                 : market_data
+feature_collection        : sce_features_integrated_entry_m5_v1
+label_collection          : sce_labels_entry_side_m5_v1
+target_collection         : sce_dataset_integrated_entry_m5_v1
+feature_version           : sce_integrated_entry_m5_v1
+label_version             : sce_entry_side_m5_v1
+dataset_version           : sce_dataset_integrated_entry_m5_v1
+raw_data_modified         : False
+dataset_targets_included  : True
+report_folder_policy      : local_section_reports
+
+Runtime parameters:
+limit                     : 0
+start_time                : 
+end_time                  : 
+train_end                 : 2022-12-31 23:59:59
+valid_end                 : 2023-12-31 23:59:59
+read_batch_size           : 5000
+batch_size                : 5000
+clear_existing            : 1
+
+Counts:
+cleared_existing_docs     : 50000
+integrated_feature_rows_scanned: 2246610
+saved_dataset_docs        : 2246610
+missing_label_docs        : 0
+batches_processed         : 450
+first_anchor_time         : 2010-01-26 07:55:00
+last_anchor_time          : 2025-12-31 12:50:00
+
+Side distribution:
+BUY                       : 1123305
+SELL                      : 1123305
+
+Entry label distribution:
+BAD_ENTRY                 : 1067401
+GOOD_ENTRY                : 1179209
+
+TP bucket distribution:
+LARGE                     : 756702
+NORMAL                    : 275621
+NO_TRADE                  : 1067401
+SMALL                     : 146886
+
+Split distribution:
+test                      : 283788
+train                     : 1839234
+valid                     : 123588
+
+Skip reasons:
+missing_label_docs        : 0
+
+End of report.

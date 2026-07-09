@@ -1,0 +1,103 @@
+SCE Channel-Zone Feature Validation Report - FAST
+================================================================================
+started_at             : 2026-06-17 15:26:21.501455
+finished_at            : 2026-06-17 15:27:33.344988
+duration_seconds       : 71.84
+status                 : FAIL
+
+Mongo
+--------------------------------------------------------------------------------
+mongo_uri              : mongodb://localhost:27017
+db                     : market_data
+features_collection    : sce_features_channel_zone_entry_m5_v2
+
+Counts
+--------------------------------------------------------------------------------
+total_docs             : 2,255,776
+buy_count              : 1,127,888
+sell_count             : 1,127,888
+other_side_count       : 0
+expected_buy_sell_sum  : 2,255,776
+
+Pair Check
+--------------------------------------------------------------------------------
+sample_size            : 1,000
+sample_pair_bad_count  : 0
+full_pair_check        : False
+full_pair_bad_count    : 0
+
+No-Leak Sample Check
+--------------------------------------------------------------------------------
+datetime_is_open       : True
+no_leak_bad_count      : 0
+
+Null / Missing Required Fields
+--------------------------------------------------------------------------------
+datetime                                   0
+side                                       0
+feature_version                            0
+open                                       0
+high                                       0
+low                                        0
+close                                      0
+channel_high                               0
+channel_low                                0
+channel_mid                                0
+channel_range                              0
+price_position_in_channel                  0
+high_zone_low                              0
+high_zone_high                             0
+high_zone_thickness                        0
+high_zone_m5_datetime                      0
+low_zone_low                               0
+low_zone_high                              0
+low_zone_thickness                         0
+low_zone_m5_datetime                       0
+last_closed_m15_datetime                   0
+close_above_high_zone                      0
+close_below_high_zone                      0
+close_inside_high_zone                     0
+close_above_low_zone                       0
+close_below_low_zone                       0
+close_inside_low_zone                      0
+high_zone_break_up                         0
+high_zone_break_down                       0
+low_zone_break_up                          0
+low_zone_break_down                        0
+side_zone_primary_break                    0
+side_adverse_zone_break                    0
+side_distance_to_mid                       0
+
+Invalid Numeric Rules
+--------------------------------------------------------------------------------
+invalid_channel_high_low                   0
+invalid_channel_range                      0
+invalid_high_zone                          0
+invalid_low_zone                           0
+invalid_price_position_low                 342
+invalid_price_position_high                436
+
+Sample Pair Examples
+--------------------------------------------------------------------------------
+No sample pair errors.
+
+No-Leak Examples
+--------------------------------------------------------------------------------
+No no-leak errors in sample.
+
+Indexes
+--------------------------------------------------------------------------------
+SON([('v', 2), ('key', SON([('_id', 1)])), ('name', '_id_')])
+SON([('v', 2), ('key', SON([('datetime', 1), ('side', 1)])), ('name', 'datetime_1_side_1'), ('unique', True)])
+SON([('v', 2), ('key', SON([('datetime', 1)])), ('name', 'datetime_1')])
+SON([('v', 2), ('key', SON([('side', 1)])), ('name', 'side_1')])
+SON([('v', 2), ('key', SON([('feature_version', 1)])), ('name', 'feature_version_1')])
+
+Warnings
+--------------------------------------------------------------------------------
+No warnings.
+
+Errors
+--------------------------------------------------------------------------------
+Invalid numeric rule: invalid_price_position_low count=342
+Invalid numeric rule: invalid_price_position_high count=436

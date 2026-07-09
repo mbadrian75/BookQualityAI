@@ -1,0 +1,138 @@
+Side Context Entry AI - Integrated Entry Model Training Report
+================================================================================
+run_id                        : sce_train_integrated_entry_model_20260616_055953
+status                        : failed
+project_name                  : Side Context Entry AI
+project_code                  : SCE
+database                      : market_data
+collection                    : sce_dataset_integrated_entry_m5_v1
+dataset_version               : sce_dataset_integrated_entry_m5_v1
+target                        : is_good_entry
+leakage_guard                 : enabled
+loader_mode                   : chunked_anchor_time_side_pagination
+
+Runtime parameters:
+mongo_uri                     : mongodb://localhost:27017
+database                      : market_data
+collection                    : sce_dataset_integrated_entry_m5_v1
+dataset_version               : sce_dataset_integrated_entry_m5_v1
+train_limit                   : 0
+valid_limit                   : 0
+test_limit                    : 0
+start_time                    : 
+end_time                      : 
+model_type                    : auto
+n_estimators                  : 500
+learning_rate                 : 0.03
+max_leaf_nodes                : 31
+threshold                     : 0.5
+random_state                  : 42
+n_jobs                        : -1
+read_batch_size               : 5000
+mongo_cursor_batch_size       : 1000
+mongo_retries                 : 5
+retry_sleep_seconds           : 2.0
+progress_every_pages          : 25
+
+Data:
+
+Feature info:
+initial_feature_cols          : None
+final_feature_cols            : None
+categorical_cols              : None
+leakage_guard_status          : None
+
+Metrics:
+Model:
+artifact_saved                : False
+
+Error:
+Traceback (most recent call last):
+  File "C:\Project\BookQuality\side_context_entry_ai\05_training\integrated_entry\13_train_sce_integrated_entry_model.py", line 459, in main
+    train_df = load_split_chunked(db, args, "train", args.train_limit)
+  File "C:\Project\BookQuality\side_context_entry_ai\05_training\integrated_entry\13_train_sce_integrated_entry_model.py", line 191, in load_split_chunked
+    batch = list(cursor)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python314\Lib\site-packages\pymongo\synchronous\cursor.py", line 1289, in __next__
+    return self.next()
+           ~~~~~~~~~^^
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python314\Lib\site-packages\pymongo\synchronous\cursor.py", line 1265, in next
+    if len(self._data) or self._refresh():
+                          ~~~~~~~~~~~~~^^
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python314\Lib\site-packages\pymongo\synchronous\cursor.py", line 1213, in _refresh
+    self._send_message(q)
+    ~~~~~~~~~~~~~~~~~~^^^
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python314\Lib\site-packages\pymongo\synchronous\cursor.py", line 1108, in _send_message
+    response = client._run_operation(
+        operation, self._unpack_response, address=self._address
+    )
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python314\Lib\site-packages\pymongo\_csot.py", line 125, in csot_wrapper
+    return func(self, *args, **kwargs)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python314\Lib\site-packages\pymongo\synchronous\mongo_client.py", line 1938, in _run_operation
+    return self._retryable_read(
+           ~~~~~~~~~~~~~~~~~~~~^
+        _cmd,
+        ^^^^^
+    ...<4 lines>...
+        operation=operation.name,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python314\Lib\site-packages\pymongo\synchronous\mongo_client.py", line 2047, in _retryable_read
+    return self._retry_internal(
+           ~~~~~~~~~~~~~~~~~~~~^
+        func,
+        ^^^^^
+    ...<7 lines>...
+        operation_id=operation_id,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python314\Lib\site-packages\pymongo\_csot.py", line 125, in csot_wrapper
+    return func(self, *args, **kwargs)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python314\Lib\site-packages\pymongo\synchronous\mongo_client.py", line 2014, in _retry_internal
+    ).run()
+      ~~~^^
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python314\Lib\site-packages\pymongo\synchronous\mongo_client.py", line 2765, in run
+    return self._read() if self._is_read else self._write()
+           ~~~~~~~~~~^^
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python314\Lib\site-packages\pymongo\synchronous\mongo_client.py", line 2910, in _read
+    self._server = self._get_server()
+                   ~~~~~~~~~~~~~~~~^^
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python314\Lib\site-packages\pymongo\synchronous\mongo_client.py", line 2858, in _get_server
+    return self._client._select_server(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        self._server_selector,
+        ^^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+        operation_id=self._operation_id,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python314\Lib\site-packages\pymongo\synchronous\mongo_client.py", line 1833, in _select_server
+    server = topology.select_server(
+        server_selector,
+    ...<2 lines>...
+        operation_id=operation_id,
+    )
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python314\Lib\site-packages\pymongo\synchronous\topology.py", line 409, in select_server
+    server = self._select_server(
+        selector,
+    ...<4 lines>...
+        operation_id=operation_id,
+    )
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python314\Lib\site-packages\pymongo\synchronous\topology.py", line 387, in _select_server
+    servers = self.select_servers(
+        selector, operation, server_selection_timeout, address, operation_id
+    )
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python314\Lib\site-packages\pymongo\synchronous\topology.py", line 294, in select_servers
+    server_descriptions = self._select_servers_loop(
+        selector, server_timeout, operation, operation_id, address
+    )
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python314\Lib\site-packages\pymongo\synchronous\topology.py", line 344, in _select_servers_loop
+    raise ServerSelectionTimeoutError(
+        f"{self._error_message(selector)}, Timeout: {timeout}s, Topology Description: {self.description!r}"
+    )
+pymongo.errors.ServerSelectionTimeoutError: localhost:27017: [WinError 10061] No connection could be made because the target machine actively refused it (configured timeouts: socketTimeoutMS: 20000.0ms, connectTimeoutMS: 20000.0ms), Timeout: 20.0s, Topology Description: <TopologyDescription id: 6a30b521a30326eba2744133, topology_type: Unknown, servers: [<ServerDescription ('localhost', 27017) server_type: Unknown, rtt: None, error=AutoReconnect('localhost:27017: [WinError 10061] No connection could be made because the target machine actively refused it (configured timeouts: socketTimeoutMS: 20000.0ms, connectTimeoutMS: 20000.0ms)')>]>
+
+
+End of report.

@@ -1,0 +1,124 @@
+Side Context Entry AI - Integrated Entry Model Training Report
+================================================================================
+run_id                   : sce_train_integrated_entry_model_20260615_231717
+status                   : failed
+project_name             : Side Context Entry AI
+project_code             : SCE
+database                 : market_data
+collection               : sce_dataset_integrated_entry_m5_v1
+dataset_version           : sce_dataset_integrated_entry_m5_v1
+target                   : is_good_entry
+leakage_guard             : enabled
+
+Runtime parameters:
+train_limit               : 0
+valid_limit               : 0
+test_limit                : 0
+model_type                : auto
+n_estimators              : 500
+learning_rate             : 0.03
+max_leaf_nodes            : 31
+threshold                 : 0.5
+random_state              : 42
+
+Data:
+
+Feature info:
+initial_feature_cols      : None
+final_feature_cols        : None
+categorical_cols          : None
+leakage_guard_status      : None
+
+Metrics:
+Model:
+
+Error:
+Traceback (most recent call last):
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python314\Lib\site-packages\pymongo\synchronous\pool.py", line 455, in send_message
+    sendall(self.conn.get_conn, message)
+    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python314\Lib\site-packages\pymongo\network_layer.py", line 239, in sendall
+    sock.sendall(buf)
+    ~~~~~~~~~~~~^^^^^
+ConnectionResetError: [WinError 10054] An existing connection was forcibly closed by the remote host
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Project\BookQuality\side_context_entry_ai\05_training\integrated_entry\13_train_sce_integrated_entry_model.py", line 234, in main
+    train_df = load_split(db, args, "train", args.train_limit)
+  File "C:\Project\BookQuality\side_context_entry_ai\05_training\integrated_entry\13_train_sce_integrated_entry_model.py", line 81, in load_split
+    rows = list(cursor)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python314\Lib\site-packages\pymongo\synchronous\cursor.py", line 1289, in __next__
+    return self.next()
+           ~~~~~~~~~^^
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python314\Lib\site-packages\pymongo\synchronous\cursor.py", line 1265, in next
+    if len(self._data) or self._refresh():
+                          ~~~~~~~~~~~~~^^
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python314\Lib\site-packages\pymongo\synchronous\cursor.py", line 1236, in _refresh
+    self._send_message(g)
+    ~~~~~~~~~~~~~~~~~~^^^
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python314\Lib\site-packages\pymongo\synchronous\cursor.py", line 1108, in _send_message
+    response = client._run_operation(
+        operation, self._unpack_response, address=self._address
+    )
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python314\Lib\site-packages\pymongo\_csot.py", line 125, in csot_wrapper
+    return func(self, *args, **kwargs)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python314\Lib\site-packages\pymongo\synchronous\mongo_client.py", line 1938, in _run_operation
+    return self._retryable_read(
+           ~~~~~~~~~~~~~~~~~~~~^
+        _cmd,
+        ^^^^^
+    ...<4 lines>...
+        operation=operation.name,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python314\Lib\site-packages\pymongo\synchronous\mongo_client.py", line 2047, in _retryable_read
+    return self._retry_internal(
+           ~~~~~~~~~~~~~~~~~~~~^
+        func,
+        ^^^^^
+    ...<7 lines>...
+        operation_id=operation_id,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python314\Lib\site-packages\pymongo\_csot.py", line 125, in csot_wrapper
+    return func(self, *args, **kwargs)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python314\Lib\site-packages\pymongo\synchronous\mongo_client.py", line 2014, in _retry_internal
+    ).run()
+      ~~~^^
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python314\Lib\site-packages\pymongo\synchronous\mongo_client.py", line 2765, in run
+    return self._read() if self._is_read else self._write()
+           ~~~~~~~~~~^^
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python314\Lib\site-packages\pymongo\synchronous\mongo_client.py", line 2926, in _read
+    return self._func(self._session, self._server, conn, read_pref)  # type: ignore
+           ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python314\Lib\site-packages\pymongo\synchronous\mongo_client.py", line 1929, in _cmd
+    return server.run_operation(
+           ~~~~~~~~~~~~~~~~~~~~^
+        conn,
+        ^^^^^
+    ...<4 lines>...
+        self,
+        ^^^^^
+    )
+    ^
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python314\Lib\site-packages\pymongo\synchronous\helpers.py", line 47, in inner
+    return func(*args, **kwargs)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python314\Lib\site-packages\pymongo\synchronous\server.py", line 207, in run_operation
+    conn.send_message(data, max_doc_size)
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python314\Lib\site-packages\pymongo\synchronous\pool.py", line 458, in send_message
+    self._raise_connection_failure(error)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python314\Lib\site-packages\pymongo\synchronous\pool.py", line 643, in _raise_connection_failure
+    _raise_connection_failure(self.address, error, timeout_details=details)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python314\Lib\site-packages\pymongo\pool_shared.py", line 150, in _raise_connection_failure
+    raise AutoReconnect(msg) from error
+pymongo.errors.AutoReconnect: localhost:27017: [WinError 10054] An existing connection was forcibly closed by the remote host (configured timeouts: connectTimeoutMS: 20000.0ms)
+
+
+End of report.

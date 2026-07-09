@@ -1,0 +1,37 @@
+SCE MA Context Feature Build Report
+================================================================================
+started_at             : 2026-06-17 15:51:25.453160
+finished_at            : 2026-06-17 16:46:10.035300
+duration_seconds       : 3284.58
+
+Mongo
+--------------------------------------------------------------------------------
+mongo_uri              : mongodb://localhost:27017
+db                     : market_data
+m5_collection          : xauusd_m5
+m30_collection         : xauusd_m30
+h1_collection          : xauusd_h1
+h4_collection          : xauusd_h4
+output_collection      : sce_features_ma_context_m5_v1
+drop_output            : True
+
+Counts
+--------------------------------------------------------------------------------
+m5_rows_loaded         : 1,127,947
+m30_rows_loaded        : 188,895
+h1_rows_loaded         : 95,009
+h4_rows_loaded         : 25,550
+processed_anchor_rows  : 1,127,947
+skipped_no_history     : 4,449
+bulk_batches           : 450
+written_or_updated≈    : 2,246,996
+output_docs_total≈     : 2,246,996
+
+Feature version
+--------------------------------------------------------------------------------
+sce_ma_context_m5_v1
+
+Design
+--------------------------------------------------------------------------------
+Higher timeframe context unchanged: M30/H1/H4 with MA20/50/100.
+This collection is side-based and joins with lower entry features by datetime + side.

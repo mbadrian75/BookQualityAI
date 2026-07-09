@@ -1,0 +1,41 @@
+Side Context Entry AI - Integrated Entry Feature Builder Report
+================================================================================
+run_id                   : sce_build_integrated_entry_features_20260615_134405
+status                   : success
+project_name             : Side Context Entry AI
+project_code             : SCE
+database                 : market_data
+ma_collection             : sce_features_ma_context_m5_v1
+candle_collection         : sce_features_candle_entry_m5_v1
+target_collection         : sce_features_integrated_entry_m5_v1
+feature_version           : sce_integrated_entry_m5_v1
+ma_feature_version        : sce_ma_context_m5_v1
+candle_feature_version    : sce_candle_entry_m5_v1
+raw_data_modified         : False
+m1_as_feature             : False
+label_targets_included    : False
+report_folder_policy      : local_section_reports
+
+Runtime parameters:
+limit                     : 50000
+start_time                : 
+end_time                  : 
+batch_size                : 5000
+clear_existing            : 1
+
+Counts:
+cleared_existing_docs     : 0
+ma_source_rows_scanned    : 50000
+saved_feature_docs        : 50000
+missing_candle_docs       : 0
+first_anchor_time         : 2010-01-26 07:55:00
+last_anchor_time          : 2010-06-01 03:40:00
+
+Side distribution:
+BUY                       : 25000
+SELL                      : 25000
+
+Skip reasons:
+missing_candle_docs       : 0
+
+End of report.

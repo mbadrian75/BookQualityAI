@@ -1,0 +1,48 @@
+Side Context Entry AI - Candle Entry Feature Builder Report
+============================================================================
+run_id                   : sce_build_candle_entry_features_20260615_123657
+status                   : success
+project_name             : Side Context Entry AI
+project_code             : SCE
+database                 : market_data
+label_collection          : sce_labels_entry_side_m5_v1
+target_collection         : sce_features_candle_entry_m5_v1
+feature_version           : sce_candle_entry_m5_v1
+raw_data_modified         : False
+m1_as_feature             : False
+report_folder_policy      : local_section_reports
+
+Runtime parameters:
+limit                     : 0
+start_time                : 
+end_time                  : 
+m5_lookback               : 20
+m15_lookback              : 20
+breakout_lookback         : 20
+compression_lookback      : 10
+doji_body_ratio           : 0.1
+expansion_ratio           : 1.5
+compression_ratio         : 0.7
+batch_size                : 5000
+clear_existing            : 1
+
+Counts:
+cleared_existing_docs     : 49902
+candidate_rows_scanned    : 2255770
+saved_feature_docs        : 2255672
+first_anchor_time         : 2010-01-03 19:05:00
+last_anchor_time          : 2025-12-31 12:50:00
+m5_raw_rows_loaded        : 1127947
+m5_raw_rows_skipped       : 0
+m15_raw_rows_loaded       : 376837
+m15_raw_rows_skipped      : 0
+
+Side distribution:
+BUY                       : 1127836
+SELL                      : 1127836
+
+Skip reasons:
+m15_history_not_available : 84
+m5_history_not_available  : 14
+
+End of report.

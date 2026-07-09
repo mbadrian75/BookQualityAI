@@ -1,0 +1,78 @@
+Side Context Entry AI - Integrated Entry Model Training Report
+================================================================================
+run_id                   : sce_train_integrated_entry_model_20260615_223550
+status                   : success
+project_name             : Side Context Entry AI
+project_code             : SCE
+database                 : market_data
+collection               : sce_dataset_integrated_entry_m5_v1
+dataset_version           : sce_dataset_integrated_entry_m5_v1
+target                   : is_good_entry
+
+Runtime parameters:
+train_limit               : 300000
+valid_limit               : 100000
+test_limit                : 100000
+model_type                : auto
+n_estimators              : 300
+learning_rate             : 0.05
+max_leaf_nodes            : 31
+threshold                 : 0.5
+random_state              : 42
+
+Data:
+train_rows                : 300000
+valid_rows                : 100000
+test_rows                 : 100000
+train_positive_rate       : 0.52783
+valid_positive_rate       : 0.52278
+test_positive_rate        : 0.52487
+
+Feature info:
+initial_feature_cols      : 169
+final_feature_cols        : 204
+categorical_cols          : ['side', 'm30_alignment', 'm30_trend_phase', 'h1_alignment', 'h1_trend_phase', 'h4_alignment', 'h4_trend_phase', 'm5_direction', 'm15_direction', 'split']
+
+Metrics:
+[train]
+rows                      : 300000
+positive_rate             : 0.52783
+predicted_positive_rate   : 0.52783
+accuracy                  : 1.0
+precision                 : 1.0
+recall                    : 1.0
+f1                        : 1.0
+confusion_matrix_0_1      : [[141651, 0], [0, 158349]]
+roc_auc                   : 1.0
+pr_auc                    : 1.0
+
+[valid]
+rows                      : 100000
+positive_rate             : 0.52278
+predicted_positive_rate   : 0.52278
+accuracy                  : 1.0
+precision                 : 1.0
+recall                    : 1.0
+f1                        : 1.0
+confusion_matrix_0_1      : [[47722, 0], [0, 52278]]
+roc_auc                   : 1.0
+pr_auc                    : 1.0
+
+[test]
+rows                      : 100000
+positive_rate             : 0.52487
+predicted_positive_rate   : 0.52487
+accuracy                  : 1.0
+precision                 : 1.0
+recall                    : 1.0
+f1                        : 1.0
+confusion_matrix_0_1      : [[47513, 0], [0, 52487]]
+roc_auc                   : 1.0
+pr_auc                    : 1.0
+
+Model:
+model_class               : HistGradientBoostingClassifier
+model_path                : C:\Project\BookQuality\side_context_entry_ai\06_models\integrated_entry\sce_integrated_entry_model_20260615_224220.joblib
+artifact_saved            : True
+
+End of report.

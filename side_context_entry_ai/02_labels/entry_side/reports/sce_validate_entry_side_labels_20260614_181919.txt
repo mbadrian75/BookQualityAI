@@ -1,0 +1,121 @@
+Side Context Entry AI - Entry Side Label QA Report
+====================================================================
+run_id                   : sce_validate_entry_side_labels_20260614_181919
+status                   : success
+project_name             : Side Context Entry AI
+project_code             : SCE
+database                 : market_data
+collection               : sce_labels_entry_side_m5_v1
+label_version            : sce_entry_side_m5_v1
+database_modified         : False
+raw_data_modified         : False
+report_folder_policy      : local_section_reports
+
+Summary:
+total_docs                    : 2255770
+unique_anchor_count           : 1127885
+invalid_side_count            : 0
+invalid_label_count           : 0
+invalid_bucket_count          : 0
+check_pairs                   : 1
+
+Side counts:
+BUY                           : 1127885 | 50.0000%
+SELL                          : 1127885 | 50.0000%
+
+Entry label counts:
+BAD_ENTRY                     : 1071708 | 47.5096%
+GOOD_ENTRY                    : 1184062 | 52.4904%
+
+TP bucket counts:
+LARGE                         : 759838 | 33.6842%
+NORMAL                        : 276742 | 12.2682%
+NO_TRADE                      : 1071708 | 47.5096%
+SMALL                         : 147482 | 6.5380%
+
+Side x Entry label:
+side=SELL | entry_label=GOOD_ENTRY: 592064 | 26.2466%
+side=BUY | entry_label=GOOD_ENTRY: 591998 | 26.2437%
+side=BUY | entry_label=BAD_ENTRY: 535887 | 23.7563%
+side=SELL | entry_label=BAD_ENTRY: 535821 | 23.7534%
+
+Side x TP bucket:
+side=BUY | entry_tp_bucket=NO_TRADE: 535887 | 23.7563%
+side=SELL | entry_tp_bucket=NO_TRADE: 535821 | 23.7534%
+side=BUY | entry_tp_bucket=LARGE: 380011 | 16.8462%
+side=SELL | entry_tp_bucket=LARGE: 379827 | 16.8380%
+side=BUY | entry_tp_bucket=NORMAL: 138374 | 6.1342%
+side=SELL | entry_tp_bucket=NORMAL: 138368 | 6.1340%
+side=SELL | entry_tp_bucket=SMALL: 73869 | 3.2747%
+side=BUY | entry_tp_bucket=SMALL: 73613 | 3.2633%
+
+Pair integrity:
+row_count=2 | side_count=2 : 1127885
+
+Year x Side x Entry label:
+year=2010 | side=BUY | label=BAD_ENTRY : 33424
+year=2010 | side=BUY | label=GOOD_ENTRY : 38570
+year=2010 | side=SELL | label=BAD_ENTRY : 34484
+year=2010 | side=SELL | label=GOOD_ENTRY : 37510
+year=2011 | side=BUY | label=BAD_ENTRY : 33412
+year=2011 | side=BUY | label=GOOD_ENTRY : 38489
+year=2011 | side=SELL | label=BAD_ENTRY : 34487
+year=2011 | side=SELL | label=GOOD_ENTRY : 37414
+year=2012 | side=BUY | label=BAD_ENTRY : 33988
+year=2012 | side=BUY | label=GOOD_ENTRY : 37478
+year=2012 | side=SELL | label=BAD_ENTRY : 33612
+year=2012 | side=SELL | label=GOOD_ENTRY : 37854
+year=2013 | side=BUY | label=BAD_ENTRY : 34083
+year=2013 | side=BUY | label=GOOD_ENTRY : 37354
+year=2013 | side=SELL | label=BAD_ENTRY : 33402
+year=2013 | side=SELL | label=GOOD_ENTRY : 38035
+year=2014 | side=BUY | label=BAD_ENTRY : 33550
+year=2014 | side=BUY | label=GOOD_ENTRY : 37318
+year=2014 | side=SELL | label=BAD_ENTRY : 33415
+year=2014 | side=SELL | label=GOOD_ENTRY : 37453
+year=2015 | side=BUY | label=BAD_ENTRY : 34077
+year=2015 | side=BUY | label=GOOD_ENTRY : 36773
+year=2015 | side=SELL | label=BAD_ENTRY : 33078
+year=2015 | side=SELL | label=GOOD_ENTRY : 37772
+year=2016 | side=BUY | label=BAD_ENTRY : 33768
+year=2016 | side=BUY | label=GOOD_ENTRY : 37097
+year=2016 | side=SELL | label=BAD_ENTRY : 33718
+year=2016 | side=SELL | label=GOOD_ENTRY : 37147
+year=2017 | side=BUY | label=BAD_ENTRY : 33744
+year=2017 | side=BUY | label=GOOD_ENTRY : 36891
+year=2017 | side=SELL | label=BAD_ENTRY : 33774
+year=2017 | side=SELL | label=GOOD_ENTRY : 36861
+year=2018 | side=BUY | label=BAD_ENTRY : 34277
+year=2018 | side=BUY | label=GOOD_ENTRY : 36697
+year=2018 | side=SELL | label=BAD_ENTRY : 32897
+year=2018 | side=SELL | label=GOOD_ENTRY : 38077
+year=2019 | side=BUY | label=BAD_ENTRY : 33454
+year=2019 | side=BUY | label=GOOD_ENTRY : 37261
+year=2019 | side=SELL | label=BAD_ENTRY : 33613
+year=2019 | side=SELL | label=GOOD_ENTRY : 37102
+year=2020 | side=BUY | label=BAD_ENTRY : 33423
+year=2020 | side=BUY | label=GOOD_ENTRY : 37455
+year=2020 | side=SELL | label=BAD_ENTRY : 34460
+year=2020 | side=SELL | label=GOOD_ENTRY : 36418
+year=2021 | side=BUY | label=BAD_ENTRY : 34178
+year=2021 | side=BUY | label=GOOD_ENTRY : 36508
+year=2021 | side=SELL | label=BAD_ENTRY : 33562
+year=2021 | side=SELL | label=GOOD_ENTRY : 37124
+year=2022 | side=BUY | label=BAD_ENTRY : 33966
+year=2022 | side=BUY | label=GOOD_ENTRY : 36962
+year=2022 | side=SELL | label=BAD_ENTRY : 33628
+year=2022 | side=SELL | label=GOOD_ENTRY : 37300
+year=2023 | side=BUY | label=BAD_ENTRY : 29699
+year=2023 | side=BUY | label=GOOD_ENTRY : 32095
+year=2023 | side=SELL | label=BAD_ENTRY : 29256
+year=2023 | side=SELL | label=GOOD_ENTRY : 32538
+year=2024 | side=BUY | label=BAD_ENTRY : 33227
+year=2024 | side=BUY | label=GOOD_ENTRY : 37906
+year=2024 | side=SELL | label=BAD_ENTRY : 34371
+year=2024 | side=SELL | label=GOOD_ENTRY : 36762
+year=2025 | side=BUY | label=BAD_ENTRY : 33617
+year=2025 | side=BUY | label=GOOD_ENTRY : 37144
+year=2025 | side=SELL | label=BAD_ENTRY : 34064
+year=2025 | side=SELL | label=GOOD_ENTRY : 36697
+
+End of report.

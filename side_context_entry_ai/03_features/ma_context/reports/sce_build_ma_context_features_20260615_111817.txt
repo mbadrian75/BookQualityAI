@@ -1,0 +1,46 @@
+Side Context Entry AI - MA Context Feature Builder Report
+========================================================================
+run_id                   : sce_build_ma_context_features_20260615_111817
+status                   : success
+project_name             : Side Context Entry AI
+project_code             : SCE
+database                 : market_data
+label_collection          : sce_labels_entry_side_m5_v1
+target_collection         : sce_features_ma_context_m5_v1
+feature_version           : sce_ma_context_m5_v1
+raw_data_modified         : False
+m1_as_feature             : False
+report_folder_policy      : local_section_reports
+
+Runtime parameters:
+limit                     : 0
+start_time                : 
+end_time                  : 
+slope_lookback            : 3
+capacity_lookback         : 20
+batch_size                : 5000
+clear_existing            : 1
+
+Counts:
+cleared_existing_docs     : 40840
+candidate_rows_scanned    : 2255770
+saved_feature_docs        : 2246610
+first_anchor_time         : 2010-01-03 19:05:00
+last_anchor_time          : 2025-12-31 12:50:00
+m30_raw_rows_loaded       : 188895
+m30_raw_rows_skipped      : 0
+h1_raw_rows_loaded        : 95009
+h1_raw_rows_skipped       : 0
+h4_raw_rows_loaded        : 25550
+h4_raw_rows_skipped       : 0
+
+Side distribution:
+BUY                       : 1123305
+SELL                      : 1123305
+
+Skip reasons:
+h1_context_not_available  : 1196
+h4_context_not_available  : 6772
+m30_context_not_available : 1192
+
+End of report.

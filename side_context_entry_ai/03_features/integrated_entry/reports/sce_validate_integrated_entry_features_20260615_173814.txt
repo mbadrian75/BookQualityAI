@@ -1,0 +1,132 @@
+Side Context Entry AI - Integrated Entry Feature QA Report
+================================================================================
+run_id                   : sce_validate_integrated_entry_features_20260615_173814
+status                   : success
+project_name             : Side Context Entry AI
+project_code             : SCE
+database                 : market_data
+collection               : sce_features_integrated_entry_m5_v1
+feature_version           : sce_integrated_entry_m5_v1
+database_modified         : False
+raw_data_modified         : False
+report_folder_policy      : local_section_reports
+
+Summary:
+total_docs                          : 2246610
+unique_anchor_count                 : 1123305
+invalid_side_count                  : 0
+wrong_ma_version_count              : 0
+wrong_candle_version_count          : 0
+target_included_count               : 0
+check_pairs                         : 1
+
+Side counts:
+BUY                                 : 1123305 | 50.0000%
+SELL                                : 1123305 | 50.0000%
+
+Source version counts:
+ma_feature_version:
+  sce_ma_context_m5_v1            : 2246610 | 100.0000%
+candle_feature_version:
+  sce_candle_entry_m5_v1          : 2246610 | 100.0000%
+label_targets_included:
+  False                           : 2246610 | 100.0000%
+
+Missing critical fields:
+anchor_time                         : 0
+entry_time                          : 0
+side                                : 0
+entry_price                         : 0
+feature_version                     : 0
+ma_feature_version                  : 0
+candle_feature_version              : 0
+m30_ma20                            : 0
+m30_ma50                            : 0
+m30_ma100                           : 0
+m30_alignment                       : 0
+m30_trend_phase                     : 0
+m30_context_tp_capacity             : 0
+h1_ma20                             : 0
+h1_ma50                             : 0
+h1_ma100                            : 0
+h1_alignment                        : 0
+h1_trend_phase                      : 0
+h1_context_tp_capacity              : 0
+h4_ma20                             : 0
+h4_ma50                             : 0
+h4_ma100                            : 0
+h4_alignment                        : 0
+h4_trend_phase                      : 0
+h4_context_tp_capacity              : 0
+ma_context_side_alignment_total     : 0
+ma_context_side_slope_total         : 0
+ma_context_tp_capacity_min          : 0
+ma_context_tp_capacity_avg          : 0
+m5_open                             : 0
+m5_high                             : 0
+m5_low                              : 0
+m5_close                            : 0
+m5_range                            : 0
+m5_body                             : 0
+m5_direction                        : 0
+m5_side_body_power                  : 0
+m5_side_rejection_wick_ratio        : 0
+m15_open                            : 0
+m15_high                            : 0
+m15_low                             : 0
+m15_close                           : 0
+m15_range                           : 0
+m15_body                            : 0
+m15_direction                       : 0
+m15_side_body_power                 : 0
+m15_side_rejection_wick_ratio       : 0
+side_body_power_total               : 0
+side_rejection_wick_total           : 0
+candle_context_agreement            : 0
+candle_rejection_agreement          : 0
+
+Forbidden target fields present:
+entry_label                         : 0
+entry_tp_bucket                     : 0
+max_entry_success_tp_atr            : 0
+success_tp_levels_atr               : 0
+fail_tp_levels_atr                  : 0
+
+Pair integrity:
+row_count=2 | side_count=2 : 1123305
+
+Year x Side counts:
+year=2010 | side=BUY : 67414
+year=2010 | side=SELL : 67414
+year=2011 | side=BUY : 71901
+year=2011 | side=SELL : 71901
+year=2012 | side=BUY : 71466
+year=2012 | side=SELL : 71466
+year=2013 | side=BUY : 71437
+year=2013 | side=SELL : 71437
+year=2014 | side=BUY : 70868
+year=2014 | side=SELL : 70868
+year=2015 | side=BUY : 70850
+year=2015 | side=SELL : 70850
+year=2016 | side=BUY : 70865
+year=2016 | side=SELL : 70865
+year=2017 | side=BUY : 70635
+year=2017 | side=SELL : 70635
+year=2018 | side=BUY : 70974
+year=2018 | side=SELL : 70974
+year=2019 | side=BUY : 70715
+year=2019 | side=SELL : 70715
+year=2020 | side=BUY : 70878
+year=2020 | side=SELL : 70878
+year=2021 | side=BUY : 70686
+year=2021 | side=SELL : 70686
+year=2022 | side=BUY : 70928
+year=2022 | side=SELL : 70928
+year=2023 | side=BUY : 61794
+year=2023 | side=SELL : 61794
+year=2024 | side=BUY : 71133
+year=2024 | side=SELL : 71133
+year=2025 | side=BUY : 70761
+year=2025 | side=SELL : 70761
+
+End of report.

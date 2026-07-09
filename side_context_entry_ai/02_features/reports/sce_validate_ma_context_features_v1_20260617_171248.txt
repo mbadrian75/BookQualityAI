@@ -1,0 +1,119 @@
+SCE MA Context Feature Validation Report
+================================================================================
+started_at             : 2026-06-17 17:12:48.766407
+finished_at            : 2026-06-17 17:14:20.029907
+duration_seconds       : 91.26
+status                 : FAIL
+
+Mongo
+--------------------------------------------------------------------------------
+mongo_uri              : mongodb://localhost:27017
+db                     : market_data
+features_collection    : sce_features_ma_context_m5_v1
+
+Counts
+--------------------------------------------------------------------------------
+total_docs             : 2,246,996
+buy_count              : 1,123,498
+sell_count             : 1,123,498
+other_side_count       : 0
+expected_buy_sell_sum  : 2,246,996
+
+Pair Check
+--------------------------------------------------------------------------------
+sample_size            : 1,000
+sample_pair_bad_count  : 0
+
+No-Leak Sample Check
+--------------------------------------------------------------------------------
+datetime_is_open       : True
+no_leak_bad_count      : 0
+
+Null / Missing Required Fields
+--------------------------------------------------------------------------------
+datetime                                      0
+side                                          0
+feature_version                               0
+m30_datetime                                  0
+h1_datetime                                   0
+h4_datetime                                   0
+m30_close                                     0
+h1_close                                      0
+h4_close                                      0
+m30_ma20                                      0
+m30_ma50                                      0
+m30_ma100                                     0
+h1_ma20                                       0
+h1_ma50                                       0
+h1_ma100                                      0
+h4_ma20                                       0
+h4_ma50                                       0
+h4_ma100                                      0
+m30_ma20_slope                                0
+m30_ma50_slope                                0
+m30_ma100_slope                               0
+h1_ma20_slope                                 0
+h1_ma50_slope                                 0
+h1_ma100_slope                                0
+h4_ma20_slope                                 0
+h4_ma50_slope                                 0
+h4_ma100_slope                                96
+m30_price_vs_ma20                             0
+m30_price_vs_ma50                             0
+m30_price_vs_ma100                            0
+h1_price_vs_ma20                              0
+h1_price_vs_ma50                              0
+h1_price_vs_ma100                             0
+h4_price_vs_ma20                              0
+h4_price_vs_ma50                              0
+h4_price_vs_ma100                             0
+m30_ma_stack_dir                              0
+h1_ma_stack_dir                               0
+h4_ma_stack_dir                               0
+side_m30_stack_alignment                      0
+side_h1_stack_alignment                       0
+side_h4_stack_alignment                       0
+side_m30_price_vs_ma20                        0
+side_h1_price_vs_ma20                         0
+side_h4_price_vs_ma20                         0
+side_context_stack_aligned_count              0
+side_context_stack_available_count            0
+side_context_slope_aligned_count              0
+side_context_slope_available_count            0
+side_context_stack_score                      0
+side_context_slope_score                      0
+
+Invalid Numeric Checks
+--------------------------------------------------------------------------------
+invalid_side_context_stack_score              0
+invalid_side_context_slope_score              0
+invalid_m30_ma_stack_dir                      0
+invalid_h1_ma_stack_dir                       0
+invalid_h4_ma_stack_dir                       0
+invalid_side_m30_stack_alignment              0
+invalid_side_h1_stack_alignment               0
+invalid_side_h4_stack_alignment               0
+
+Sample Pair Examples
+--------------------------------------------------------------------------------
+No sample pair errors.
+
+No-Leak Examples
+--------------------------------------------------------------------------------
+No no-leak errors in sample.
+
+Indexes
+--------------------------------------------------------------------------------
+SON([('v', 2), ('key', SON([('_id', 1)])), ('name', '_id_')])
+SON([('v', 2), ('key', SON([('datetime', 1), ('side', 1)])), ('name', 'datetime_1_side_1'), ('unique', True)])
+SON([('v', 2), ('key', SON([('datetime', 1)])), ('name', 'datetime_1')])
+SON([('v', 2), ('key', SON([('side', 1)])), ('name', 'side_1')])
+SON([('v', 2), ('key', SON([('feature_version', 1)])), ('name', 'feature_version_1')])
+
+Warnings
+--------------------------------------------------------------------------------
+No warnings.
+
+Errors
+--------------------------------------------------------------------------------
+Null/missing required field: h4_ma100_slope count=96

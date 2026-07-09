@@ -1,0 +1,41 @@
+SCE / BQ MongoDB Cleanup Report
+================================================================================
+datetime           : 20260617_104711
+mongo_uri          : mongodb://localhost:27017
+db                 : market_data
+mode               : DRY_RUN
+collections_total  : 21
+collections_to_drop: 13
+collections_kept   : 8
+
+DROP LIST
+--------------------------------------------------------------------------------
+sce_api_decisions_m5_v1                                      docs≈0            reason=drop_prefix:sce_api_
+sce_dataset_integrated_entry_m5_v1                           docs≈2246610      reason=drop_prefix:sce_dataset_
+sce_features_candle_entry_m5_v1                              docs≈2255672      reason=drop_prefix:sce_features_
+sce_features_integrated_entry_m5_v1                          docs≈2246610      reason=drop_prefix:sce_features_
+sce_features_ma_context_m5_v1                                docs≈2246610      reason=drop_prefix:sce_features_
+sce_labels_entry_side_m5_v1                                  docs≈2255770      reason=drop_prefix:sce_labels_
+sce_meta_dataset_versions                                    docs≈1            reason=drop_prefix:sce_meta_
+sce_meta_feature_versions                                    docs≈3            reason=drop_prefix:sce_meta_
+sce_meta_label_versions                                      docs≈1            reason=drop_prefix:sce_meta_
+sce_meta_model_versions                                      docs≈1            reason=drop_prefix:sce_meta_
+sce_meta_project                                             docs≈1            reason=drop_prefix:sce_meta_
+sce_meta_runs                                                docs≈3            reason=drop_prefix:sce_meta_
+sce_predictions_integrated_entry_m5_v1                       docs≈0            reason=drop_prefix:sce_predictions_
+
+KEEP LIST
+--------------------------------------------------------------------------------
+sce_backtest_results_m5_v1                                   docs≈0            reason=not_matched
+xauusd_d1                                                    docs≈4978         reason=kept_raw_or_whitelisted
+xauusd_h1                                                    docs≈95009        reason=kept_raw_or_whitelisted
+xauusd_h4                                                    docs≈25550        reason=kept_raw_or_whitelisted
+xauusd_m1                                                    docs≈5604412      reason=kept_raw_or_whitelisted
+xauusd_m15                                                   docs≈376837       reason=kept_raw_or_whitelisted
+xauusd_m30                                                   docs≈188895       reason=kept_raw_or_whitelisted
+xauusd_m5                                                    docs≈1127947      reason=kept_raw_or_whitelisted
+
+DRY-RUN NOTE
+--------------------------------------------------------------------------------
+No collection was deleted.
+Run again with --apply to execute the cleanup.

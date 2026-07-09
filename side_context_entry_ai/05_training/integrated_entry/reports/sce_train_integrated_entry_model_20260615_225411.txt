@@ -1,0 +1,80 @@
+Side Context Entry AI - Integrated Entry Model Training Report
+================================================================================
+run_id                   : sce_train_integrated_entry_model_20260615_225411
+status                   : success
+project_name             : Side Context Entry AI
+project_code             : SCE
+database                 : market_data
+collection               : sce_dataset_integrated_entry_m5_v1
+dataset_version           : sce_dataset_integrated_entry_m5_v1
+target                   : is_good_entry
+leakage_guard             : enabled
+
+Runtime parameters:
+train_limit               : 300000
+valid_limit               : 100000
+test_limit                : 100000
+model_type                : auto
+n_estimators              : 300
+learning_rate             : 0.05
+max_leaf_nodes            : 31
+threshold                 : 0.5
+random_state              : 42
+
+Data:
+train_rows                : 300000
+valid_rows                : 100000
+test_rows                 : 100000
+train_positive_rate       : 0.52783
+valid_positive_rate       : 0.52278
+test_positive_rate        : 0.52487
+
+Feature info:
+initial_feature_cols      : 166
+final_feature_cols        : 198
+categorical_cols          : ['side', 'm30_alignment', 'm30_trend_phase', 'h1_alignment', 'h1_trend_phase', 'h4_alignment', 'h4_trend_phase', 'm5_direction', 'm15_direction']
+leakage_guard_status      : passed
+
+Metrics:
+[train]
+rows                      : 300000
+positive_rate             : 0.52783
+predicted_positive_rate   : 0.7597966666666667
+accuracy                  : 0.61232
+precision                 : 0.5922286225700736
+recall                    : 0.852496700326494
+f1                        : 0.6989189413080396
+confusion_matrix_0_1      : [[48704, 92947], [23357, 134992]]
+roc_auc                   : 0.6755241638192835
+pr_auc                    : 0.696209879336066
+
+[valid]
+rows                      : 100000
+positive_rate             : 0.52278
+predicted_positive_rate   : 0.60232
+accuracy                  : 0.50982
+precision                 : 0.5270620268295922
+recall                    : 0.6072535292092276
+f1                        : 0.5643231712736646
+confusion_matrix_0_1      : [[19236, 28486], [20532, 31746]]
+roc_auc                   : 0.506787064602299
+pr_auc                    : 0.5280349865131819
+
+[test]
+rows                      : 100000
+positive_rate             : 0.52487
+predicted_positive_rate   : 0.61299
+accuracy                  : 0.5043
+precision                 : 0.5237932103296954
+recall                    : 0.6117324289824146
+f1                        : 0.5643576538414217
+confusion_matrix_0_1      : [[18322, 29191], [20379, 32108]]
+roc_auc                   : 0.4985941684777798
+pr_auc                    : 0.5227801847418856
+
+Model:
+model_class               : HistGradientBoostingClassifier
+model_path                : C:\Project\BookQuality\side_context_entry_ai\06_models\integrated_entry\sce_integrated_entry_model_20260615_230121.joblib
+artifact_saved            : True
+
+End of report.

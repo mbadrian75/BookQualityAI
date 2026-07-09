@@ -1,0 +1,21 @@
+Side Context Entry AI - Entry Side Label Cleanup Report
+====================================================================
+run_id                   : sce_clear_entry_side_labels_20260614_153710
+status                   : success
+project_name             : Side Context Entry AI
+project_code             : SCE
+database                 : market_data
+mongo_uri                : mongodb://localhost:27017
+target_collection        : sce_labels_entry_side_m5_v1
+confirm_delete           : 1
+collection_dropped        : False
+indexes_dropped           : False
+raw_data_modified         : False
+report_folder_policy      : local_section_reports
+
+Counts:
+existing_docs_before      : 99974
+deleted_docs              : 99974
+existing_docs_after       : 0
+
+End of report.

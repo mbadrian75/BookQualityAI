@@ -1,0 +1,164 @@
+Side Context Entry AI - Candle Entry Feature QA Report
+============================================================================
+run_id                   : sce_validate_candle_entry_features_20260615_133326
+status                   : success
+project_name             : Side Context Entry AI
+project_code             : SCE
+database                 : market_data
+collection               : sce_features_candle_entry_m5_v1
+feature_version           : sce_candle_entry_m5_v1
+database_modified         : False
+raw_data_modified         : False
+report_folder_policy      : local_section_reports
+
+Summary:
+total_docs                        : 2255672
+unique_anchor_count               : 1127836
+invalid_side_count                : 0
+check_pairs                       : 1
+
+Side counts:
+BUY                               : 1127836 | 50.0000%
+SELL                              : 1127836 | 50.0000%
+
+Direction distributions:
+m5_direction:
+  bear                          : 1010018 | 44.7768%
+  bull                          : 1018878 | 45.1696%
+  doji                          : 226776 | 10.0536%
+m15_direction:
+  bear                          : 1002614 | 44.4486%
+  bull                          : 1017258 | 45.0978%
+  doji                          : 235800 | 10.4536%
+
+Boolean feature distributions:
+m5_is_doji:
+  False                         : 2028896 | 89.9464%
+  True                          : 226776 | 10.0536%
+m15_is_doji:
+  False                         : 2019872 | 89.5464%
+  True                          : 235800 | 10.4536%
+m5_side_engulfing:
+  False                         : 2108960 | 93.4959%
+  True                          : 146712 | 6.5041%
+m15_side_engulfing:
+  False                         : 2103990 | 93.2755%
+  True                          : 151682 | 6.7245%
+m5_inside_bar:
+  False                         : 1878230 | 83.2670%
+  True                          : 377442 | 16.7330%
+m15_inside_bar:
+  False                         : 1872534 | 83.0145%
+  True                          : 383138 | 16.9855%
+m5_side_breakout:
+  False                         : 2138178 | 94.7912%
+  True                          : 117494 | 5.2088%
+m15_side_breakout:
+  False                         : 2143315 | 95.0189%
+  True                          : 112357 | 4.9811%
+m5_side_failed_breakout:
+  False                         : 2141884 | 94.9555%
+  True                          : 113788 | 5.0445%
+m15_side_failed_breakout:
+  False                         : 2137760 | 94.7726%
+  True                          : 117912 | 5.2274%
+m5_is_expansion:
+  False                         : 1923504 | 85.2741%
+  True                          : 332168 | 14.7259%
+m15_is_expansion:
+  False                         : 1893420 | 83.9404%
+  True                          : 362252 | 16.0596%
+m5_is_compression:
+  False                         : 1600774 | 70.9666%
+  True                          : 654898 | 29.0334%
+m15_is_compression:
+  False                         : 1566268 | 69.4369%
+  True                          : 689404 | 30.5631%
+candle_context_agreement:
+  False                         : 1650457 | 73.1692%
+  True                          : 605215 | 26.8308%
+candle_rejection_agreement:
+  False                         : 1676142 | 74.3079%
+  True                          : 579530 | 25.6921%
+candle_breakout_agreement:
+  False                         : 2222832 | 98.5441%
+  True                          : 32840 | 1.4559%
+candle_failed_breakout_support:
+  False                         : 2041145 | 90.4894%
+  True                          : 214527 | 9.5106%
+
+Missing critical fields:
+anchor_time                       : 0
+entry_time                        : 0
+side                              : 0
+entry_price                       : 0
+feature_version                   : 0
+m5_open                           : 0
+m5_high                           : 0
+m5_low                            : 0
+m5_close                          : 0
+m5_range                          : 0
+m5_body                           : 0
+m5_body_ratio                     : 0
+m5_close_position                 : 0
+m5_direction                      : 0
+m5_side_body_power                : 0
+m5_side_rejection_wick_ratio      : 0
+m5_side_close_position            : 0
+m15_open                          : 0
+m15_high                          : 0
+m15_low                           : 0
+m15_close                         : 0
+m15_range                         : 0
+m15_body                          : 0
+m15_body_ratio                    : 0
+m15_close_position                : 0
+m15_direction                     : 0
+m15_side_body_power               : 0
+m15_side_rejection_wick_ratio     : 0
+m15_side_close_position           : 0
+side_body_power_total             : 0
+side_rejection_wick_total         : 0
+candle_context_agreement          : 0
+candle_rejection_agreement        : 0
+candle_breakout_agreement         : 0
+candle_failed_breakout_support    : 0
+
+Pair integrity:
+row_count=2 | side_count=2 : 1127836
+
+Year x Side counts:
+year=2010 | side=BUY : 71945
+year=2010 | side=SELL : 71945
+year=2011 | side=BUY : 71901
+year=2011 | side=SELL : 71901
+year=2012 | side=BUY : 71466
+year=2012 | side=SELL : 71466
+year=2013 | side=BUY : 71437
+year=2013 | side=SELL : 71437
+year=2014 | side=BUY : 70868
+year=2014 | side=SELL : 70868
+year=2015 | side=BUY : 70850
+year=2015 | side=SELL : 70850
+year=2016 | side=BUY : 70865
+year=2016 | side=SELL : 70865
+year=2017 | side=BUY : 70635
+year=2017 | side=SELL : 70635
+year=2018 | side=BUY : 70974
+year=2018 | side=SELL : 70974
+year=2019 | side=BUY : 70715
+year=2019 | side=SELL : 70715
+year=2020 | side=BUY : 70878
+year=2020 | side=SELL : 70878
+year=2021 | side=BUY : 70686
+year=2021 | side=SELL : 70686
+year=2022 | side=BUY : 70928
+year=2022 | side=SELL : 70928
+year=2023 | side=BUY : 61794
+year=2023 | side=SELL : 61794
+year=2024 | side=BUY : 71133
+year=2024 | side=SELL : 71133
+year=2025 | side=BUY : 70761
+year=2025 | side=SELL : 70761
+
+End of report.

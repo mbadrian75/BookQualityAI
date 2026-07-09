@@ -1,0 +1,77 @@
+Side Context Entry AI - Model Probability Diagnostics Report
+====================================================================================
+run_id                            : sce_diagnose_integrated_entry_model_20260616_125003
+status                            : success
+database                          : market_data
+collection                        : sce_dataset_integrated_entry_m5_v1
+dataset_version                   : sce_dataset_integrated_entry_m5_v1
+model_path                        : C:\Project\BookQuality\side_context_entry_ai\06_models\integrated_entry\sce_integrated_entry_model_20260616_104629.joblib
+split                             : test
+loader_mode                       : chunked_anchor_time_side_pagination
+
+Runtime parameters:
+mongo_uri                         : mongodb://localhost:27017
+database                          : market_data
+collection                        : sce_dataset_integrated_entry_m5_v1
+dataset_version                   : sce_dataset_integrated_entry_m5_v1
+model_path                        : C:\Project\BookQuality\side_context_entry_ai\06_models\integrated_entry\sce_integrated_entry_model_20260616_104629.joblib
+split                             : test
+limit                             : 0
+start_time                        : 
+end_time                          : 
+read_batch_size                   : 5000
+mongo_cursor_batch_size           : 1000
+mongo_retries                     : 5
+retry_sleep_seconds               : 2.0
+progress_every_pages              : 25
+bins                              : 10
+top_quantile                      : 0.9
+thresholds                        : 0.50,0.55,0.60,0.65,0.70,0.75,0.80,0.85,0.90
+
+Data:
+rows                              : 283788
+positive_rate                     : 0.5233096536851453
+pages_loaded                      : 57
+mongo_retries                     : 0
+
+Probability summary:
+p_min                             : 0.32825722556403175
+p_max                             : 0.7116102689416743
+p_mean                            : 0.5224601818656014
+p_std                             : 0.03391569747801177
+p_q50                             : 0.5232723998412792
+p_q75                             : 0.5442122334457705
+p_q90                             : 0.5633678107378187
+p_q95                             : 0.5760849798139775
+p_q99                             : 0.6041285455338091
+
+Threshold table:
+threshold=0.5 | selected=216209 | selected_rate=0.7618680141514088 | precision=0.525121525930928 | lift=1.003462332928551 | buy=105824 | sell=110385
+threshold=0.55 | selected=55034 | selected_rate=0.1939264521403301 | precision=0.5268197841334448 | lift=1.0067075591355543 | buy=25324 | sell=29710
+threshold=0.6 | selected=3604 | selected_rate=0.012699620843728417 | precision=0.5504994450610433 | lift=1.051957366321121 | buy=1343 | sell=2261
+threshold=0.65 | selected=174 | selected_rate=0.0006131337477271766 | precision=0.6149425287356322 | lift=1.175102588697167 | buy=52 | sell=122
+threshold=0.7 | selected=5 | selected_rate=1.7618785854229214e-05 | precision=0.6 | lift=1.1465486940185443 | buy=1 | sell=4
+threshold=0.75 | selected=0 | selected_rate=0.0 | precision=None | lift=None | buy=0 | sell=0
+threshold=0.8 | selected=0 | selected_rate=0.0 | precision=None | lift=None | buy=0 | sell=0
+threshold=0.85 | selected=0 | selected_rate=0.0 | precision=None | lift=None | buy=0 | sell=0
+threshold=0.9 | selected=0 | selected_rate=0.0 | precision=None | lift=None | buy=0 | sell=0
+
+Probability bins:
+bin=(0.327, 0.48] | rows=28379 | p_min=0.32825722556403175 | p_max=0.4801777274808627 | positive_rate=0.5167553472638219 | lift=0.9874752808873906 | buy=15166 | sell=13213
+bin=(0.48, 0.496] | rows=28379 | p_min=0.480178348094148 | p_max=0.4956640279703207 | positive_rate=0.5160153634729906 | lift=0.986061235139103 | buy=15197 | sell=13182
+bin=(0.496, 0.506] | rows=28379 | p_min=0.4956641108761294 | p_max=0.506221850716736 | positive_rate=0.5266922724549843 | lift=1.006463895221536 | buy=14799 | sell=13580
+bin=(0.506, 0.515] | rows=28378 | p_min=0.5062224876945881 | p_max=0.5151226622457065 | positive_rate=0.5212488547466347 | lift=0.9960619894473599 | buy=14531 | sell=13847
+bin=(0.515, 0.523] | rows=28379 | p_min=0.5151228176458811 | p_max=0.523272288094448 | positive_rate=0.5244018464357447 | lift=1.0020870869530272 | buy=14235 | sell=14144
+bin=(0.523, 0.531] | rows=28379 | p_min=0.5232725115881104 | p_max=0.5313381446547043 | positive_rate=0.5237675746150322 | lift=1.0008750477402093 | buy=14194 | sell=14185
+bin=(0.531, 0.54] | rows=28378 | p_min=0.5313381715362779 | p_max=0.5396438071280708 | positive_rate=0.5208612305306928 | lift=0.9953212727164296 | buy=13862 | sell=14516
+bin=(0.54, 0.549] | rows=28379 | p_min=0.5396440781971581 | p_max=0.5493354896491979 | positive_rate=0.5300045808520385 | lift=1.0127934333329178 | buy=13763 | sell=14616
+bin=(0.549, 0.563] | rows=28379 | p_min=0.5493356241620136 | p_max=0.5633674800038039 | positive_rate=0.5278903414496635 | lift=1.0087533026235251 | buy=13536 | sell=14843
+bin=(0.563, 0.712] | rows=28379 | p_min=0.5633685824505201 | p_max=0.7116102689416743 | positive_rate=0.5254589661369322 | lift=1.0041071523077236 | buy=12611 | sell=15768
+
+Top probability by year/side:
+year=2024 | side=BUY | rows=5862 | positive_rate=0.5312180143295804 | p_min=0.5633748302462921 | p_avg=0.5786258984226031
+year=2024 | side=SELL | rows=5715 | positive_rate=0.5280839895013123 | p_min=0.5633712715206479 | p_avg=0.5773005469092205
+year=2025 | side=BUY | rows=6749 | positive_rate=0.5237813009334716 | p_min=0.5633701750344798 | p_avg=0.5815129276546729
+year=2025 | side=SELL | rows=10053 | positive_rate=0.5217348055306874 | p_min=0.5633685824505201 | p_avg=0.5848951866618948
+
+End of report.

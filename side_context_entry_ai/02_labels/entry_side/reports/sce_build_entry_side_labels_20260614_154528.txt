@@ -1,0 +1,60 @@
+Side Context Entry AI - Entry Side Label Builder Report
+====================================================================
+run_id                   : sce_build_entry_side_labels_20260614_154528
+status                   : success
+project_name             : Side Context Entry AI
+project_code             : SCE
+database                 : market_data
+target_collection        : sce_labels_entry_side_m5_v1
+label_version            : sce_entry_side_m5_v1
+raw_data_modified         : False
+m1_as_feature             : False
+report_folder_policy      : local_section_reports
+
+Runtime parameters:
+limit                     : 0
+start_time                : 
+end_time                  : 
+atr_period                : 14
+lookahead_m1_bars         : 240
+batch_size                : 5000
+clear_existing            : 1
+
+Locked label parameters:
+sides                    : ['BUY', 'SELL']
+entry_labels             : ['GOOD_ENTRY', 'BAD_ENTRY', 'WAIT']
+entry_tp_buckets          : ['NO_TRADE', 'SMALL', 'NORMAL', 'LARGE']
+tp_levels_atr            : [0.5, 0.8, 1.2, 1.6]
+fail_ratio_of_tp          : 0.5
+
+Counts:
+cleared_existing_docs     : 99974
+m1_loaded                 : 5604412
+m1_skipped                : 0
+m5_loaded                 : 1127947
+m5_skipped                : 0
+saved_candidate_labels    : 2255770
+ambiguous_same_bar_total  : 43676
+first_anchor_time         : 2010-01-03 18:00:00
+last_anchor_time          : 2025-12-31 16:55:00
+
+Entry label distribution:
+BAD_ENTRY                 : 1071708
+GOOD_ENTRY                : 1184062
+
+TP bucket distribution:
+LARGE                     : 759838
+NORMAL                    : 276742
+NO_TRADE                  : 1071708
+SMALL                     : 147482
+
+Side distribution:
+BUY                       : 1127885
+SELL                      : 1127885
+
+Skip reasons:
+atr_not_available         : 13
+future_m1_not_available   : 1
+not_enough_future_m1_bars : 48
+
+End of report.

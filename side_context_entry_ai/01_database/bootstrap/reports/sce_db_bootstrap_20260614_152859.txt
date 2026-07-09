@@ -1,0 +1,122 @@
+Side Context Entry AI - Database Bootstrap Report
+============================================================
+run_id                   : sce_db_bootstrap_20260614_152859
+status                   : success
+project_name             : Side Context Entry AI
+project_code             : SCE
+database                 : market_data
+mongo_uri                : mongodb://localhost:27017
+derived_prefix           : sce_
+raw_data_modified         : False
+report_folder_policy      : local_section_reports
+
+Architecture:
+anchor_tf                : M5
+candle_context_tf         : M15
+ma_context_tfs           : M30, H1, H4
+label_checker_tf         : M1
+training_mode            : integrated
+side_based               : True
+raw_m1_as_feature        : False
+
+Collections:
+created_count            : 0
+already_exists_count     : 14
+- sce_meta_project: already_exists
+- sce_meta_runs: already_exists
+- sce_meta_feature_versions: already_exists
+- sce_meta_label_versions: already_exists
+- sce_meta_dataset_versions: already_exists
+- sce_meta_model_versions: already_exists
+- sce_labels_entry_side_m5_v1: already_exists
+- sce_features_ma_context_m5_v1: already_exists
+- sce_features_candle_entry_m5_v1: already_exists
+- sce_features_integrated_entry_m5_v1: already_exists
+- sce_dataset_integrated_entry_m5_v1: already_exists
+- sce_predictions_integrated_entry_m5_v1: already_exists
+- sce_backtest_results_m5_v1: already_exists
+- sce_api_decisions_m5_v1: already_exists
+
+Indexes:
+created_count            : 0
+already_exists_count     : 66
+- sce_meta_project.ux_project_code: already_exists unique
+- sce_meta_project.idx_database: already_exists
+- sce_meta_project.idx_derived_prefix: already_exists
+- sce_meta_runs.ux_run_id: already_exists unique
+- sce_meta_runs.idx_project_code: already_exists
+- sce_meta_runs.idx_run_type: already_exists
+- sce_meta_runs.idx_status: already_exists
+- sce_meta_runs.idx_created_at: already_exists
+- sce_meta_feature_versions.ux_feature_version: already_exists unique
+- sce_meta_feature_versions.idx_collection_name: already_exists
+- sce_meta_feature_versions.idx_status: already_exists
+- sce_meta_label_versions.ux_label_version: already_exists unique
+- sce_meta_label_versions.idx_collection_name: already_exists
+- sce_meta_label_versions.idx_status: already_exists
+- sce_meta_dataset_versions.ux_dataset_version: already_exists unique
+- sce_meta_dataset_versions.idx_collection_name: already_exists
+- sce_meta_dataset_versions.idx_status: already_exists
+- sce_meta_model_versions.ux_model_version: already_exists unique
+- sce_meta_model_versions.idx_dataset_version: already_exists
+- sce_meta_model_versions.idx_status: already_exists
+- sce_labels_entry_side_m5_v1.ux_anchor_time_side: already_exists unique
+- sce_labels_entry_side_m5_v1.idx_anchor_time: already_exists
+- sce_labels_entry_side_m5_v1.idx_side: already_exists
+- sce_labels_entry_side_m5_v1.idx_entry_label: already_exists
+- sce_labels_entry_side_m5_v1.idx_entry_tp_bucket: already_exists
+- sce_labels_entry_side_m5_v1.idx_max_entry_success_tp_atr: already_exists
+- sce_labels_entry_side_m5_v1.idx_created_at: already_exists
+- sce_features_ma_context_m5_v1.ux_anchor_time_side: already_exists unique
+- sce_features_ma_context_m5_v1.idx_anchor_time: already_exists
+- sce_features_ma_context_m5_v1.idx_side: already_exists
+- sce_features_ma_context_m5_v1.idx_feature_version: already_exists
+- sce_features_ma_context_m5_v1.idx_created_at: already_exists
+- sce_features_candle_entry_m5_v1.ux_anchor_time_side: already_exists unique
+- sce_features_candle_entry_m5_v1.idx_anchor_time: already_exists
+- sce_features_candle_entry_m5_v1.idx_side: already_exists
+- sce_features_candle_entry_m5_v1.idx_feature_version: already_exists
+- sce_features_candle_entry_m5_v1.idx_created_at: already_exists
+- sce_features_integrated_entry_m5_v1.ux_anchor_time_side: already_exists unique
+- sce_features_integrated_entry_m5_v1.idx_anchor_time: already_exists
+- sce_features_integrated_entry_m5_v1.idx_side: already_exists
+- sce_features_integrated_entry_m5_v1.idx_feature_version: already_exists
+- sce_features_integrated_entry_m5_v1.idx_created_at: already_exists
+- sce_dataset_integrated_entry_m5_v1.ux_anchor_time_side: already_exists unique
+- sce_dataset_integrated_entry_m5_v1.idx_anchor_time: already_exists
+- sce_dataset_integrated_entry_m5_v1.idx_side: already_exists
+- sce_dataset_integrated_entry_m5_v1.idx_entry_label: already_exists
+- sce_dataset_integrated_entry_m5_v1.idx_entry_tp_bucket: already_exists
+- sce_dataset_integrated_entry_m5_v1.idx_split: already_exists
+- sce_dataset_integrated_entry_m5_v1.idx_feature_version: already_exists
+- sce_dataset_integrated_entry_m5_v1.idx_label_version: already_exists
+- sce_dataset_integrated_entry_m5_v1.idx_created_at: already_exists
+- sce_predictions_integrated_entry_m5_v1.ux_anchor_time_side_model_version: already_exists unique
+- sce_predictions_integrated_entry_m5_v1.idx_anchor_time: already_exists
+- sce_predictions_integrated_entry_m5_v1.idx_side: already_exists
+- sce_predictions_integrated_entry_m5_v1.idx_model_version: already_exists
+- sce_predictions_integrated_entry_m5_v1.idx_created_at: already_exists
+- sce_api_decisions_m5_v1.ux_anchor_time_side_model_version: already_exists unique
+- sce_api_decisions_m5_v1.idx_anchor_time: already_exists
+- sce_api_decisions_m5_v1.idx_side: already_exists
+- sce_api_decisions_m5_v1.idx_model_version: already_exists
+- sce_api_decisions_m5_v1.idx_created_at: already_exists
+- sce_backtest_results_m5_v1.idx_run_id: already_exists
+- sce_backtest_results_m5_v1.idx_model_version: already_exists
+- sce_backtest_results_m5_v1.idx_side_mode: already_exists
+- sce_backtest_results_m5_v1.idx_period: already_exists
+- sce_backtest_results_m5_v1.idx_created_at: already_exists
+
+Metadata upserts:
+project_upserts           : 1
+feature_version_upserts   : 3
+label_version_upserts     : 1
+dataset_version_upserts   : 1
+model_version_upserts     : 1
+
+Core unique rules:
+- Every M5 anchor_time has two candidate rows: BUY and SELL.
+- Main training collections use unique index: (anchor_time, side).
+- Prediction/API collections use unique index: (anchor_time, side, model_version).
+
+End of report.

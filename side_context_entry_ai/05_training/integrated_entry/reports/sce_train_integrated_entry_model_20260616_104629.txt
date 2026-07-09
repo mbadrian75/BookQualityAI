@@ -1,0 +1,99 @@
+Side Context Entry AI - Integrated Entry Model Training Report
+================================================================================
+run_id                        : sce_train_integrated_entry_model_20260616_104629
+status                        : success
+project_name                  : Side Context Entry AI
+project_code                  : SCE
+database                      : market_data
+collection                    : sce_dataset_integrated_entry_m5_v1
+dataset_version               : sce_dataset_integrated_entry_m5_v1
+target                        : is_good_entry
+leakage_guard                 : enabled
+loader_mode                   : chunked_anchor_time_side_pagination
+
+Runtime parameters:
+mongo_uri                     : mongodb://localhost:27017
+database                      : market_data
+collection                    : sce_dataset_integrated_entry_m5_v1
+dataset_version               : sce_dataset_integrated_entry_m5_v1
+train_limit                   : 0
+valid_limit                   : 0
+test_limit                    : 0
+start_time                    : 
+end_time                      : 
+model_type                    : auto
+n_estimators                  : 500
+learning_rate                 : 0.03
+max_leaf_nodes                : 31
+threshold                     : 0.5
+random_state                  : 42
+n_jobs                        : -1
+read_batch_size               : 5000
+mongo_cursor_batch_size       : 1000
+mongo_retries                 : 5
+retry_sleep_seconds           : 2.0
+progress_every_pages          : 25
+
+Data:
+train_rows                    : 1839234
+valid_rows                    : 123588
+test_rows                     : 283788
+train_positive_rate           : 0.5252550790165906
+valid_positive_rate           : 0.5229714859047804
+test_positive_rate            : 0.5233096536851453
+train_pages_loaded            : 368
+valid_pages_loaded            : 25
+test_pages_loaded             : 57
+train_mongo_retries           : 0
+valid_mongo_retries           : 0
+test_mongo_retries            : 0
+
+Feature info:
+initial_feature_cols          : 166
+final_feature_cols            : 189
+categorical_cols              : ['side', 'm30_alignment', 'm30_trend_phase', 'h1_alignment', 'h1_trend_phase', 'h4_alignment', 'h4_trend_phase', 'm5_direction', 'm15_direction']
+leakage_guard_status          : passed
+
+Metrics:
+[train]
+rows                          : 1839234
+positive_rate                 : 0.5252550790165906
+predicted_positive_rate       : 0.8544671314253651
+accuracy                      : 0.5481869082454979
+precision                     : 0.5429753144158848
+recall                        : 0.8832938088145025
+f1                            : 0.6725332908790558
+confusion_matrix_0_1          : [[154923, 718244], [112746, 853321]]
+roc_auc                       : 0.5714032090284844
+pr_auc                        : 0.5913657406928567
+
+[valid]
+rows                          : 123588
+positive_rate                 : 0.5229714859047804
+predicted_positive_rate       : 0.8175470110366703
+accuracy                      : 0.5232385021199469
+precision                     : 0.5282613644236384
+recall                        : 0.8258165333498367
+f1                            : 0.6443454536674875
+confusion_matrix_0_1          : [[11291, 47664], [11258, 53375]]
+roc_auc                       : 0.5182526460474852
+pr_auc                        : 0.5360204134467198
+
+[test]
+rows                          : 283788
+positive_rate                 : 0.5233096536851453
+predicted_positive_rate       : 0.7618680141514088
+accuracy                      : 0.5149689204617531
+precision                     : 0.525121525930928
+recall                        : 0.764505854864015
+f1                            : 0.6225960879364331
+confusion_matrix_0_1          : [[32606, 102673], [34973, 113536]]
+roc_auc                       : 0.5036695521252548
+pr_auc                        : 0.5263513473173673
+
+Model:
+model_class                   : HistGradientBoostingClassifier
+model_path                    : C:\Project\BookQuality\side_context_entry_ai\06_models\integrated_entry\sce_integrated_entry_model_20260616_104629.joblib
+artifact_saved                : True
+
+End of report.
